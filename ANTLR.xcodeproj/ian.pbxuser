@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8DC2EF4F0486A6940098B216 /* ANTLR */;
+		addToTargets = (
+			8DC2EF4F0486A6940098B216 /* ANTLR */,
+		);
+		codeSenseManager = 3C404380117EC130002C5A3F /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					872,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					832,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 293520022;
+			PBXWorkspaceStateSaveDate = 293520022;
+		};
+		perUserProjectItems = {
+			3C440AD0117EC7A500161EBF /* XCBuildMessageTextBookmark */ = 3C440AD0117EC7A500161EBF /* XCBuildMessageTextBookmark */;
+			3C440AD1117EC7A500161EBF /* PBXTextBookmark */ = 3C440AD1117EC7A500161EBF /* PBXTextBookmark */;
+			3C440ADB117EC84C00161EBF /* PBXTextBookmark */ = 3C440ADB117EC84C00161EBF /* PBXTextBookmark */;
+			3C440ADC117EC84C00161EBF /* XCBuildMessageTextBookmark */ = 3C440ADC117EC84C00161EBF /* XCBuildMessageTextBookmark */;
+			3C440ADD117EC84C00161EBF /* PBXTextBookmark */ = 3C440ADD117EC84C00161EBF /* PBXTextBookmark */;
+		};
+		sourceControlManager = 3C40437F117EC130002C5A3F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	3C40437F117EC130002C5A3F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	3C404380117EC130002C5A3F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	3C440A78117EC2EE00161EBF /* ANTLRTree.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1248}}";
+			sepNavSelRange = "{1624, 0}";
+			sepNavVisRange = "{0, 2243}";
+		};
+	};
+	3C440A79117EC2EE00161EBF /* ANTLRTree.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 5798}}";
+			sepNavSelRange = "{1769, 0}";
+			sepNavVisRange = "{1046, 1072}";
+		};
+	};
+	3C440A7C117EC31A00161EBF /* ANTLRIntStream.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{1932, 0}";
+			sepNavVisRange = "{0, 1932}";
+		};
+	};
+	3C440A7E117EC32700161EBF /* ANTLRCharStream.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{1897, 0}";
+			sepNavVisRange = "{0, 1897}";
+		};
+	};
+	3C440A83117EC37800161EBF /* ANTLRBitSet.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{2034, 0}";
+			sepNavVisRange = "{0, 2425}";
+		};
+	};
+	3C440A84117EC37800161EBF /* ANTLRBitSet.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 2665}}";
+			sepNavSelRange = "{5243, 0}";
+			sepNavVisRange = "{0, 2657}";
+		};
+	};
+	3C440A8F117EC3DE00161EBF /* ANTLRTokenSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 707}}";
+			sepNavSelRange = "{1224, 0}";
+			sepNavVisRange = "{0, 1915}";
+		};
+	};
+	3C440A91117EC3FA00161EBF /* ANTLR.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{131, 1424}";
+			sepNavVisRange = "{0, 1702}";
+		};
+	};
+	3C440A94117EC45D00161EBF /* ANTLRStringStream.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{0, 138}";
+			sepNavVisRange = "{0, 1913}";
+		};
+	};
+	3C440A95117EC45D00161EBF /* ANTLRStringStream.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 2262}}";
+			sepNavSelRange = "{1563, 0}";
+			sepNavVisRange = "{0, 2160}";
+		};
+	};
+	3C440A9A117EC4CB00161EBF /* ANTLRError.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{1557, 0}";
+			sepNavVisRange = "{0, 1699}";
+		};
+	};
+	3C440A9B117EC55000161EBF /* ANTLRCharStreamState.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{877, 0}";
+			sepNavVisRange = "{0, 1841}";
+		};
+	};
+	3C440A9C117EC55000161EBF /* ANTLRCharStreamState.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{141, 1425}";
+			sepNavVisRange = "{0, 1716}";
+		};
+	};
+	3C440A9F117EC5CE00161EBF /* ANTLRRecognizerSharedState.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{147, 1425}";
+			sepNavVisRange = "{0, 2777}";
+		};
+	};
+	3C440AA0117EC5CE00161EBF /* ANTLRRecognizerSharedState.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1287}}";
+			sepNavSelRange = "{1973, 0}";
+			sepNavVisRange = "{0, 2662}";
+		};
+	};
+	3C440AA3117EC61E00161EBF /* ANTLRTokenStream.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{138, 1424}";
+			sepNavVisRange = "{0, 1992}";
+		};
+	};
+	3C440AA5117EC64E00161EBF /* ANTLRCommonToken.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{1179, 0}";
+			sepNavVisRange = "{0, 2003}";
+		};
+	};
+	3C440AA6117EC64E00161EBF /* ANTLRCommonToken.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {967, 494}}";
+			sepNavSelRange = "{1628, 0}";
+			sepNavVisRange = "{304, 1329}";
+		};
+	};
+	3C440AA9117EC69900161EBF /* ANTLRTreeNodeStream.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1024}}";
+			sepNavSelRange = "{140, 0}";
+			sepNavVisRange = "{0, 2214}";
+		};
+	};
+	3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 728}}";
+			sepNavSelRange = "{18, 0}";
+			sepNavVisRange = "{0, 2094}";
+		};
+	};
+	3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1050, 1092}}";
+			sepNavSelRange = "{1744, 0}";
+			sepNavVisRange = "{0, 1973}";
+		};
+	};
+	3C440AD0117EC7A500161EBF /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'ANTLRCommonTree' undeclared (first use in this function)";
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 87;
+		rType = 1;
+	};
+	3C440AD1117EC7A500161EBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		name = "ANTLRTree.m: 86";
+		rLen = 0;
+		rLoc = 2213;
+		rType = 0;
+		vrLen = 284;
+		vrLoc = 2067;
+	};
+	3C440ADB117EC84C00161EBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		name = "ANTLRTree.m: 131";
+		rLen = 0;
+		rLoc = 3220;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 0;
+	};
+	3C440ADC117EC84C00161EBF /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Method definition for '-initWithCharStream:' not found";
+		fRef = 3C440AA6117EC64E00161EBF /* ANTLRCommonToken.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 36;
+		rType = 1;
+	};
+	3C440ADD117EC84C00161EBF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440AA6117EC64E00161EBF /* ANTLRCommonToken.m */;
+		name = "ANTLRCommonToken.m: 37";
+		rLen = 0;
+		rLoc = 1628;
+		rType = 0;
+		vrLen = 1329;
+		vrLoc = 304;
+	};
+	8DC2EF4F0486A6940098B216 /* ANTLR */ = {
+		activeExec = 0;
+	};
+}
