@@ -65,7 +65,6 @@ static id<ANTLRTree> invalidNode = nil;
 	if (self)
 	{
 		children = nil;
-		isEmptyNode = NO;
 	}
 	return self;
 }
@@ -140,7 +139,7 @@ static id<ANTLRTree> invalidNode = nil;
 	child.childIndex = idx;
 }
 
--(id<ANTLRTree>) firstChildWithType:(NSInteger) type
+-(id<ANTLRTree>) firstChildWithType:(NSInteger) t
 {
 	if (self.children == nil)
 	{
@@ -151,7 +150,7 @@ static id<ANTLRTree> invalidNode = nil;
 	// loop through each child until we get one of it's type.
 	for (id<ANTLRTree> child in self.children)
 	{
-		if (child.type == type)
+		if (child.type == t)
 		{
 			return child;
 		}
@@ -353,32 +352,6 @@ static id<ANTLRTree> invalidNode = nil;
 	}
 }
 
-@synthesize children;
-@dynamic childCount; // dynamic
-
--(NSInteger) childCount
-{
-	if (self.children != nil)
-	{
-		return [self.children count];
-	}
-	return 0;
-}
-
-@synthesize childIndex;
-
-@dynamic isEmpty;
--(BOOL) isEmpty
-{
-	return NO;
-}
-
-@synthesize tokenStartIndex;
-@synthesize tokenStopIndex;
-@synthesize type;
-@synthesize line;
-@synthesize charPositionInLine;
-@synthesize text;
 
 -(id) copyWithZone:(NSZone *) aZone
 {
@@ -445,6 +418,60 @@ static id<ANTLRTree> invalidNode = nil;
 		[treeString appendString:@")"];
 	}
 	return treeString;
+}
+
+@synthesize children;
+@synthesize childIndex;
+@synthesize tokenStartIndex;
+@synthesize tokenStopIndex;
+
+/*******************************************************************************
+ *	Dynamic properties
+ ******************************************************************************/
+@dynamic isEmpty;
+-(BOOL) isEmpty
+{
+	return NO;
+}
+
+
+@dynamic childCount; // dynamic
+-(NSInteger) childCount
+{
+	if (self.children != nil)
+	{
+		return [self.children count];
+	}
+	return 0;
+}
+
+@dynamic charPositionInLine;
+-(NSInteger) charPositionInLine
+{
+	[self doesNotRecognizeSelector:_cmd];
+	return 0;
+}
+
+
+@dynamic type;
+-(NSInteger) type
+{
+	[self doesNotRecognizeSelector:_cmd];
+	return 0;
+}
+
+@dynamic line;
+-(NSInteger) line
+{
+	[self doesNotRecognizeSelector:_cmd];
+	return 0;
+}
+
+@dynamic text;
+-(NSString *) text
+{
+	[self doesNotRecognizeSelector:_cmd];
+	return nil;
 }
 
 @end

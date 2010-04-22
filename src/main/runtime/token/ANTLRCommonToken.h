@@ -35,19 +35,29 @@
 
 @interface ANTLRCommonToken : NSObject <ANTLRToken> 
 {
+	NSString *text;
 	NSInteger type;
 	NSInteger line;
 	NSInteger charPositionInLine;
 	NSInteger channel;
-	id<ANTLRCharStream> input;
-	NSString *text;
-	NSInteger index;
+	NSInteger tokenIndex;
 	NSInteger start;
 	NSInteger stop;
 	
+	id<ANTLRCharStream> inputStream;
+	
 }
 
-- (id) initWithTokenType:(ANTLRTokenType) type;
-- (id) initWithCharStream:(id<ANTLRCharStream>) input;
+-(id) initWithTokenType:(NSInteger) aType;
+-(id) initWithTokenTypeAndText:(NSInteger) aType text:(NSString *) txt;
+-(id) initWithCharStream:(id<ANTLRCharStream>) input type:(NSInteger) aType channel:(NSInteger) aChannel start:(NSInteger) theStart stop:(NSInteger) theStop;
+-(id) initWithToken:(id<ANTLRToken>) oldToken;
+
+-(NSString *) text;
+-(void) setText:(NSString *) txt;
+
+@property(readwrite, retain) id<ANTLRCharStream> inputStream;
+@property(readwrite) NSInteger start;
+@property(readwrite) NSInteger stop;
 
 @end

@@ -35,11 +35,11 @@
 
 typedef enum {
 	ANTLRTokenTypeEOF = -1,
-	ANTLRTokenTypeInvalid,
-	ANTLRTokenTypeEOR,
-	ANTLRTokenTypeDOWN,
-	ANTLRTokenTypeUP,
-	ANTLRTokenTypeMIN
+	ANTLRTokenTypeInvalid = 0,
+	ANTLRTokenTypeEOR = 1,
+	ANTLRTokenTypeDOWN = 2,
+	ANTLRTokenTypeUP = 3,
+	ANTLRTokenTypeMIN = 4
 } ANTLRTokenType;
 
 typedef enum {
@@ -50,9 +50,9 @@ typedef enum {
 @protocol ANTLRToken <NSObject>
 
 // The singleton eofToken instance.
-+ (id<ANTLRToken>) eofToken;
++(id<ANTLRToken>) eofToken;
 // The default channel for this class of Tokens
-+ (ANTLRTokenChannel) defaultChannel;
++(ANTLRTokenChannel) defaultChannel;
 
 @required
 @property(readwrite, retain) NSString *text;

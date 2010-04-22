@@ -36,20 +36,26 @@
 
 @interface ANTLRCommonTree : ANTLRTree
 {
-	NSInteger startIndex;
-	NSInteger stopIndex;
 	id<ANTLRToken> token;
-	ANTLRCommonTree *parent;
 }
 
 -(id) initWithCommonTreeNode:(ANTLRCommonTree *) node;
 -(id) initWithToken:(id<ANTLRToken>) t;
--(id) initWithTokenType:(ANTLRTokenType) t;
+-(id) initWithTokenType:(NSInteger) t;
 
+// Dynamic properties
 -(id<ANTLRToken>) token;
+-(void) setToken:(id<ANTLRToken>) t;
+-(BOOL) isEmpty;
+-(NSInteger) type;
+-(NSInteger) tokenStartIndex;
+-(void) setTokenStartIndex:(NSInteger) s;
+-(NSInteger) tokenStopIndex;
+-(void) setTokenStopIndex:(NSInteger) s;
+-(NSInteger) charPositionInLine;
+-(NSInteger) line;
+-(NSString *) text;
 
-@property (readwrite) NSInteger startIndex;
-@property (readwrite) NSInteger stopIndex;
 @property (retain, readwrite) id<ANTLRToken> token;
 
 @end

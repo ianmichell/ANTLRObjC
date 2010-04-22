@@ -34,4 +34,135 @@
 
 @implementation ANTLRCommonToken
 
++(id<ANTLRToken>) eofToken
+{
+	return [[ANTLRCommonToken alloc] initWithTokenType: ANTLRTokenTypeEOF];
+}
+
++(ANTLRTokenChannel) defaultChannel
+{
+	return ANTLRTokenChannelDefault;
+}
+
+-(id) init
+{
+	self = [super init];
+	if (self)
+	{
+		self.tokenIndex = -1;
+		self.charPositionInLine = -1;
+	}
+	return self;
+}
+
+-(id) initWithTokenType:(NSInteger) aType
+{
+	self = [super init];
+	if (self)
+	{
+		self.type = aType;
+	}
+	return self;
+}
+
+-(id) initWithTokenTypeAndText:(NSInteger) aType text:(NSString *) txt
+{
+	self = [self initWithTokenType:aType];
+	if (self)
+	{
+		self.channel = [ANTLRCommonToken defaultChannel];
+		self.text = txt;
+	}
+	return self;
+}
+
+-(id) initWithCharStream:(id<ANTLRCharStream>) input type:(NSInteger) aType channel:(NSInteger) aChannel start:(NSInteger) theStart stop:(NSInteger) theStop
+{
+	self = [self initWithTokenType:aType];
+	if (self)
+	{
+		self.inputStream = input;
+		self.channel = aChannel;
+		self.start = theStart;
+		self.stop = theStop;
+	}
+	return self;
+}
+
+-(id) initWithToken:(id<ANTLRToken>) oldToken
+{
+	self = [super init];
+	if (self)
+	{
+		self.text = oldToken.text;
+		self.type = oldToken.type;
+		self.line = oldToken.line;
+		self.tokenIndex = oldToken.tokenIndex;
+		self.charPositionInLine = oldToken.charPositionInLine;
+		self.channel = oldToken.channel;
+		if ([oldToken isKindOfClass:[ANTLRCommonToken class]])
+		{
+			self.start = ((ANTLRCommonToken *)oldToken).start;
+			self.stop = ((ANTLRCommonToken *)oldToken).stop;
+		}
+	}
+	return self;
+}
+
+@dynamic text;
+-(NSString *) text
+{
+	// If text is set, then return it.
+	if (text != nil)
+	{
+		return text;
+	}
+	// If not check that the input stream is set, if not return nil
+	if (self.inputStream == nil)
+	{
+		return nil;
+	}
+	// If there is an input stream, then return a substring from it.
+	text = [self.inputStream substring:self.start stop:self.stop];
+	return text;
+}
+
+-(void) setText:(NSString *) txt
+{
+	text = txt;
+}
+
+-(NSString *) description
+{
+	NSString *channelStr = @"";
+	if (self.channel > 0)
+	{
+		channelStr = @",channel=" + self.channel;
+	}
+	NSMutableString *txt = nil;
+	if (self.text != nil)
+	{
+		txt = [NSMutableString stringWithString:self.text];
+		[txt replaceOccurrencesOfString:@"\n" withString:@"\\\n" options:NSAnchoredSearch range:NSMakeRange(0, [txt length])];
+		[txt replaceOccurrencesOfString:@"\r" withString:@"\\\r" options:NSAnchoredSearch range:NSMakeRange(0, [txt length])];
+		[txt replaceOccurrencesOfString:@"\t" withString:@"\\\t" options:NSAnchoredSearch range:NSMakeRange(0, [txt length])];
+	}
+	else 
+	{
+		txt = [NSMutableString stringWithString:@"<no text>"];
+	}
+	return [NSString stringWithFormat:@"[@%d,%d,%d,%@,<%d>%@,%d,%d]", self.tokenIndex, self.start, self.stop, txt, self.type, channelStr, self.line, self.charPositionInLine];
+
+}
+
+@synthesize type;
+@synthesize line;
+@synthesize charPositionInLine;
+@synthesize channel;
+@synthesize tokenIndex;
+@synthesize inputStream;
+
+@synthesize start;
+@synthesize stop;
+
 @end

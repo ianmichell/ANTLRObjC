@@ -35,21 +35,33 @@
 
 @implementation ANTLRCommonTree
 
+-(id) init
+{
+	self = [super init];
+	if (self)
+	{
+		self.tokenStartIndex = -1;
+		self.tokenStopIndex = -1;
+		self.childIndex = -1;
+	}
+	return self;
+}
+
 -(id) initWithCommonTreeNode:(ANTLRCommonTree *) node
 {
-	self = [super initWithTree:node];
+	self = [self initWithTree:node];
 	if (self)
 	{
 		self.token = node.token;
-		self.startIndex = node.startIndex;
-		self.stopIndex = node.stopIndex;
+		self.tokenStartIndex = node.tokenStartIndex;
+		self.tokenStopIndex = node.tokenStopIndex;
 	}
 	return self;
 }
 
 -(id) initWithToken:(id<ANTLRToken>) t
 {
-	self = [super init];
+	self = [self init];
 	if (self)
 	{
 		self.token = t;
@@ -57,13 +69,15 @@
 	return self;
 }
 
--(id) initWithTokenType:(ANTLRTokenType) t
+-(id) initWithTokenType:(NSInteger) t
 {
-	self = [super init];
+	self = [self init];
 	if (self)
 	{
 		ANTLRCommonToken *tmpToken = [[ANTLRCommonToken alloc] init];
-		
+		tmpToken.type = t;
+		self.token = tmpToken;
+		[tmpToken release];
 	}
 	return self;
 }
@@ -73,14 +87,110 @@
 	return [[ANTLRCommonTree allocWithZone:aZone] initWithCommonTreeNode:self];
 }
 
-@synthesize startIndex;
-@synthesize stopIndex;
-@synthesize token;
-@dynamic isEmpty;
+-(NSString *) description
+{
+	if (self.isEmpty)
+	{
+		return @"nil";
+	}
+	if (self.type == ANTLRTokenTypeInvalid)
+	{
+		return @"<errornode>";
+	}
+	if (self.token == nil)
+	{
+		return nil;
+	}
+	return self.token.text;
+}
 
+@synthesize token;
+
+/*******************************************************************************
+ *	Dynamic properties
+ ******************************************************************************/
+@dynamic isEmpty;
 -(BOOL) isEmpty
 {
 	return self.token == nil;
+}
+
+@dynamic type;
+-(NSInteger) type
+{
+	if (self.token == nil)
+	{
+		return ANTLRTokenTypeInvalid;
+	}
+	return token.type;
+}
+
+@dynamic charPositionInLine;
+-(NSInteger) charPositionInLine
+{
+	if (self.token == nil || self.token.charPositionInLine == -1)
+	{
+		if (self.childCount > 0)
+		{
+			return [self childAtIndex:0].charPositionInLine;
+		}
+		return 0;
+	}
+	return self.token.line;
+}
+
+@dynamic tokenStartIndex;
+-(NSInteger) tokenStartIndex
+{
+	if (tokenStartIndex == -1 && self.token != nil)
+	{
+		return self.token.tokenIndex;
+	}
+	return tokenStartIndex;
+}
+
+-(void) setTokenStartIndex:(NSInteger) s
+{
+	tokenStartIndex = s;
+}
+
+@dynamic tokenStopIndex;
+-(NSInteger) tokenStopIndex
+{
+	if (tokenStopIndex == -1 && self.token != nil)
+	{
+		return self.token.tokenIndex;
+	}
+	return tokenStopIndex;
+}
+
+-(void) setTokenStopIndex:(NSInteger) s
+{
+	tokenStopIndex = s;
+}
+
+@dynamic line;
+-(NSInteger) line
+{
+	if (self.token == nil || self.token.line == 0)
+	{
+		if (self.childCount > 0)
+		{
+			return [self childAtIndex:0].line;
+		}
+		return 0;
+	}
+	return self.token.line;
+}
+
+@dynamic text;
+-(NSString *) text
+{
+	if (self.token == nil)
+	{
+		return nil;
+	}
+	return self.token.text;
 }
 
 @end

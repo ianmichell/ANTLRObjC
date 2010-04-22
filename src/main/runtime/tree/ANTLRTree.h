@@ -64,10 +64,10 @@
 @property(readonly) BOOL isEmpty;
 @property(readwrite) NSInteger tokenStartIndex;
 @property(readwrite) NSInteger tokenStopIndex;
-@property(readwrite) NSInteger type;
-@property(readwrite) NSInteger line;
-@property(readwrite) NSInteger charPositionInLine;
-@property(readwrite, retain) NSString *text;
+@property(readonly) NSInteger type;
+@property(readonly) NSInteger line;
+@property(readonly) NSInteger charPositionInLine;
+@property(readonly) NSString *text;
 
 #pragma mark copying
 -(id) deepCopy;
@@ -82,12 +82,13 @@
 @interface ANTLRTree : NSObject <ANTLRTree>
 {
 	NSMutableArray *children;
-	BOOL isEmptyNode;
+	NSInteger tokenStartIndex;
+	NSInteger tokenStopIndex;
+	NSInteger childIndex;
+	id<ANTLRTree> parent;
 }
 
--(NSInteger) childCount;
--(BOOL) isEmpty;
--(id<ANTLRTree>) firstChildWithType:(NSInteger) type;
+-(id<ANTLRTree>) firstChildWithType:(NSInteger) t;
 -(void) freshenParentAndChildIndexesAtOffset:(NSInteger) offset;
 -(void) sanityCheckParentAndChildIndexes:(NSError **) error;
 -(void) sanityCheckParentAndChildIndexesForParentTree:(id<ANTLRTree>) parentTree forIndex:(NSInteger) idx error:(NSError **)error;
