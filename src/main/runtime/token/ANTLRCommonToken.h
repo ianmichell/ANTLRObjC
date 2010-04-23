@@ -49,7 +49,7 @@
 }
 
 -(id) initWithTokenType:(NSInteger) aType;
--(id) initWithTokenTypeAndText:(NSInteger) aType text:(NSString *) txt;
+-(id) initWithTokenType:(NSInteger) aType andText:(NSString *) txt;
 -(id) initWithCharStream:(id<ANTLRCharStream>) input type:(NSInteger) aType channel:(NSInteger) aChannel start:(NSInteger) theStart stop:(NSInteger) theStop;
 -(id) initWithToken:(id<ANTLRToken>) oldToken;
 

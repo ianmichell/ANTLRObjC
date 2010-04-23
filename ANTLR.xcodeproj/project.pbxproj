@@ -28,6 +28,8 @@
 		3C440AAD117EC70B00161EBF /* ANTLRCommonTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */; };
 		3C440AAE117EC70B00161EBF /* ANTLRCommonTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */; };
 		3C440ADF117ECB1D00161EBF /* ANTLRToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C440ADE117ECB1D00161EBF /* ANTLRToken.h */; };
+		3C8549AA118162F600618CAD /* ANTLRTreeAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */; };
+		3C8549AB118162F600618CAD /* ANTLRTreeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRCommonTree.h; sourceTree = "<group>"; };
 		3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRCommonTree.m; sourceTree = "<group>"; };
 		3C440ADE117ECB1D00161EBF /* ANTLRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRToken.h; sourceTree = "<group>"; };
+		3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRTreeAdapter.h; sourceTree = "<group>"; };
+		3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRTreeAdapter.m; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ANTLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANTLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -214,6 +218,8 @@
 				3C440A79117EC2EE00161EBF /* ANTLRTree.m */,
 				3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */,
 				3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */,
+				3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */,
+				3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */,
 			);
 			path = tree;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				3C440AAA117EC69900161EBF /* ANTLRTreeNodeStream.h in Headers */,
 				3C440AAD117EC70B00161EBF /* ANTLRCommonTree.h in Headers */,
 				3C440ADF117ECB1D00161EBF /* ANTLRToken.h in Headers */,
+				3C8549AA118162F600618CAD /* ANTLRTreeAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +321,7 @@
 				3C440AA2117EC5CE00161EBF /* ANTLRRecognizerSharedState.m in Sources */,
 				3C440AA8117EC64E00161EBF /* ANTLRCommonToken.m in Sources */,
 				3C440AAE117EC70B00161EBF /* ANTLRCommonTree.m in Sources */,
+				3C8549AB118162F600618CAD /* ANTLRTreeAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

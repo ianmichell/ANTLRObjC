@@ -65,7 +65,7 @@
 	return self;
 }
 
--(id) initWithTokenTypeAndText:(NSInteger) aType text:(NSString *) txt
+-(id) initWithTokenType:(NSInteger) aType andText:(NSString *) txt
 {
 	self = [self initWithTokenType:aType];
 	if (self)
