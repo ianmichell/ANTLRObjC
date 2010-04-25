@@ -37,3 +37,4 @@
 #import <ANTLR/ANTLRIntStream.h>
 #import <ANTLR/ANTLRCharStream.h>
 #import <ANTLR/ANTLRError.h>
+#import <ANTLR/ANTLRTreeAdaptor.h>

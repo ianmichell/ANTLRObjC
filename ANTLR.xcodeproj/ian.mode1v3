@@ -270,6 +270,7 @@
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>3C404382117EC1D1002C5A3F</string>
+								<string>3C854A441182B3BB00618CAD</string>
 								<string>3C440A82117EC36600161EBF</string>
 								<string>3C404383117EC1D1002C5A3F</string>
 								<string>3C404384117EC1D1002C5A3F</string>
@@ -279,20 +280,22 @@
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>8DC2EF5B0486A6940098B216</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>3C854B011183F81400618CAD</string>
+								<string>3C854B021183F81400618CAD</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
-									<integer>24</integer>
+									<integer>43</integer>
+									<integer>37</integer>
 									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {297, 1055}}</string>
+							<string>{{0, 29}, {297, 1192}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -304,14 +307,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {314, 1073}}</string>
+						<string>{{0, 0}, {314, 1210}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>297</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>824 221 1679 1114 0 0 2560 1418 </string>
+						<string>631 146 1914 1251 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -329,7 +332,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTreeAdapter.h</string>
+								<string>ANTLRTreeAdaptor.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,37 +340,49 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ANTLRTreeAdapter.h</string>
+										<string>ANTLRTreeAdaptor.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3C8549E41181712700618CAD</string>
+										<string>3C854BB31184145300618CAD</string>
 										<key>history</key>
 										<array>
-											<string>3C440AE9117ECD6F00161EBF</string>
-											<string>3C440AEA117ECD6F00161EBF</string>
-											<string>3C440AEB117ECD6F00161EBF</string>
-											<string>3C440AEC117ECD6F00161EBF</string>
 											<string>3C440AED117ECD6F00161EBF</string>
-											<string>3C440AEE117ECD6F00161EBF</string>
-											<string>3C440AF2117ECD6F00161EBF</string>
-											<string>3C440AF3117ECD6F00161EBF</string>
-											<string>3C440AF4117ECD6F00161EBF</string>
-											<string>3C440AF5117ECD6F00161EBF</string>
-											<string>3C440AF6117ECD6F00161EBF</string>
-											<string>3C8549B2118165D300618CAD</string>
-											<string>3C8549B4118165D300618CAD</string>
-											<string>3C8549D011816B2F00618CAD</string>
-											<string>3C8549D111816B2F00618CAD</string>
-											<string>3C8549D211816B2F00618CAD</string>
-											<string>3C8549D311816B2F00618CAD</string>
 											<string>3C8549D411816B2F00618CAD</string>
 											<string>3C8549D511816B2F00618CAD</string>
 											<string>3C8549D611816B2F00618CAD</string>
 											<string>3C8549D711816B2F00618CAD</string>
-											<string>3C8549E11181712700618CAD</string>
-											<string>3C8549E21181712700618CAD</string>
-											<string>3C8549E31181712700618CAD</string>
+											<string>3C854A071181E88E00618CAD</string>
+											<string>3C854A531182B4D000618CAD</string>
+											<string>3C854A541182B4D000618CAD</string>
+											<string>3C854A551182B4D000618CAD</string>
+											<string>3C854A561182B4D000618CAD</string>
+											<string>3C854A571182B4D000618CAD</string>
+											<string>3C854A581182B4D000618CAD</string>
+											<string>3C854A5A1182B4D000618CAD</string>
+											<string>3C854A5B1182B4D000618CAD</string>
+											<string>3C854A5C1182B4D000618CAD</string>
+											<string>3C854A781182BA2400618CAD</string>
+											<string>3C854AC91182F79900618CAD</string>
+											<string>3C854ACF1182F79900618CAD</string>
+											<string>3C854B031183F81400618CAD</string>
+											<string>3C854B041183F81400618CAD</string>
+											<string>3C854B091183F81400618CAD</string>
+											<string>3C854B0B1183F81400618CAD</string>
+											<string>3C854B221183FED600618CAD</string>
+											<string>3C854B271184001600618CAD</string>
+											<string>3C854B281184001600618CAD</string>
+											<string>3C854B4A118405EF00618CAD</string>
+											<string>3C854B4B118405EF00618CAD</string>
+											<string>3C854B4C118405EF00618CAD</string>
+											<string>3C854B4D118405EF00618CAD</string>
+											<string>3C854B4E118405EF00618CAD</string>
+											<string>3C854B4F118405EF00618CAD</string>
+											<string>3C854B841184102200618CAD</string>
+											<string>3C854BAF1184145300618CAD</string>
+											<string>3C854BB01184145300618CAD</string>
+											<string>3C854BB11184145300618CAD</string>
+											<string>3C854BB21184145300618CAD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,14 +394,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1360, 1068}}</string>
+								<string>{{0, 0}, {1595, 1203}}</string>
 								<key>RubberWindowFrame</key>
-								<string>824 221 1679 1114 0 0 2560 1418 </string>
+								<string>631 146 1914 1251 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>1068pt</string>
+							<string>1203pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -399,18 +414,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 1073}, {1360, 0}}</string>
+								<string>{{0, 1208}, {1595, 3}}</string>
 								<key>RubberWindowFrame</key>
-								<string>824 221 1679 1114 0 0 2560 1418 </string>
+								<string>631 146 1914 1251 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>3pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1360pt</string>
+					<string>1595pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -569,7 +584,7 @@
 		<string>/Users/ian/projects/XCode Projects/ANTLR/ANTLR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>824 221 1679 1114 0 0 2560 1418 </string>
+	<string>631 146 1914 1251 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -590,7 +605,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTreeAdapter.h</string>
+								<string>ANTLRUnwantedTokenException.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -661,7 +676,7 @@
 			<key>WindowToolGUID</key>
 			<string>3C40437D117EC130002C5A3F</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

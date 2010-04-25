@@ -117,7 +117,7 @@ static id<ANTLRTree> invalidNode = nil;
 	return nil;
 }
 
--(void) setChildAtIndex:(NSInteger) idx child:(id<ANTLRTree>)child error:(NSError **) error
+-(void) setChildAtIndex:(NSInteger) idx child:(id<ANTLRTree>)child
 {
 	// If child is nil, do nothing
 	if (child == nil)
@@ -126,9 +126,7 @@ static id<ANTLRTree> invalidNode = nil;
 	}
 	if (child.isEmpty)
 	{
-		NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithObject:@"The specified child is empty" forKey:NSLocalizedDescriptionKey];
-		*error = [NSError errorWithDomain:ANTLRErrorDomain code:ANTLRIllegalArgument userInfo:userInfo];
-		return;
+		@throw [NSException exceptionWithName:ANTLRRuntimeException reason:@"The specified child is empty" userInfo:nil];
 	}
 	if (self.children == nil)
 	{
@@ -175,49 +173,30 @@ static id<ANTLRTree> invalidNode = nil;
 	}
 }
 
--(void) sanityCheckParentAndChildIndexes:(NSError **) error
+-(void) sanityCheckParentAndChildIndexes
 {
-	[self sanityCheckParentAndChildIndexesForParentTree:nil forIndex:-1 error:error];
+	[self sanityCheckParentAndChildIndexesForParentTree:nil forIndex:-1];
 }
 
--(void) sanityCheckParentAndChildIndexesForParentTree:(id<ANTLRTree>) parentTree forIndex:(NSInteger) idx error:(NSError **)error
+-(void) sanityCheckParentAndChildIndexesForParentTree:(id<ANTLRTree>) parentTree forIndex:(NSInteger) idx
 {
-	// Check that our parent is the samea s parent tree
+	// Check that our parent is the same as parent tree
 	if (parentTree != self.parent)
 	{
-		// Setup error message
-		NSString *errorMsg = @"Parents don't match; expected ";
-		errorMsg = [errorMsg stringByAppendingString:[parentTree description]];
-		errorMsg = [errorMsg stringByAppendingString:@" found"];
-		errorMsg = [errorMsg stringByAppendingString:[self.parent description]];
-		// Setup user info dictionary
-		NSMutableDictionary *errInfo = [NSMutableDictionary dictionaryWithObject:errorMsg forKey:NSLocalizedDescriptionKey];
-		// Setup error
-		*error = [NSError errorWithDomain:ANTLRErrorDomain code:ANTLRIllegalState userInfo:errInfo];
-		// After setting error, return.
-		return;
+		@throw [NSException exceptionWithName:ANTLRIllegalArgumentException reason:[NSString stringWithFormat:@"Parents don't match; expected %@ found %@", [self.parent description]] userInfo:nil];
 	}
 	
 	// Check that the child indexes match
 	if (idx != self.childIndex)
 	{
-		NSString *errorMsg = @"Child indexes don't match; expected ";
-		errorMsg = [errorMsg stringByAppendingString: [NSString stringWithFormat: @" %d found %d", idx, self.childIndex]];
-		NSMutableDictionary *errInfo = [NSMutableDictionary dictionaryWithObject:errorMsg forKey:NSLocalizedDescriptionKey];
-		*error = [NSError errorWithDomain:ANTLRErrorDomain code:ANTLRIllegalState userInfo:errInfo];
-		return;
+		@throw [NSException exceptionWithName:ANTLRIllegalStateException reason:[NSString stringWithFormat:@"Child indexes don't match; expected %d found %d", idx, self.childIndex] userInfo:nil];
 	}
 	
 	// Cycle through children and check their sanity.
 	for (int i = 0; i < self.childCount; i++)
 	{
 		ANTLRTree *child = [self.children objectAtIndex:i];
-		[child sanityCheckParentAndChildIndexesForParentTree:self forIndex:i error:error];
-		// check for errors
-		if (*error != nil)
-		{
-			return;
-		}
+		[child sanityCheckParentAndChildIndexesForParentTree:self forIndex:i];
 	}
 }
 
@@ -237,10 +216,17 @@ static id<ANTLRTree> invalidNode = nil;
 	
 	if (child.isEmpty)
 	{
+		if (self.children != nil && self.children == child.children)
+		{
+			@throw [NSException exceptionWithName:ANTLRIllegalArgumentException reason:@"Attempted to add child list to itself" userInfo:nil];
+		}
 		// if the empty tree has children, we should add those to our children.
 		if (child.childCount > 0)
 		{
+			// add all children from the array
 			[self.children addObjectsFromArray:child.children];
+			// then freshen it up by correcting indexes and parent.
+			[self freshenParentAndChildIndexes];
 		}
 	}
 	else
@@ -265,15 +251,12 @@ static id<ANTLRTree> invalidNode = nil;
 	return deletedTree;
 }
 
--(void) replaceChildrenFromIndex:(NSInteger) start toIndex:(NSInteger) stop tree:(id<ANTLRTree>) tree error:(NSError**) error
+-(void) replaceChildrenFromIndex:(NSInteger) start toIndex:(NSInteger) stop tree:(id<ANTLRTree>) tree
 {
 	// If there are no children, return an illegal state error. It's up to the person using the parser to pick these errors up.
 	if (self.children == nil)
 	{
-		NSString *errMsg = @"Indexes invalid; no children in list";
-		NSMutableDictionary *errInfo = [NSMutableDictionary dictionaryWithObject:errMsg forKey:NSLocalizedDescriptionKey];
-		*error = [NSError errorWithDomain:ANTLRErrorDomain code:ANTLRIllegalState userInfo:errInfo];
-		return;
+		@throw [NSException exceptionWithName:ANTLRIllegalArgumentException reason:@"Indexes invalid; no children in list" userInfo:nil];
 	}
 	
 	int replacingHowMany = stop - start + 1;

@@ -28,8 +28,20 @@
 		3C440AAD117EC70B00161EBF /* ANTLRCommonTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */; };
 		3C440AAE117EC70B00161EBF /* ANTLRCommonTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */; };
 		3C440ADF117ECB1D00161EBF /* ANTLRToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C440ADE117ECB1D00161EBF /* ANTLRToken.h */; };
-		3C8549AA118162F600618CAD /* ANTLRTreeAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */; };
-		3C8549AB118162F600618CAD /* ANTLRTreeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */; };
+		3C8549AB118162F600618CAD /* ANTLRTreeAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549A9118162F600618CAD /* ANTLRTreeAdaptor.m */; };
+		3C8549EC118190D200618CAD /* ANTLRCommonErrorNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8549EA118190D200618CAD /* ANTLRCommonErrorNode.h */; };
+		3C8549ED118190D200618CAD /* ANTLRCommonErrorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549EB118190D200618CAD /* ANTLRCommonErrorNode.m */; };
+		3C854A491182B3E000618CAD /* ANTLRRecognitionException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C854A471182B3E000618CAD /* ANTLRRecognitionException.h */; };
+		3C854A4A1182B3E000618CAD /* ANTLRRecognitionException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C854A481182B3E000618CAD /* ANTLRRecognitionException.m */; };
+		3C854A6B1182B70000618CAD /* ANTLRMismatchedTokenException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C854A691182B70000618CAD /* ANTLRMismatchedTokenException.h */; };
+		3C854A6C1182B70000618CAD /* ANTLRMismatchedTokenException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C854A6A1182B70000618CAD /* ANTLRMismatchedTokenException.m */; };
+		3C854A871182BFAD00618CAD /* ANTLRMissingTokenException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C854A851182BFAD00618CAD /* ANTLRMissingTokenException.h */; };
+		3C854A881182BFAD00618CAD /* ANTLRMissingTokenException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C854A861182BFAD00618CAD /* ANTLRMissingTokenException.m */; };
+		3C854AFA1183F80200618CAD /* ANTLRTreeAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8549A8118162F600618CAD /* ANTLRTreeAdaptor.h */; };
+		3C854B101183F85600618CAD /* ANTLRUnwantedTokenException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C854B0E1183F85600618CAD /* ANTLRUnwantedTokenException.h */; };
+		3C854B111183F85600618CAD /* ANTLRUnwantedTokenException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C854B0F1183F85600618CAD /* ANTLRUnwantedTokenException.m */; };
+		3C854B301184015C00618CAD /* ANTLRNoViableAltException.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C854B2E1184015C00618CAD /* ANTLRNoViableAltException.h */; };
+		3C854B311184015C00618CAD /* ANTLRNoViableAltException.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C854B2F1184015C00618CAD /* ANTLRNoViableAltException.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -62,8 +74,20 @@
 		3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRCommonTree.h; sourceTree = "<group>"; };
 		3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRCommonTree.m; sourceTree = "<group>"; };
 		3C440ADE117ECB1D00161EBF /* ANTLRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRToken.h; sourceTree = "<group>"; };
-		3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRTreeAdapter.h; sourceTree = "<group>"; };
-		3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRTreeAdapter.m; sourceTree = "<group>"; };
+		3C8549A8118162F600618CAD /* ANTLRTreeAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRTreeAdaptor.h; sourceTree = "<group>"; };
+		3C8549A9118162F600618CAD /* ANTLRTreeAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRTreeAdaptor.m; sourceTree = "<group>"; };
+		3C8549EA118190D200618CAD /* ANTLRCommonErrorNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRCommonErrorNode.h; sourceTree = "<group>"; };
+		3C8549EB118190D200618CAD /* ANTLRCommonErrorNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRCommonErrorNode.m; sourceTree = "<group>"; };
+		3C854A471182B3E000618CAD /* ANTLRRecognitionException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRRecognitionException.h; sourceTree = "<group>"; };
+		3C854A481182B3E000618CAD /* ANTLRRecognitionException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRRecognitionException.m; sourceTree = "<group>"; };
+		3C854A691182B70000618CAD /* ANTLRMismatchedTokenException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRMismatchedTokenException.h; sourceTree = "<group>"; };
+		3C854A6A1182B70000618CAD /* ANTLRMismatchedTokenException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRMismatchedTokenException.m; sourceTree = "<group>"; };
+		3C854A851182BFAD00618CAD /* ANTLRMissingTokenException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRMissingTokenException.h; sourceTree = "<group>"; };
+		3C854A861182BFAD00618CAD /* ANTLRMissingTokenException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRMissingTokenException.m; sourceTree = "<group>"; };
+		3C854B0E1183F85600618CAD /* ANTLRUnwantedTokenException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRUnwantedTokenException.h; sourceTree = "<group>"; };
+		3C854B0F1183F85600618CAD /* ANTLRUnwantedTokenException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRUnwantedTokenException.m; sourceTree = "<group>"; };
+		3C854B2E1184015C00618CAD /* ANTLRNoViableAltException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRNoViableAltException.h; sourceTree = "<group>"; };
+		3C854B2F1184015C00618CAD /* ANTLRNoViableAltException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRNoViableAltException.m; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ANTLR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANTLR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -156,6 +180,9 @@
 		3C404382117EC1D1002C5A3F /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				3C854A451182B3D200618CAD /* debugging */,
+				3C854A461182B3D200618CAD /* misc */,
+				3C854A441182B3BB00618CAD /* exceptions */,
 				3C440A82117EC36600161EBF /* sets */,
 				3C404383117EC1D1002C5A3F /* dfa */,
 				3C404384117EC1D1002C5A3F /* recognizer */,
@@ -218,8 +245,10 @@
 				3C440A79117EC2EE00161EBF /* ANTLRTree.m */,
 				3C440AAB117EC70B00161EBF /* ANTLRCommonTree.h */,
 				3C440AAC117EC70B00161EBF /* ANTLRCommonTree.m */,
-				3C8549A8118162F600618CAD /* ANTLRTreeAdapter.h */,
-				3C8549A9118162F600618CAD /* ANTLRTreeAdapter.m */,
+				3C8549A8118162F600618CAD /* ANTLRTreeAdaptor.h */,
+				3C8549A9118162F600618CAD /* ANTLRTreeAdaptor.m */,
+				3C8549EA118190D200618CAD /* ANTLRCommonErrorNode.h */,
+				3C8549EB118190D200618CAD /* ANTLRCommonErrorNode.m */,
 			);
 			path = tree;
 			sourceTree = "<group>";
@@ -233,6 +262,37 @@
 			path = sets;
 			sourceTree = "<group>";
 		};
+		3C854A441182B3BB00618CAD /* exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				3C854A471182B3E000618CAD /* ANTLRRecognitionException.h */,
+				3C854A481182B3E000618CAD /* ANTLRRecognitionException.m */,
+				3C854A691182B70000618CAD /* ANTLRMismatchedTokenException.h */,
+				3C854A6A1182B70000618CAD /* ANTLRMismatchedTokenException.m */,
+				3C854A851182BFAD00618CAD /* ANTLRMissingTokenException.h */,
+				3C854A861182BFAD00618CAD /* ANTLRMissingTokenException.m */,
+				3C854B0E1183F85600618CAD /* ANTLRUnwantedTokenException.h */,
+				3C854B0F1183F85600618CAD /* ANTLRUnwantedTokenException.m */,
+				3C854B2E1184015C00618CAD /* ANTLRNoViableAltException.h */,
+				3C854B2F1184015C00618CAD /* ANTLRNoViableAltException.m */,
+			);
+			path = exceptions;
+			sourceTree = "<group>";
+		};
+		3C854A451182B3D200618CAD /* debugging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debugging;
+			sourceTree = "<group>";
+		};
+		3C854A461182B3D200618CAD /* misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -240,6 +300,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C854AFA1183F80200618CAD /* ANTLRTreeAdaptor.h in Headers */,
 				3C440A7A117EC2EE00161EBF /* ANTLRTree.h in Headers */,
 				3C440A7D117EC31A00161EBF /* ANTLRIntStream.h in Headers */,
 				3C440A7F117EC32700161EBF /* ANTLRCharStream.h in Headers */,
@@ -254,7 +315,12 @@
 				3C440AAA117EC69900161EBF /* ANTLRTreeNodeStream.h in Headers */,
 				3C440AAD117EC70B00161EBF /* ANTLRCommonTree.h in Headers */,
 				3C440ADF117ECB1D00161EBF /* ANTLRToken.h in Headers */,
-				3C8549AA118162F600618CAD /* ANTLRTreeAdapter.h in Headers */,
+				3C8549EC118190D200618CAD /* ANTLRCommonErrorNode.h in Headers */,
+				3C854A491182B3E000618CAD /* ANTLRRecognitionException.h in Headers */,
+				3C854A6B1182B70000618CAD /* ANTLRMismatchedTokenException.h in Headers */,
+				3C854A871182BFAD00618CAD /* ANTLRMissingTokenException.h in Headers */,
+				3C854B101183F85600618CAD /* ANTLRUnwantedTokenException.h in Headers */,
+				3C854B301184015C00618CAD /* ANTLRNoViableAltException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +387,13 @@
 				3C440AA2117EC5CE00161EBF /* ANTLRRecognizerSharedState.m in Sources */,
 				3C440AA8117EC64E00161EBF /* ANTLRCommonToken.m in Sources */,
 				3C440AAE117EC70B00161EBF /* ANTLRCommonTree.m in Sources */,
-				3C8549AB118162F600618CAD /* ANTLRTreeAdapter.m in Sources */,
+				3C8549AB118162F600618CAD /* ANTLRTreeAdaptor.m in Sources */,
+				3C8549ED118190D200618CAD /* ANTLRCommonErrorNode.m in Sources */,
+				3C854A4A1182B3E000618CAD /* ANTLRRecognitionException.m in Sources */,
+				3C854A6C1182B70000618CAD /* ANTLRMismatchedTokenException.m in Sources */,
+				3C854A881182BFAD00618CAD /* ANTLRMissingTokenException.m in Sources */,
+				3C854B111183F85600618CAD /* ANTLRUnwantedTokenException.m in Sources */,
+				3C854B311184015C00618CAD /* ANTLRNoViableAltException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

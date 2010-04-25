@@ -32,7 +32,7 @@
 #import <Cocoa/Cocoa.h>
 #import <ANTLR/ANTLRIntStream.h>
 #import <ANTLR/ANTLRTokenStream.h>
-#import <ANTLR/ANTLRTreeAdapter.h>
+#import <ANTLR/ANTLRTreeAdaptor.h>
 
 @protocol ANTLRTreeNodeStream <NSObject, ANTLRIntStream>
 
@@ -44,7 +44,7 @@
 
 @property(readwrite, retain) id treeSource;
 @property(readwrite, retain) id<ANTLRTokenStream> tokenStream;
-@property(readwrite, retain) id<ANTLRTreeAdapter> treeAdapter;
-@property(readwrite, retain) BOOL uniqueNavigationNodes;
+@property(readwrite, retain) id<ANTLRTreeAdaptor> treeAdaptor;
+@property(readwrite) BOOL uniqueNavigationNodes;
 
 @end

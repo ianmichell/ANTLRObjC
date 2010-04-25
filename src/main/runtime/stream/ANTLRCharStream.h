@@ -35,7 +35,7 @@
 
 #define ANTLRCharStreamEOF -1;
 
-@protocol ANTLRCharStream <NSObject, ANTLRIntStream>
+@protocol ANTLRCharStream <ANTLRIntStream>
 
 @property(readwrite) NSInteger line;
 @property(readwrite) NSInteger charPositionInLine;

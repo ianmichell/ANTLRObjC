@@ -49,11 +49,11 @@
 // Children
 #pragma mark Children
 -(id<ANTLRTree>) childAtIndex:(NSInteger) idx;
--(void) setChildAtIndex:(NSInteger) idx child:(id<ANTLRTree>)child error:(NSError **) err;
+-(void) setChildAtIndex:(NSInteger) idx child:(id<ANTLRTree>)child;
 -(void) freshenParentAndChildIndexes;
 -(void) addChild:(id<ANTLRTree>) child;
 -(id<ANTLRTree>) deleteChild:(NSInteger) index;
--(void) replaceChildrenFromIndex:(NSInteger) start toIndex:(NSInteger) stop tree:(id<ANTLRTree>) tree error:(NSError**) error;
+-(void) replaceChildrenFromIndex:(NSInteger) start toIndex:(NSInteger) stop tree:(id<ANTLRTree>) tree;
 -(void) addChildren:(NSArray *) c;
 
 @property(readonly) NSMutableArray *children;
@@ -90,7 +90,7 @@
 
 -(id<ANTLRTree>) firstChildWithType:(NSInteger) t;
 -(void) freshenParentAndChildIndexesAtOffset:(NSInteger) offset;
--(void) sanityCheckParentAndChildIndexes:(NSError **) error;
--(void) sanityCheckParentAndChildIndexesForParentTree:(id<ANTLRTree>) parentTree forIndex:(NSInteger) idx error:(NSError **)error;
+-(void) sanityCheckParentAndChildIndexes;
+-(void) sanityCheckParentAndChildIndexesForParentTree:(id<ANTLRTree>) parentTree forIndex:(NSInteger) idx;
 
 @end

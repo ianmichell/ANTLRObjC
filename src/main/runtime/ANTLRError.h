@@ -34,9 +34,20 @@
 
 #define ANTLRErrorDomain @"ANTLRError"
 
-typedef enum
+#define ANTLRIllegalArgumentException @"IllegalArgumentException"
+#define ANTLRIllegalStateException @"IllegalStateException"
+#define ANTLRRuntimeException @"RuntimeException"
+#define ANTLRNoSuchMethodException @"NoSuchMethodException"
+
+
+/*typedef enum
 {
-	ANTLRIllegalState,
-	ANTLRIllegalArgument
+	ANTLRIllegalState = 1,
+	ANTLRIllegalArgument = 2,
+	ANTLRRecognitionError = 3,
+	ANTLRMissingTokenError = 4,
+	ANTLRUnwantedTokenError = 5,
+	ANTLRMismatechedTokenError = 6,
+	ANTLRNoViableAltError = 7
 	
-} ANTLRErrorCode;
+} ANTLRErrorCode;*/
