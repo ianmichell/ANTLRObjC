@@ -42,8 +42,11 @@
 
 -(id<ANTLRTree>) copyNode:(id<ANTLRTree>) t;
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return nil;
+	if (t == nil)
+	{
+		return nil;
+	}
+	return [t copyWithZone:nil];
 }
 
 -(id<ANTLRTree>) copyTree:(id<ANTLRTree>) t
@@ -169,6 +172,10 @@
 
 -(NSInteger) tokenTypeForNode:(id<ANTLRTree>) t
 {
+	if (t == nil)
+	{
+		return ANTLRTokenTypeInvalid;
+	}
 	return t.type;
 }
 
@@ -179,6 +186,10 @@
 
 -(NSString *) textForNode:(id<ANTLRTree>) t
 {
+	if (t == nil)
+	{
+		return nil;
+	}
 	return t.text;
 }
 
@@ -195,23 +206,38 @@
 
 -(void) setTokenBoundriesForTree:(id<ANTLRTree>) t fromToken:(id<ANTLRToken>) start toToken:(id<ANTLRToken>) stop
 {
-	[self doesNotRecognizeSelector:_cmd];
+	if (t == nil)
+	{
+		return;
+	}
+	t.tokenStartIndex = start != nil ? start.tokenIndex : 0;
+	t.tokenStopIndex = stop != nil ? stop.tokenIndex : 0;
 }
 
 -(NSInteger) tokenStartIndexForTree:(id<ANTLRTree>) t
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return -1;
+	if (t == nil)
+	{
+		return -1;
+	}
+	return t.tokenStartIndex;
 }
 
 -(NSInteger) tokenStopIndexForTree:(id<ANTLRTree>) t
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return -1;
+	if (t == nil)
+	{
+		return -1;
+	}
+	return t.tokenStopIndex;
 }
 
 -(id<ANTLRTree>) childForNode:(id<ANTLRTree>) parent atIndex:(NSInteger) idx
 {
+	if (parent == nil)
+	{
+		return nil;
+	}
 	return [parent.children objectAtIndex:idx];
 }
 
@@ -232,29 +258,44 @@
 
 -(id<ANTLRTree>) parentForNode:(id<ANTLRTree>) child
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return nil;
+	if (child == nil)
+	{
+		return nil;
+	}
+	return child.parent;
 }
 
 -(void) setParentForNode:(id<ANTLRTree>) child toParent:(id<ANTLRTree>) parent
 {
-	[self doesNotRecognizeSelector:_cmd];
+	if (child != nil)
+	{
+		child.parent = parent;
+	}
 }
 
 -(NSInteger) indexForNode:(id<ANTLRTree>) t
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return -1;
+	if (t == nil)
+	{
+		return 0;
+	}
+	return t.childIndex;
 }
 
 -(void) setIndexForNode:(id<ANTLRTree>) t toIndex:(NSInteger) idx
 {
-	[self doesNotRecognizeSelector:_cmd];
+	if (t != nil)
+	{
+		t.childIndex = idx;
+	}
 }
 
 -(void) replaceChildrenForTree:(id<ANTLRTree>) parent from:(NSInteger) start to:(NSInteger) stop with:(id<ANTLRTree>) t
 {
-	[self doesNotRecognizeSelector:_cmd];
+	if (parent != nil)
+	{
+		[parent replaceChildrenFromIndex:start toIndex:stop tree:t];
+	}
 }
 
 -(id<ANTLRToken>) createTokenFromType:(NSInteger) tokenType withText:(NSString *) txt

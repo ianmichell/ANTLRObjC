@@ -270,6 +270,7 @@
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>3C404382117EC1D1002C5A3F</string>
+								<string>3C854A461182B3D200618CAD</string>
 								<string>3C854A441182B3BB00618CAD</string>
 								<string>3C440A82117EC36600161EBF</string>
 								<string>3C404383117EC1D1002C5A3F</string>
@@ -280,22 +281,20 @@
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>8DC2EF5B0486A6940098B216</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>3C854B011183F81400618CAD</string>
-								<string>3C854B021183F81400618CAD</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>43</integer>
-									<integer>37</integer>
+									<integer>38</integer>
+									<integer>25</integer>
 									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 29}, {297, 1192}}</string>
+							<string>{{0, 0}, {297, 1192}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,7 +313,7 @@
 							<real>297</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>631 146 1914 1251 0 0 2560 1418 </string>
+						<string>623 146 1914 1251 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +331,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTreeAdaptor.m</string>
+								<string>ANTLRLookaheadStream.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,15 +339,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ANTLRTreeAdaptor.m</string>
+										<string>ANTLRLookaheadStream.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3C854BB31184145300618CAD</string>
+										<string>3C4E35D611858B3A000D0139</string>
 										<key>history</key>
 										<array>
 											<string>3C440AED117ECD6F00161EBF</string>
-											<string>3C8549D411816B2F00618CAD</string>
 											<string>3C8549D511816B2F00618CAD</string>
 											<string>3C8549D611816B2F00618CAD</string>
 											<string>3C8549D711816B2F00618CAD</string>
@@ -361,10 +359,8 @@
 											<string>3C854A581182B4D000618CAD</string>
 											<string>3C854A5A1182B4D000618CAD</string>
 											<string>3C854A5B1182B4D000618CAD</string>
-											<string>3C854A5C1182B4D000618CAD</string>
 											<string>3C854A781182BA2400618CAD</string>
 											<string>3C854AC91182F79900618CAD</string>
-											<string>3C854ACF1182F79900618CAD</string>
 											<string>3C854B031183F81400618CAD</string>
 											<string>3C854B041183F81400618CAD</string>
 											<string>3C854B091183F81400618CAD</string>
@@ -378,11 +374,21 @@
 											<string>3C854B4D118405EF00618CAD</string>
 											<string>3C854B4E118405EF00618CAD</string>
 											<string>3C854B4F118405EF00618CAD</string>
-											<string>3C854B841184102200618CAD</string>
 											<string>3C854BAF1184145300618CAD</string>
-											<string>3C854BB01184145300618CAD</string>
-											<string>3C854BB11184145300618CAD</string>
-											<string>3C854BB21184145300618CAD</string>
+											<string>3C4E357511855947000D0139</string>
+											<string>3C4E357611855947000D0139</string>
+											<string>3C4E357811855947000D0139</string>
+											<string>3C4E3586118559DA000D0139</string>
+											<string>3C4E359211855C37000D0139</string>
+											<string>3C4E35CD11858B3A000D0139</string>
+											<string>3C4E35CE11858B3A000D0139</string>
+											<string>3C4E35CF11858B3A000D0139</string>
+											<string>3C4E35D011858B3A000D0139</string>
+											<string>3C4E35D111858B3A000D0139</string>
+											<string>3C4E35D211858B3A000D0139</string>
+											<string>3C4E35D311858B3A000D0139</string>
+											<string>3C4E35D411858B3A000D0139</string>
+											<string>3C4E35D511858B3A000D0139</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -394,14 +400,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1595, 1203}}</string>
+								<string>{{0, 0}, {1595, 1202}}</string>
 								<key>RubberWindowFrame</key>
-								<string>631 146 1914 1251 0 0 2560 1418 </string>
+								<string>623 146 1914 1251 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>1203pt</string>
+							<string>1202pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -414,9 +420,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 1208}, {1595, 3}}</string>
+								<string>{{0, 1207}, {1595, 3}}</string>
 								<key>RubberWindowFrame</key>
-								<string>631 146 1914 1251 0 0 2560 1418 </string>
+								<string>623 146 1914 1251 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -440,9 +446,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3C8549A211815FDF00618CAD</string>
+				<string>3C4E354D118552E7000D0139</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>3C8549A311815FDF00618CAD</string>
+				<string>3C4E354E118552E7000D0139</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -584,7 +590,7 @@
 		<string>/Users/ian/projects/XCode Projects/ANTLR/ANTLR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>631 146 1914 1251 0 0 2560 1418 </string>
+	<string>623 146 1914 1251 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -600,12 +606,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRUnwantedTokenException.h</string>
+								<string>ANTLRLookaheadStream.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -622,8 +630,6 @@
 							<string>396pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -663,7 +669,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>3C40437D117EC130002C5A3F</string>
-				<string>3C8549A411815FDF00618CAD</string>
+				<string>3C4E354F118552E7000D0139</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -676,7 +682,7 @@
 			<key>WindowToolGUID</key>
 			<string>3C40437D117EC130002C5A3F</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

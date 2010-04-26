@@ -38,6 +38,8 @@
 #define ANTLRIllegalStateException @"IllegalStateException"
 #define ANTLRRuntimeException @"RuntimeException"
 #define ANTLRNoSuchMethodException @"NoSuchMethodException"
+#define ANTLRNoSuchElementException @"NoSuchElementException"
+#define ANTLRUnsupportedOperationException @"UnsupportedOperationException"
 
 
 /*typedef enum
