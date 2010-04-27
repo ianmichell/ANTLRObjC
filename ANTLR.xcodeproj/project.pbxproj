@@ -36,6 +36,10 @@
 		3C4E35A411855D49000D0139 /* ANTLRFastQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E35A211855D49000D0139 /* ANTLRFastQueue.m */; };
 		3C4E35A711855D82000D0139 /* ANTLRLookaheadStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4E35A511855D82000D0139 /* ANTLRLookaheadStream.h */; };
 		3C4E35A811855D82000D0139 /* ANTLRLookaheadStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E35A611855D82000D0139 /* ANTLRLookaheadStream.m */; };
+		3C4E35E211858CB5000D0139 /* ANTLRTreeIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4E35E011858CB5000D0139 /* ANTLRTreeIterator.h */; };
+		3C4E35E311858CB5000D0139 /* ANTLRTreeIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E35E111858CB5000D0139 /* ANTLRTreeIterator.m */; };
+		3C5A539D1186A5E400E9E525 /* ANTLRIntArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C5A539B1186A5E400E9E525 /* ANTLRIntArray.h */; };
+		3C5A539E1186A5E400E9E525 /* ANTLRIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A539C1186A5E400E9E525 /* ANTLRIntArray.m */; };
 		3C8549AB118162F600618CAD /* ANTLRTreeAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549A9118162F600618CAD /* ANTLRTreeAdaptor.m */; };
 		3C8549EC118190D200618CAD /* ANTLRCommonErrorNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8549EA118190D200618CAD /* ANTLRCommonErrorNode.h */; };
 		3C8549ED118190D200618CAD /* ANTLRCommonErrorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8549EB118190D200618CAD /* ANTLRCommonErrorNode.m */; };
@@ -90,6 +94,10 @@
 		3C4E35A211855D49000D0139 /* ANTLRFastQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRFastQueue.m; sourceTree = "<group>"; };
 		3C4E35A511855D82000D0139 /* ANTLRLookaheadStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRLookaheadStream.h; sourceTree = "<group>"; };
 		3C4E35A611855D82000D0139 /* ANTLRLookaheadStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRLookaheadStream.m; sourceTree = "<group>"; };
+		3C4E35E011858CB5000D0139 /* ANTLRTreeIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRTreeIterator.h; sourceTree = "<group>"; };
+		3C4E35E111858CB5000D0139 /* ANTLRTreeIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRTreeIterator.m; sourceTree = "<group>"; };
+		3C5A539B1186A5E400E9E525 /* ANTLRIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRIntArray.h; sourceTree = "<group>"; };
+		3C5A539C1186A5E400E9E525 /* ANTLRIntArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRIntArray.m; sourceTree = "<group>"; };
 		3C8549A8118162F600618CAD /* ANTLRTreeAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRTreeAdaptor.h; sourceTree = "<group>"; };
 		3C8549A9118162F600618CAD /* ANTLRTreeAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLRTreeAdaptor.m; sourceTree = "<group>"; };
 		3C8549EA118190D200618CAD /* ANTLRCommonErrorNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLRCommonErrorNode.h; sourceTree = "<group>"; };
@@ -271,6 +279,8 @@
 				3C8549EB118190D200618CAD /* ANTLRCommonErrorNode.m */,
 				3C4E35511185530B000D0139 /* ANTLRCommonTreeAdaptor.h */,
 				3C4E35521185530B000D0139 /* ANTLRCommonTreeAdaptor.m */,
+				3C4E35E011858CB5000D0139 /* ANTLRTreeIterator.h */,
+				3C4E35E111858CB5000D0139 /* ANTLRTreeIterator.m */,
 			);
 			path = tree;
 			sourceTree = "<group>";
@@ -313,6 +323,8 @@
 			children = (
 				3C4E35A111855D49000D0139 /* ANTLRFastQueue.h */,
 				3C4E35A211855D49000D0139 /* ANTLRFastQueue.m */,
+				3C5A539B1186A5E400E9E525 /* ANTLRIntArray.h */,
+				3C5A539C1186A5E400E9E525 /* ANTLRIntArray.m */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -349,6 +361,8 @@
 				3C4E359F11855D1D000D0139 /* ANTLRCommonTreeNodeStream.h in Headers */,
 				3C4E35A311855D49000D0139 /* ANTLRFastQueue.h in Headers */,
 				3C4E35A711855D82000D0139 /* ANTLRLookaheadStream.h in Headers */,
+				3C4E35E211858CB5000D0139 /* ANTLRTreeIterator.h in Headers */,
+				3C5A539D1186A5E400E9E525 /* ANTLRIntArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +440,8 @@
 				3C4E35A011855D1D000D0139 /* ANTLRCommonTreeNodeStream.m in Sources */,
 				3C4E35A411855D49000D0139 /* ANTLRFastQueue.m in Sources */,
 				3C4E35A811855D82000D0139 /* ANTLRLookaheadStream.m in Sources */,
+				3C4E35E311858CB5000D0139 /* ANTLRTreeIterator.m in Sources */,
+				3C5A539E1186A5E400E9E525 /* ANTLRIntArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

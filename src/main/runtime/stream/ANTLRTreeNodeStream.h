@@ -40,9 +40,9 @@
 -(id) LT:(NSInteger) i;
 -(void) reset;
 -(NSString *) stringValueFromObjects:(id) start end:(id) stop;
--(void) replaceChildren:(id) parent start:(NSInteger) startIdx end:(NSInteger) stopIdx object:(id) t;
+-(void) replaceChildren:(id<ANTLRTree>) parent start:(NSInteger) startIdx end:(NSInteger) stopIdx object:(id<ANTLRTree>) t;
 
-@property(readwrite, retain) id treeSource;
+@property(readwrite, retain) id<ANTLRTree> treeSource;
 @property(readwrite, retain) id<ANTLRTokenStream> tokenStream;
 @property(readwrite, retain) id<ANTLRTreeAdaptor> treeAdaptor;
 @property(readwrite) BOOL uniqueNavigationNodes;
