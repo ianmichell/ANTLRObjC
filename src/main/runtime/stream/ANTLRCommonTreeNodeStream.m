@@ -98,11 +98,6 @@
 	}
 }
 
--(NSString *) description
-{
-	return @"n/a";
-}
-
 -(NSString *) toTokenTypeString
 {
 	[self reset];
@@ -118,6 +113,11 @@
 		type = [self.treeAdaptor tokenTypeForNode:o];
 	}
 	return buf;
+}
+
+-(NSString *) stringValueFromObjects:(id) start end:(id) stop
+{
+	return @"n/a";
 }
 
 @synthesize uniqueNavigationNodes; // may be dynamic

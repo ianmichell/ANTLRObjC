@@ -54,6 +54,6 @@
 
 -(NSInteger) size;
 
-@property(readwrite, retain) NSString *sourceName;
+@property(readonly, retain) NSString *sourceName;
 
 @end
