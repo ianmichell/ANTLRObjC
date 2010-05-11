@@ -35,6 +35,7 @@
 
 @implementation ANTLRRecognizerSharedState
 
+@synthesize _fsp;
 @synthesize following;
 @synthesize ruleMemo;
 @synthesize errorRecovery;
@@ -56,6 +57,7 @@
 	if (self)
 	{
 		self.following = [NSMutableArray new];
+		self._fsp = -1;
 		self.ruleMemo = [NSMutableArray new];
 		self.errorRecovery = NO;
 		self.lastErrorIndex = -1;
@@ -72,6 +74,7 @@
 	if (self)
 	{
 		self.following = state.following;
+		self._fsp = state._fsp;
 		self.errorRecovery = state.errorRecovery;
 		self.lastErrorIndex = state.lastErrorIndex;
 		self.failed = state.failed;

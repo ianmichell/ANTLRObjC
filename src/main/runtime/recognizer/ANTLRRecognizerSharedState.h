@@ -37,6 +37,7 @@
 {
 	NSMutableArray *following;
 	NSMutableArray *ruleMemo;
+	NSInteger _fsp;
 	
 	BOOL errorRecovery;
 	BOOL failed;
@@ -55,6 +56,7 @@
 -(id) initWithState:(ANTLRRecognizerSharedState *) state;
 
 @property(readwrite, retain) NSMutableArray *following;
+@property(readwrite) NSInteger _fsp; // what is this?
 @property(readwrite, retain) NSMutableArray *ruleMemo;
 @property(readwrite) BOOL errorRecovery;
 @property(readwrite) BOOL failed;
