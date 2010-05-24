@@ -12,6 +12,7 @@
 
 @interface ANTLRIntArray : NSObject 
 {
+	NSAutoreleasePool *pool;
 	NSMutableData *buffer;
 	NSInteger *data;
 	NSInteger p;

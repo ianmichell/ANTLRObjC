@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - ANTLR.info - main/runtime/recognizer/ANTLRRecognizerSharedState.m</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">main/runtime/recognizer</a> - ANTLRRecognizerSharedState.m<span style="font-size: 80%;"> (source / <a href="ANTLRRecognizerSharedState.m.func.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">ANTLR.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2010-05-24</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>                :            : //</a>
+<span class="lineNum">       2 </span>                :            : //  ANTLRRecognizerSharedState.m
+<span class="lineNum">       3 </span>                :            : //  ANTLR
+<span class="lineNum">       4 </span>                :            : //
+<span class="lineNum">       5 </span>                :            : //  Created by Ian Michell on 21/03/2010.
+<span class="lineNum">       6 </span>                :            : //  Copyright 2010 Ian Michell. All rights reserved.
+<span class="lineNum">       7 </span>                :            : //
+<span class="lineNum">       8 </span>                :            : 
+<span class="lineNum">       9 </span>                :            : // [The &quot;BSD licence&quot;]
+<span class="lineNum">      10 </span>                :            : //
+<span class="lineNum">      11 </span>                :            : // Redistribution and use in source and binary forms, with or without
+<span class="lineNum">      12 </span>                :            : // modification, are permitted provided that the following conditions
+<span class="lineNum">      13 </span>                :            : // are met:
+<span class="lineNum">      14 </span>                :            : // 1. Redistributions of source code must retain the above copyright
+<span class="lineNum">      15 </span>                :            : //    notice, this list of conditions and the following disclaimer.
+<span class="lineNum">      16 </span>                :            : // 2. Redistributions in binary form must reproduce the above copyright
+<span class="lineNum">      17 </span>                :            : //    notice, this list of conditions and the following disclaimer in the
+<span class="lineNum">      18 </span>                :            : //    documentation and/or other materials provided with the distribution.
+<span class="lineNum">      19 </span>                :            : // 3. The name of the author may not be used to endorse or promote products
+<span class="lineNum">      20 </span>                :            : //    derived from this software without specific prior written permission.
+<span class="lineNum">      21 </span>                :            : //
+<span class="lineNum">      22 </span>                :            : // THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+<span class="lineNum">      23 </span>                :            : // IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+<span class="lineNum">      24 </span>                :            : // OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+<span class="lineNum">      25 </span>                :            : // IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+<span class="lineNum">      26 </span>                :            : // INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+<span class="lineNum">      27 </span>                :            : // NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+<span class="lineNum">      28 </span>                :            : // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+<span class="lineNum">      29 </span>                :            : // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+<span class="lineNum">      30 </span>                :            : // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+<span class="lineNum">      31 </span>                :            : // THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+<span class="lineNum">      32 </span>                :            : 
+<span class="lineNum">      33 </span>                :            : #import &quot;ANTLRRecognizerSharedState.h&quot;
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            : 
+<span class="lineNum">      36 </span>                :            : @implementation ANTLRRecognizerSharedState
+<span class="lineNum">      37 </span>                :            : 
+<span class="lineNum">      38 </span>                :            : @synthesize _fsp;
+<span class="lineNum">      39 </span>                :            : @synthesize following;
+<span class="lineNum">      40 </span>                :            : @synthesize ruleMemo;
+<span class="lineNum">      41 </span>                :            : @synthesize errorRecovery;
+<span class="lineNum">      42 </span>                :            : @synthesize failed;
+<span class="lineNum">      43 </span>                :            : @synthesize lastErrorIndex;
+<span class="lineNum">      44 </span>                :            : @synthesize syntaxErrors;
+<span class="lineNum">      45 </span>                :            : @synthesize backtracking;
+<span class="lineNum">      46 </span>                :            : @synthesize token;
+<span class="lineNum">      47 </span>                :            : @synthesize tokenStartCharIndex;
+<span class="lineNum">      48 </span>                :            : @synthesize tokenStartLine;
+<span class="lineNum">      49 </span>                :            : @synthesize tokenStartCharPositionInLine;
+<span class="lineNum">      50 </span>                :            : @synthesize channel;
+<span class="lineNum">      51 </span>                :            : @synthesize type;
+<span class="lineNum">      52 </span>                :            : @synthesize text;
+<span class="lineNum">      53 </span>                :            : 
+<span class="lineNum">      54 </span>                :            : -(id) init
+<span class="lineNum">      55 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      56 </span>                :<span class="lineNoCov">          0 :         self = [super init];</span>
+<span class="lineNum">      57 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (self)</span>
+<span class="lineNum">      58 </span>                :            :         {
+<span class="lineNum">      59 </span>                :<span class="lineNoCov">          0 :                 self.following = [NSMutableArray new];</span>
+<span class="lineNum">      60 </span>                :<span class="lineNoCov">          0 :                 self._fsp = -1;</span>
+<span class="lineNum">      61 </span>                :<span class="lineNoCov">          0 :                 self.ruleMemo = [NSMutableArray new];</span>
+<span class="lineNum">      62 </span>                :<span class="lineNoCov">          0 :                 self.errorRecovery = NO;</span>
+<span class="lineNum">      63 </span>                :<span class="lineNoCov">          0 :                 self.lastErrorIndex = -1;</span>
+<span class="lineNum">      64 </span>                :<span class="lineNoCov">          0 :                 self.failed = NO;</span>
+<span class="lineNum">      65 </span>                :<span class="lineNoCov">          0 :                 self.backtracking = 0;</span>
+<span class="lineNum">      66 </span>                :<span class="lineNoCov">          0 :                 self.tokenStartCharIndex = -1;</span>
+<span class="lineNum">      67 </span>                :            :         }
+<span class="lineNum">      68 </span>                :<span class="lineNoCov">          0 :         return self;</span>
+<span class="lineNum">      69 </span>                :            : }
+<span class="lineNum">      70 </span>                :            : 
+<span class="lineNum">      71 </span>                :            : -(id) initWithState:(ANTLRRecognizerSharedState *) state
+<span class="lineNum">      72 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      73 </span>                :<span class="lineNoCov">          0 :         self = [self init];</span>
+<span class="lineNum">      74 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (self)</span>
+<span class="lineNum">      75 </span>                :            :         {
+<span class="lineNum">      76 </span>                :<span class="lineNoCov">          0 :                 self.following = state.following;</span>
+<span class="lineNum">      77 </span>                :<span class="lineNoCov">          0 :                 self._fsp = state._fsp;</span>
+<span class="lineNum">      78 </span>                :<span class="lineNoCov">          0 :                 self.errorRecovery = state.errorRecovery;</span>
+<span class="lineNum">      79 </span>                :<span class="lineNoCov">          0 :                 self.lastErrorIndex = state.lastErrorIndex;</span>
+<span class="lineNum">      80 </span>                :<span class="lineNoCov">          0 :                 self.failed = state.failed;</span>
+<span class="lineNum">      81 </span>                :<span class="lineNoCov">          0 :                 self.syntaxErrors = state.syntaxErrors;</span>
+<span class="lineNum">      82 </span>                :<span class="lineNoCov">          0 :                 self.backtracking = state.backtracking;</span>
+<span class="lineNum">      83 </span>                :<span class="lineNoCov">          0 :                 self.ruleMemo = state.ruleMemo;</span>
+<span class="lineNum">      84 </span>                :<span class="lineNoCov">          0 :                 self.token = state.token;</span>
+<span class="lineNum">      85 </span>                :<span class="lineNoCov">          0 :                 self.tokenStartCharIndex = state.tokenStartCharIndex;</span>
+<span class="lineNum">      86 </span>                :<span class="lineNoCov">          0 :                 self.tokenStartCharPositionInLine = state.tokenStartCharPositionInLine;</span>
+<span class="lineNum">      87 </span>                :<span class="lineNoCov">          0 :                 self.channel = state.channel;</span>
+<span class="lineNum">      88 </span>                :<span class="lineNoCov">          0 :                 self.type = state.type;</span>
+<span class="lineNum">      89 </span>                :<span class="lineNoCov">          0 :                 self.text = state.text;</span>
+<span class="lineNum">      90 </span>                :            :         }
+<span class="lineNum">      91 </span>                :<span class="lineNoCov">          0 :         return self;</span>
+<span class="lineNum">      92 </span>                :            : }
+<span class="lineNum">      93 </span>                :            : 
+<span class="lineNum">      94 </span>                :            : -(void) dealloc
+<span class="lineNum">      95 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      96 </span>                :<span class="lineNoCov">          0 :         [following release];</span>
+<span class="lineNum">      97 </span>                :<span class="lineNoCov">          0 :         [ruleMemo release];</span>
+<span class="lineNum">      98 </span>                :<span class="lineNoCov">          0 :         [super dealloc];</span>
+<span class="lineNum">      99 </span>                :            : }
+<span class="lineNum">     100 </span>                :            : 
+<span class="lineNum">     101 </span>                :<span class="lineNoCov">          0 : @end</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.8</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -16,16 +16,17 @@
 	self = [super init];
 	if (self)
 	{
-		data = [NSMutableArray new];
+		pool = [NSAutoreleasePool new];
+		data = [[NSMutableArray new] autorelease];
 		p = 0;
 	}
 	return self;
 }
 
+// FIXME: Java code has this, it doesn't seem like it needs to be there... Then again a lot of the code in the java runtime is not great...
 -(void) reset
 {
-	p = 0;
-	[data removeAllObjects];
+	[self clear];
 }
 
 -(id) remove
@@ -65,10 +66,10 @@
 	return [data objectAtIndex:(p + i)];
 }
 
-// FIXME: Java code has this, it doesn't seem like it needs to be there... Then again a lot of the code in the java runtime is not great...
 -(void) clear
 {
-	[self reset];
+	p = 0;
+	[data removeAllObjects];
 }
 
 -(NSString *) description
@@ -84,6 +85,12 @@
 		}
 	}
 	return buf;
+}
+
+-(void) dealloc
+{
+	[pool drain];
+	[super dealloc];
 }
 
 @end

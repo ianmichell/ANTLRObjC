@@ -33,7 +33,7 @@
 #import <Cocoa/Cocoa.h>
 #import <ANTLR/ANTLRIntStream.h>
 
-#define ANTLRCharStreamEOF -1;
+#define ANTLRCharStreamEOF -1
 
 @protocol ANTLRCharStream <ANTLRIntStream>
 

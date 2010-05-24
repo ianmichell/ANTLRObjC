@@ -11,16 +11,25 @@
 
 @implementation ANTLRIntArray
 
+@synthesize data;
+
 -(id) init
 {
 	self = [super init];
 	if (self)
 	{
+		pool = [NSAutoreleasePool new];
 		p = -1;
-		buffer = [NSMutableData dataWithLength:ANTLR_INT_ARRAY_INITIAL_SIZE];
+		buffer = [[[NSMutableData alloc] initWithCapacity:ANTLR_INT_ARRAY_INITIAL_SIZE] autorelease];
 		data = [buffer mutableBytes];
 	}
 	return self;
+}
+
+-(void) dealloc
+{
+	[pool drain];
+	[super dealloc];
 }
 
 -(void) add:(NSInteger) v
@@ -46,9 +55,10 @@
 	return data[i];
 }
 
+// FIXME: Java runtime returns p, I'm not so sure it's right so have added p + 1 to show true size!
 -(NSInteger) size
 {
-	return p;
+	return p + 1;
 }
 
 -(void) clear
@@ -69,12 +79,5 @@
 	}
 }
 
--(void) dealloc
-{
-	[buffer release];
-	[super dealloc];
-}
-
-@synthesize data;
-
 @end
+

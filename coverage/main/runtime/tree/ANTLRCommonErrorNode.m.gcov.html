@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - ANTLR.info - main/runtime/tree/ANTLRCommonErrorNode.m</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">main/runtime/tree</a> - ANTLRCommonErrorNode.m<span style="font-size: 80%;"> (source / <a href="ANTLRCommonErrorNode.m.func.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">ANTLR.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2010-05-24</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>                :            : //</a>
+<span class="lineNum">       2 </span>                :            : //  ANTLRCommonErrorNode.m
+<span class="lineNum">       3 </span>                :            : //  ANTLR
+<span class="lineNum">       4 </span>                :            : //
+<span class="lineNum">       5 </span>                :            : //  Created by Ian Michell on 23/04/2010.
+<span class="lineNum">       6 </span>                :            : //  Copyright 2010 Ian Michell. All rights reserved.
+<span class="lineNum">       7 </span>                :            : //
+<span class="lineNum">       8 </span>                :            : 
+<span class="lineNum">       9 </span>                :            : #import &quot;ANTLRCommonErrorNode.h&quot;
+<span class="lineNum">      10 </span>                :            : #import &quot;ANTLRError.h&quot;
+<span class="lineNum">      11 </span>                :            : #import &quot;ANTLRMismatchedTokenException.h&quot;
+<span class="lineNum">      12 </span>                :            : #import &quot;ANTLRMissingTokenException.h&quot;
+<span class="lineNum">      13 </span>                :            : #import &quot;ANTLRUnwantedTokenException.h&quot;
+<span class="lineNum">      14 </span>                :            : #import &quot;ANTLRNoViableAltException.h&quot;
+<span class="lineNum">      15 </span>                :            : 
+<span class="lineNum">      16 </span>                :            : @implementation ANTLRCommonErrorNode
+<span class="lineNum">      17 </span>                :            : 
+<span class="lineNum">      18 </span>                :            : -(id) initWithStream:(id&lt;ANTLRTokenStream&gt;) input fromToken:(id&lt;ANTLRToken&gt;) start toToken:(id&lt;ANTLRToken&gt;) stop caughtException:(ANTLRRecognitionException *) exception
+<span class="lineNum">      19 </span>                :            : {
+<span class="lineNum">      20 </span>                :<span class="lineNoCov">          0 :         self = [super init];</span>
+<span class="lineNum">      21 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (self)</span>
+<span class="lineNum">      22 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      23 </span>[<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>][<span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 5 was never executed"> # </span>]:            :                 if (stop == nil || (stop.tokenIndex &lt; start.tokenIndex &amp;&amp; stop.type != ANTLRTokenTypeEOF))
+<span class="lineNum">         </span>        [<span class="branchNoExec" title="Block containing branch 7 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 8 was never executed"> # </span>]
+<span class="lineNum">      24 </span>                :<span class="lineNoCov">          0 :                 {</span>
+<span class="lineNum">      25 </span>                :            :                         stop = start;
+<span class="lineNum">      26 </span>                :<span class="lineNoCov">          0 :                 }</span>
+<span class="lineNum">      27 </span>                :            :                 self.inputStream = input;
+<span class="lineNum">      28 </span>                :<span class="lineNoCov">          0 :                 self.startToken = start;</span>
+<span class="lineNum">      29 </span>                :<span class="lineNoCov">          0 :                 self.stopToken = stop;</span>
+<span class="lineNum">      30 </span>                :<span class="lineNoCov">          0 :                 self.trappedException = exception;</span>
+<span class="lineNum">      31 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      32 </span>                :            :         return self;
+<span class="lineNum">      33 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            : @dynamic isEmpty;
+<span class="lineNum">      36 </span>                :            : -(BOOL) isEmpty
+<span class="lineNum">      37 </span>                :            : {
+<span class="lineNum">      38 </span>                :<span class="lineNoCov">          0 :         return NO;</span>
+<span class="lineNum">      39 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      40 </span>                :            : 
+<span class="lineNum">      41 </span>                :            : @dynamic type;
+<span class="lineNum">      42 </span>                :            : -(NSInteger) type
+<span class="lineNum">      43 </span>                :            : {
+<span class="lineNum">      44 </span>                :<span class="lineNoCov">          0 :         return ANTLRTokenTypeInvalid;</span>
+<span class="lineNum">      45 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      46 </span>                :            : 
+<span class="lineNum">      47 </span>                :            : @dynamic text;
+<span class="lineNum">      48 </span>                :            : -(NSString *) text
+<span class="lineNum">      49 </span>                :            : {
+<span class="lineNum">      50 </span>                :<span class="lineNoCov">          0 :         // The java version hasn't caught up with the generics of java 5, but in here</span>
+<span class="lineNum">      51 </span>                :            :         // we force the type to conform to ANTLRToken, so we only need to make sure
+<span class="lineNum">      52 </span>                :            :         // it's not nil. The java runtime also has an else if to see if start is an
+<span class="lineNum">      53 </span>                :            :         // instance
+<span class="lineNum">      54 </span>        [<span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span>]:            :         if (self.startToken != nil)
+<span class="lineNum">      55 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      56 </span>                :            :                 NSInteger i = self.startToken.tokenIndex;
+<span class="lineNum">      57 </span>                :<span class="lineNoCov">          0 :                 NSInteger j = self.stopToken.tokenIndex;</span>
+<span class="lineNum">      58 </span>        [<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:<span class="lineNoCov">          0 :                 if (self.stopToken.type == ANTLRTokenTypeEOF)</span>
+<span class="lineNum">      59 </span>                :<span class="lineNoCov">          0 :                 {</span>
+<span class="lineNum">      60 </span>                :            :                         j = [self.inputStream size];
+<span class="lineNum">      61 </span>                :<span class="lineNoCov">          0 :                 }</span>
+<span class="lineNum">      62 </span>                :            :                 return [((id&lt;ANTLRTokenStream&gt;)self.inputStream)  stringValueFromPositions:i end:j];
+<span class="lineNum">      63 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      64 </span>                :            :         else 
+<span class="lineNum">      65 </span>                :            :         {
+<span class="lineNum">      66 </span>                :            :                 return @&quot;&lt;unknown&gt;&quot;;
+<span class="lineNum">      67 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      68 </span>                :            : 
+<span class="lineNum">      69 </span>                :            : }
+<span class="lineNum">      70 </span>                :            : 
+<span class="lineNum">      71 </span>                :            : -(NSString *) description
+<span class="lineNum">      72 </span>                :            : {
+<span class="lineNum">      73 </span>        [<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if ([self.trappedException isKindOfClass:[ANTLRMissingTokenException class]])</span>
+<span class="lineNum">      74 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      75 </span>                :            :                 return [NSString stringWithFormat:@&quot;&lt;missing type: %d&gt;&quot;, ((ANTLRMissingTokenException *)self.trappedException).missingType];
+<span class="lineNum">      76 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      77 </span>        [<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:            :         else if ([self.trappedException isKindOfClass:[ANTLRUnwantedTokenException class]])
+<span class="lineNum">      78 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      79 </span>                :            :                 return [NSString stringWithFormat:@&quot;&lt;extraneous: %@, resync=%@&gt;&quot;, [self.trappedException.token description], self.text];
+<span class="lineNum">      80 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      81 </span>        [<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:            :         else if ([self.trappedException isKindOfClass:[ANTLRMismatchedTokenException class]])
+<span class="lineNum">      82 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      83 </span>                :            :                 return [NSString stringWithFormat:@&quot;&lt;mismatched token: %@, resync=%@&gt;&quot;, [self.trappedException.token description], self.text];
+<span class="lineNum">      84 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      85 </span>        [<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:            :         else if ([self.trappedException isKindOfClass:[ANTLRNoViableAltException class]])
+<span class="lineNum">      86 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      87 </span>                :            :                 return [NSString stringWithFormat:@&quot;&lt;unexpected: %@, resync=%@&gt;&quot;, [self.trappedException.token description], self.text];
+<span class="lineNum">      88 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      89 </span>                :            :         return [NSString stringWithFormat:@&quot;&lt;error %@&gt;&quot;, self.text];
+<span class="lineNum">      90 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      91 </span>                :            : 
+<span class="lineNum">      92 </span>                :            : @synthesize inputStream;
+<span class="lineNum">      93 </span>                :            : @synthesize startToken;
+<span class="lineNum">      94 </span>                :            : @synthesize stopToken;
+<span class="lineNum">      95 </span>                :            : @synthesize trappedException;
+<span class="lineNum">      96 </span>                :            : 
+<span class="lineNum">      97 </span>                :            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.8</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -31,7 +31,9 @@
 // THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import "ANTLRStringStream.h"
-#import <ANTLR/ANTLRCharStreamState.h>
+#import "ANTLRCharStreamState.h"
+#import "ANTLRError.h"
+
 
 @implementation ANTLRStringStream
 
@@ -62,7 +64,7 @@
 
 -(id) initWithInput:(NSString *) input
 {
-	[self init];
+	self = [self init];
 	if (self)
 	{
 		[input retain];
@@ -82,6 +84,7 @@
 
 -(void) consume
 {
+
 	if (p < n)
 	{
 		charPositionInLine++;
@@ -99,7 +102,7 @@
 	if ( (p+i-1) >= [data length] ) {
 		return ANTLRCharStreamEOF;
 	}
-	return (int)[data characterAtIndex:p+i-1];
+	return (NSInteger)[data characterAtIndex:p+i-1];
 }
 
 -(NSInteger) LT:(NSInteger) i
@@ -112,7 +115,9 @@
 	if (markers == nil)
 	{
 		markers = [NSMutableArray new];
-		[markers addObject:nil];
+		NSNull *none = [NSNull null];
+		[markers addObject:none];
+		[none release]; // release from here...
 	}
 	markDepth++;
 	ANTLRCharStreamState *state = nil;
@@ -120,6 +125,7 @@
 	{
 		state = [ANTLRCharStreamState new];
 		[markers addObject:state];
+		[state release];
 	}
 	else 
 	{
@@ -181,7 +187,7 @@
 
 -(NSString *) substring:(NSInteger) start stop:(NSInteger) stop
 {
-	return [data substringWithRange:NSMakeRange(start, stop - start + 1)];
+	return [data substringWithRange:NSMakeRange(start, stop)];
 }
 
 

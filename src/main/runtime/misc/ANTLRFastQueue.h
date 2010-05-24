@@ -11,6 +11,7 @@
 
 @interface ANTLRFastQueue : NSObject 
 {
+	NSAutoreleasePool *pool;
 	NSMutableArray *data;
 	NSInteger p;
 }

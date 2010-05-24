@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - ANTLR.info - /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../../../index.html">top level</a> - <a href="index.html">Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers</a> - CFBase.h<span style="font-size: 80%;"> (source / <a href="CFBase.h.func.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">ANTLR.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2010-05-24</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr><td><img src="../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>                :            : /*      CFBase.h</a>
+<span class="lineNum">       2 </span>                :            :         Copyright (c) 1998-2009, Apple Inc. All rights reserved.
+<span class="lineNum">       3 </span>                :            : */
+<span class="lineNum">       4 </span>                :            : 
+<span class="lineNum">       5 </span>                :            : #if !defined(__COREFOUNDATION_CFBASE__)
+<span class="lineNum">       6 </span>                :            : #define __COREFOUNDATION_CFBASE__ 1
+<span class="lineNum">       7 </span>                :            : 
+<span class="lineNum">       8 </span>                :            : #include &lt;TargetConditionals.h&gt;
+<span class="lineNum">       9 </span>                :            : 
+<span class="lineNum">      10 </span>                :            : #if (defined(__CYGWIN32__) || defined(_WIN32)) &amp;&amp; !defined(__WIN32__)
+<span class="lineNum">      11 </span>                :            : #define __WIN32__ 1
+<span class="lineNum">      12 </span>                :            : #endif
+<span class="lineNum">      13 </span>                :            : 
+<span class="lineNum">      14 </span>                :            : #if defined(_MSC_VER) &amp;&amp; defined(_M_IX86)
+<span class="lineNum">      15 </span>                :            : #define __i386__ 1
+<span class="lineNum">      16 </span>                :            : #endif
+<span class="lineNum">      17 </span>                :            : 
+<span class="lineNum">      18 </span>                :            : #if (defined(__i386__) || defined(__x86_64__)) &amp;&amp; !defined(__LITTLE_ENDIAN__)
+<span class="lineNum">      19 </span>                :            : #define __LITTLE_ENDIAN__ 1
+<span class="lineNum">      20 </span>                :            : #endif
+<span class="lineNum">      21 </span>                :            : 
+<span class="lineNum">      22 </span>                :            : #if !defined(__BIG_ENDIAN__) &amp;&amp; !defined(__LITTLE_ENDIAN__)
+<span class="lineNum">      23 </span>                :            : #error Do not know the endianess of this architecture
+<span class="lineNum">      24 </span>                :            : #endif
+<span class="lineNum">      25 </span>                :            : 
+<span class="lineNum">      26 </span>                :            : #if !__BIG_ENDIAN__ &amp;&amp; !__LITTLE_ENDIAN__
+<span class="lineNum">      27 </span>                :            : #error Both __BIG_ENDIAN__ and __LITTLE_ENDIAN__ cannot be false
+<span class="lineNum">      28 </span>                :            : #endif
+<span class="lineNum">      29 </span>                :            : 
+<span class="lineNum">      30 </span>                :            : #if __BIG_ENDIAN__ &amp;&amp; __LITTLE_ENDIAN__
+<span class="lineNum">      31 </span>                :            : #error Both __BIG_ENDIAN__ and __LITTLE_ENDIAN__ cannot be true
+<span class="lineNum">      32 </span>                :            : #endif
+<span class="lineNum">      33 </span>                :            : 
+<span class="lineNum">      34 </span>                :            : #if TARGET_OS_WIN32
+<span class="lineNum">      35 </span>                :            : #include &lt;stdint.h&gt;
+<span class="lineNum">      36 </span>                :            : #include &lt;stdbool.h&gt;
+<span class="lineNum">      37 </span>                :            : #elif defined(__GNUC__)
+<span class="lineNum">      38 </span>                :            : #include &lt;stdint.h&gt;
+<span class="lineNum">      39 </span>                :            : #include &lt;stdbool.h&gt;
+<span class="lineNum">      40 </span>                :            : #endif
+<span class="lineNum">      41 </span>                :            : #include &lt;AvailabilityMacros.h&gt;
+<span class="lineNum">      42 </span>                :            : 
+<span class="lineNum">      43 </span>                :            : #ifndef CF_OPEN_SOURCE
+<span class="lineNum">      44 </span>                :            : #if defined(__CF_USE_FRAMEWORK_INCLUDES__) || (((TARGET_OS_MAC &amp;&amp; !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) &amp;&amp; !defined(__MWERKS__)) 
+<span class="lineNum">      45 </span>                :            : #if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+<span class="lineNum">      46 </span>                :            : #include &lt;MacTypes.h&gt;
+<span class="lineNum">      47 </span>                :            : #else
+<span class="lineNum">      48 </span>                :            : #include &lt;CoreServices/../Frameworks/CarbonCore.framework/Headers/MacTypes.h&gt;
+<span class="lineNum">      49 </span>                :            : #endif
+<span class="lineNum">      50 </span>                :            : #elif defined(__MWERKS__)
+<span class="lineNum">      51 </span>                :            : #include &lt;MacTypes.h&gt;
+<span class="lineNum">      52 </span>                :            : #endif
+<span class="lineNum">      53 </span>                :            : #else // CF_OPEN_SOURCE
+<span class="lineNum">      54 </span>                :            : #if (TARGET_OS_MAC &amp;&amp; !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+<span class="lineNum">      55 </span>                :            : #include &lt;libkern/OSTypes.h&gt;
+<span class="lineNum">      56 </span>                :            : #endif
+<span class="lineNum">      57 </span>                :            : #endif // CF_OPEN_SOURCE
+<span class="lineNum">      58 </span>                :            : 
+<span class="lineNum">      59 </span>                :            : #if !defined(__MACTYPES__)
+<span class="lineNum">      60 </span>                :            : #if !defined(_OS_OSTYPES_H)
+<span class="lineNum">      61 </span>                :            :     typedef unsigned char           Boolean;
+<span class="lineNum">      62 </span>                :            :     typedef unsigned char           UInt8;
+<span class="lineNum">      63 </span>                :            :     typedef signed char             SInt8;
+<span class="lineNum">      64 </span>                :            :     typedef unsigned short          UInt16;
+<span class="lineNum">      65 </span>                :            :     typedef signed short            SInt16;
+<span class="lineNum">      66 </span>                :            :     typedef unsigned int            UInt32;
+<span class="lineNum">      67 </span>                :            :     typedef signed int              SInt32;
+<span class="lineNum">      68 </span>                :            :     typedef uint64_t                UInt64;
+<span class="lineNum">      69 </span>                :            :     typedef int64_t                 SInt64;
+<span class="lineNum">      70 </span>                :            :     typedef SInt32                  OSStatus;
+<span class="lineNum">      71 </span>                :            : #endif
+<span class="lineNum">      72 </span>                :            :     typedef float                   Float32;
+<span class="lineNum">      73 </span>                :            :     typedef double                  Float64;
+<span class="lineNum">      74 </span>                :            :     typedef unsigned short          UniChar;
+<span class="lineNum">      75 </span>                :            :     typedef unsigned long           UniCharCount;
+<span class="lineNum">      76 </span>                :            :     typedef unsigned char *         StringPtr;
+<span class="lineNum">      77 </span>                :            :     typedef const unsigned char *   ConstStringPtr;
+<span class="lineNum">      78 </span>                :            :     typedef unsigned char           Str255[256];
+<span class="lineNum">      79 </span>                :            :     typedef const unsigned char *   ConstStr255Param;
+<span class="lineNum">      80 </span>                :            :     typedef SInt16                  OSErr;
+<span class="lineNum">      81 </span>                :            :     typedef SInt16                  RegionCode;
+<span class="lineNum">      82 </span>                :            :     typedef SInt16                  LangCode;
+<span class="lineNum">      83 </span>                :            :     typedef SInt16                  ScriptCode;
+<span class="lineNum">      84 </span>                :            :     typedef UInt32                  FourCharCode;
+<span class="lineNum">      85 </span>                :            :     typedef FourCharCode            OSType;
+<span class="lineNum">      86 </span>                :            :     typedef UInt8                   Byte;
+<span class="lineNum">      87 </span>                :            :     typedef SInt8                   SignedByte;
+<span class="lineNum">      88 </span>                :            : #endif
+<span class="lineNum">      89 </span>                :            : #if !defined(__MACTYPES__) || (defined(UNIVERSAL_INTERFACES_VERSION) &amp;&amp; UNIVERSAL_INTERFACES_VERSION &lt; 0x0340)
+<span class="lineNum">      90 </span>                :            :     typedef UInt32                  UTF32Char;
+<span class="lineNum">      91 </span>                :            :     typedef UInt16                  UTF16Char;
+<span class="lineNum">      92 </span>                :            :     typedef UInt8                   UTF8Char;
+<span class="lineNum">      93 </span>                :            : #endif
+<span class="lineNum">      94 </span>                :            : 
+<span class="lineNum">      95 </span>                :            : #if !defined(CF_EXTERN_C_BEGIN)
+<span class="lineNum">      96 </span>                :            : #if defined(__cplusplus)
+<span class="lineNum">      97 </span>                :            : #define CF_EXTERN_C_BEGIN extern &quot;C&quot; {
+<span class="lineNum">      98 </span>                :            : #define CF_EXTERN_C_END   }
+<span class="lineNum">      99 </span>                :            : #else
+<span class="lineNum">     100 </span>                :            : #define CF_EXTERN_C_BEGIN
+<span class="lineNum">     101 </span>                :            : #define CF_EXTERN_C_END
+<span class="lineNum">     102 </span>                :            : #endif
+<span class="lineNum">     103 </span>                :            : #endif
+<span class="lineNum">     104 </span>                :            : 
+<span class="lineNum">     105 </span>                :            : #if TARGET_OS_WIN32 &amp;&amp; defined(CF_BUILDING_CF) &amp;&amp; defined(__cplusplus)
+<span class="lineNum">     106 </span>                :            : #define CF_EXPORT extern &quot;C&quot; __declspec(dllexport) 
+<span class="lineNum">     107 </span>                :            : #elif TARGET_OS_WIN32 &amp;&amp; defined(CF_BUILDING_CF) &amp;&amp; !defined(__cplusplus)
+<span class="lineNum">     108 </span>                :            : #define CF_EXPORT extern __declspec(dllexport) 
+<span class="lineNum">     109 </span>                :            : #elif TARGET_OS_WIN32 &amp;&amp; defined(__cplusplus)
+<span class="lineNum">     110 </span>                :            : #define CF_EXPORT extern &quot;C&quot; __declspec(dllimport) 
+<span class="lineNum">     111 </span>                :            : #elif TARGET_OS_WIN32
+<span class="lineNum">     112 </span>                :            : #define CF_EXPORT extern __declspec(dllimport) 
+<span class="lineNum">     113 </span>                :            : #else
+<span class="lineNum">     114 </span>                :            : #define CF_EXPORT extern
+<span class="lineNum">     115 </span>                :            : #endif
+<span class="lineNum">     116 </span>                :            : 
+<span class="lineNum">     117 </span>                :            : CF_EXTERN_C_BEGIN
+<span class="lineNum">     118 </span>                :            : 
+<span class="lineNum">     119 </span>                :            : #if !defined(NULL)
+<span class="lineNum">     120 </span>                :            : #if defined(__GNUG__)
+<span class="lineNum">     121 </span>                :            :     #define NULL __null
+<span class="lineNum">     122 </span>                :            : #elif defined(__cplusplus)
+<span class="lineNum">     123 </span>                :            :     #define NULL 0
+<span class="lineNum">     124 </span>                :            : #else
+<span class="lineNum">     125 </span>                :            :     #define NULL ((void *)0)
+<span class="lineNum">     126 </span>                :            : #endif
+<span class="lineNum">     127 </span>                :            : #endif
+<span class="lineNum">     128 </span>                :            : 
+<span class="lineNum">     129 </span>                :            : #if !defined(TRUE)
+<span class="lineNum">     130 </span>                :            :     #define TRUE        1
+<span class="lineNum">     131 </span>                :            : #endif
+<span class="lineNum">     132 </span>                :            : 
+<span class="lineNum">     133 </span>                :            : #if !defined(FALSE)
+<span class="lineNum">     134 </span>                :            :     #define FALSE       0
+<span class="lineNum">     135 </span>                :            : #endif
+<span class="lineNum">     136 </span>                :            : 
+<span class="lineNum">     137 </span>                :            : #if !defined(CF_INLINE)
+<span class="lineNum">     138 </span>                :            :     #if defined(__GNUC__) &amp;&amp; (__GNUC__ == 4) &amp;&amp; !defined(DEBUG)
+<span class="lineNum">     139 </span>                :            :         #define CF_INLINE static __inline__ __attribute__((always_inline))
+<span class="lineNum">     140 </span>                :            :     #elif defined(__GNUC__)
+<span class="lineNum">     141 </span>                :            :         #define CF_INLINE static __inline__
+<span class="lineNum">     142 </span>                :            :     #elif defined(__MWERKS__) || defined(__cplusplus)
+<span class="lineNum">     143 </span>                :            :         #define CF_INLINE static inline
+<span class="lineNum">     144 </span>                :            :     #elif defined(_MSC_VER)
+<span class="lineNum">     145 </span>                :            :         #define CF_INLINE static __inline
+<span class="lineNum">     146 </span>                :            :     #elif TARGET_OS_WIN32
+<span class="lineNum">     147 </span>                :            :         #define CF_INLINE static __inline__
+<span class="lineNum">     148 </span>                :            :     #endif
+<span class="lineNum">     149 </span>                :            : #endif
+<span class="lineNum">     150 </span>                :            : 
+<span class="lineNum">     151 </span>                :            : // Marks functions which return a CF type that needs to be released by the caller but whose names are not consistent with CoreFoundation naming rules. The recommended fix to this is the rename the functions, but this macro can be used to let the clang static analyzer know of any exceptions that cannot be fixed.
+<span class="lineNum">     152 </span>                :            : #if defined(__clang__)
+<span class="lineNum">     153 </span>                :            : #define CF_RETURNS_RETAINED __attribute__((cf_returns_retained))
+<span class="lineNum">     154 </span>                :            : #else
+<span class="lineNum">     155 </span>                :            : #define CF_RETURNS_RETAINED
+<span class="lineNum">     156 </span>                :            : #endif
+<span class="lineNum">     157 </span>                :            : 
+<span class="lineNum">     158 </span>                :            : 
+<span class="lineNum">     159 </span>                :            : CF_EXPORT double kCFCoreFoundationVersionNumber;
+<span class="lineNum">     160 </span>                :            : 
+<span class="lineNum">     161 </span>                :            : #if TARGET_OS_MAC
+<span class="lineNum">     162 </span>                :            : #define kCFCoreFoundationVersionNumber10_0      196.40
+<span class="lineNum">     163 </span>                :            : #define kCFCoreFoundationVersionNumber10_0_3    196.50
+<span class="lineNum">     164 </span>                :            : #define kCFCoreFoundationVersionNumber10_1      226.00
+<span class="lineNum">     165 </span>                :            : #define kCFCoreFoundationVersionNumber10_1_1    226.00
+<span class="lineNum">     166 </span>                :            : /* Note the next three do not follow the usual numbering policy from the base release */
+<span class="lineNum">     167 </span>                :            : #define kCFCoreFoundationVersionNumber10_1_2    227.20
+<span class="lineNum">     168 </span>                :            : #define kCFCoreFoundationVersionNumber10_1_3    227.20
+<span class="lineNum">     169 </span>                :            : #define kCFCoreFoundationVersionNumber10_1_4    227.30
+<span class="lineNum">     170 </span>                :            : #define kCFCoreFoundationVersionNumber10_2      263.00
+<span class="lineNum">     171 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_1    263.10
+<span class="lineNum">     172 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_2    263.10
+<span class="lineNum">     173 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_3    263.30
+<span class="lineNum">     174 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_4    263.30
+<span class="lineNum">     175 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_5    263.50
+<span class="lineNum">     176 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_6    263.50
+<span class="lineNum">     177 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_7    263.50
+<span class="lineNum">     178 </span>                :            : #define kCFCoreFoundationVersionNumber10_2_8    263.50
+<span class="lineNum">     179 </span>                :            : #define kCFCoreFoundationVersionNumber10_3      299.00
+<span class="lineNum">     180 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_1    299.00
+<span class="lineNum">     181 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_2    299.00
+<span class="lineNum">     182 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_3    299.30
+<span class="lineNum">     183 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_4    299.31
+<span class="lineNum">     184 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_5    299.31
+<span class="lineNum">     185 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_6    299.32
+<span class="lineNum">     186 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_7    299.33
+<span class="lineNum">     187 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_8    299.33
+<span class="lineNum">     188 </span>                :            : #define kCFCoreFoundationVersionNumber10_3_9    299.35
+<span class="lineNum">     189 </span>                :            : #define kCFCoreFoundationVersionNumber10_4      368.00
+<span class="lineNum">     190 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_1    368.10
+<span class="lineNum">     191 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_2    368.11
+<span class="lineNum">     192 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_3    368.18
+<span class="lineNum">     193 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_4_Intel      368.26
+<span class="lineNum">     194 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_4_PowerPC    368.25
+<span class="lineNum">     195 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_5_Intel      368.26
+<span class="lineNum">     196 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_5_PowerPC    368.25
+<span class="lineNum">     197 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_6_Intel      368.26
+<span class="lineNum">     198 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_6_PowerPC    368.25
+<span class="lineNum">     199 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_7    368.27
+<span class="lineNum">     200 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_8    368.27
+<span class="lineNum">     201 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_9    368.28
+<span class="lineNum">     202 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_10   368.28
+<span class="lineNum">     203 </span>                :            : #define kCFCoreFoundationVersionNumber10_4_11   368.31
+<span class="lineNum">     204 </span>                :            : #define kCFCoreFoundationVersionNumber10_5      476.00
+<span class="lineNum">     205 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_1    476.00
+<span class="lineNum">     206 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_2    476.10
+<span class="lineNum">     207 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_3    476.13
+<span class="lineNum">     208 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_4    476.14
+<span class="lineNum">     209 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_5    476.15
+<span class="lineNum">     210 </span>                :            : #define kCFCoreFoundationVersionNumber10_5_6    476.17
+<span class="lineNum">     211 </span>                :            : #endif
+<span class="lineNum">     212 </span>                :            : 
+<span class="lineNum">     213 </span>                :            : #if TARGET_OS_IPHONE
+<span class="lineNum">     214 </span>                :            : #define kCFCoreFoundationVersionNumber_iPhoneOS_2_0     478.23
+<span class="lineNum">     215 </span>                :            : #define kCFCoreFoundationVersionNumber_iPhoneOS_2_1 478.26
+<span class="lineNum">     216 </span>                :            : #define kCFCoreFoundationVersionNumber_iPhoneOS_2_2 478.29
+<span class="lineNum">     217 </span>                :            : #endif
+<span class="lineNum">     218 </span>                :            : 
+<span class="lineNum">     219 </span>                :            : typedef unsigned long CFTypeID;
+<span class="lineNum">     220 </span>                :            : typedef unsigned long CFOptionFlags;
+<span class="lineNum">     221 </span>                :            : typedef unsigned long CFHashCode;
+<span class="lineNum">     222 </span>                :            : typedef signed long CFIndex;
+<span class="lineNum">     223 </span>                :            : 
+<span class="lineNum">     224 </span>                :            : /* Base &quot;type&quot; of all &quot;CF objects&quot;, and polymorphic functions on them */
+<span class="lineNum">     225 </span>                :            : typedef const void * CFTypeRef;
+<span class="lineNum">     226 </span>                :            : 
+<span class="lineNum">     227 </span>                :            : typedef const struct __CFString * CFStringRef;
+<span class="lineNum">     228 </span>                :            : typedef struct __CFString * CFMutableStringRef;
+<span class="lineNum">     229 </span>                :            : 
+<span class="lineNum">     230 </span>                :            : /*
+<span class="lineNum">     231 </span>                :            :         Type to mean any instance of a property list type;
+<span class="lineNum">     232 </span>                :            :         currently, CFString, CFData, CFNumber, CFBoolean, CFDate,
+<span class="lineNum">     233 </span>                :            :         CFArray, and CFDictionary.
+<span class="lineNum">     234 </span>                :            : */
+<span class="lineNum">     235 </span>                :            : typedef CFTypeRef CFPropertyListRef;
+<span class="lineNum">     236 </span>                :            : 
+<span class="lineNum">     237 </span>                :            : /* Values returned from comparison functions */
+<span class="lineNum">     238 </span>                :            : enum {
+<span class="lineNum">     239 </span>                :            :     kCFCompareLessThan = -1,
+<span class="lineNum">     240 </span>                :            :     kCFCompareEqualTo = 0,
+<span class="lineNum">     241 </span>                :            :     kCFCompareGreaterThan = 1
+<span class="lineNum">     242 </span>                :            : };
+<span class="lineNum">     243 </span>                :            : typedef CFIndex CFComparisonResult;
+<span class="lineNum">     244 </span>                :            : 
+<span class="lineNum">     245 </span>                :            : /* A standard comparison function */
+<span class="lineNum">     246 </span>                :            : typedef CFComparisonResult (*CFComparatorFunction)(const void *val1, const void *val2, void *context);
+<span class="lineNum">     247 </span>                :            : 
+<span class="lineNum">     248 </span>                :            : /* Constant used by some functions to indicate failed searches. */
+<span class="lineNum">     249 </span>                :            : /* This is of type CFIndex. */
+<span class="lineNum">     250 </span>                :            : enum {
+<span class="lineNum">     251 </span>                :            :     kCFNotFound = -1
+<span class="lineNum">     252 </span>                :            : };
+<span class="lineNum">     253 </span>                :            : 
+<span class="lineNum">     254 </span>                :            : 
+<span class="lineNum">     255 </span>                :            : /* Range type */
+<span class="lineNum">     256 </span>                :            : typedef struct {
+<span class="lineNum">     257 </span>                :            :     CFIndex location;
+<span class="lineNum">     258 </span>                :            :     CFIndex length;
+<span class="lineNum">     259 </span>                :            : } CFRange;
+<span class="lineNum">     260 </span>                :            : 
+<span class="lineNum">     261 </span>                :            : #if defined(CF_INLINE)
+<span class="lineNum">     262 </span>                :            : CF_INLINE CFRange CFRangeMake(CFIndex loc, CFIndex len) {
+<span class="lineNum">     263 </span>                :            :     CFRange range;
+<span class="lineNum">     264 </span>                :<span class="lineCov">          8 :     range.location = loc;</span>
+<span class="lineNum">     265 </span>                :<span class="lineCov">          8 :     range.length = len;</span>
+<span class="lineNum">     266 </span>                :<span class="lineCov">          8 :     return range;</span>
+<span class="lineNum">     267 </span>                :            : }
+<span class="lineNum">     268 </span>                :            : #else
+<span class="lineNum">     269 </span>                :            : #define CFRangeMake(LOC, LEN) __CFRangeMake(LOC, LEN)
+<span class="lineNum">     270 </span>                :            : #endif
+<span class="lineNum">     271 </span>                :            : 
+<span class="lineNum">     272 </span>                :            : /* Private; do not use */
+<span class="lineNum">     273 </span>                :            : CF_EXPORT
+<span class="lineNum">     274 </span>                :            : CFRange __CFRangeMake(CFIndex loc, CFIndex len);
+<span class="lineNum">     275 </span>                :            : 
+<span class="lineNum">     276 </span>                :            : 
+<span class="lineNum">     277 </span>                :            : #if MAC_OS_X_VERSION_10_2 &lt;= MAC_OS_X_VERSION_MAX_ALLOWED
+<span class="lineNum">     278 </span>                :            : /* Null representant */
+<span class="lineNum">     279 </span>                :            : 
+<span class="lineNum">     280 </span>                :            : typedef const struct __CFNull * CFNullRef;
+<span class="lineNum">     281 </span>                :            : 
+<span class="lineNum">     282 </span>                :            : CF_EXPORT
+<span class="lineNum">     283 </span>                :            : CFTypeID CFNullGetTypeID(void);
+<span class="lineNum">     284 </span>                :            : 
+<span class="lineNum">     285 </span>                :            : CF_EXPORT
+<span class="lineNum">     286 </span>                :            : const CFNullRef kCFNull;        // the singleton null instance
+<span class="lineNum">     287 </span>                :            : 
+<span class="lineNum">     288 </span>                :            : #endif
+<span class="lineNum">     289 </span>                :            : 
+<span class="lineNum">     290 </span>                :            : 
+<span class="lineNum">     291 </span>                :            : /* Allocator API
+<span class="lineNum">     292 </span>                :            : 
+<span class="lineNum">     293 </span>                :            :    Most of the time when specifying an allocator to Create functions, the NULL
+<span class="lineNum">     294 </span>                :            :    argument indicates &quot;use the default&quot;; this is the same as using kCFAllocatorDefault
+<span class="lineNum">     295 </span>                :            :    or the return value from CFAllocatorGetDefault().  This assures that you will use
+<span class="lineNum">     296 </span>                :            :    the allocator in effect at that time.
+<span class="lineNum">     297 </span>                :            : 
+<span class="lineNum">     298 </span>                :            :    You should rarely use kCFAllocatorSystemDefault, the default default allocator.
+<span class="lineNum">     299 </span>                :            : */
+<span class="lineNum">     300 </span>                :            : typedef const struct __CFAllocator * CFAllocatorRef;
+<span class="lineNum">     301 </span>                :            : 
+<span class="lineNum">     302 </span>                :            : /* This is a synonym for NULL, if you'd rather use a named constant. */
+<span class="lineNum">     303 </span>                :            : CF_EXPORT
+<span class="lineNum">     304 </span>                :            : const CFAllocatorRef kCFAllocatorDefault;
+<span class="lineNum">     305 </span>                :            : 
+<span class="lineNum">     306 </span>                :            : /* Default system allocator; you rarely need to use this. */
+<span class="lineNum">     307 </span>                :            : CF_EXPORT
+<span class="lineNum">     308 </span>                :            : const CFAllocatorRef kCFAllocatorSystemDefault;
+<span class="lineNum">     309 </span>                :            : 
+<span class="lineNum">     310 </span>                :            : /* This allocator uses malloc(), realloc(), and free(). This should not be
+<span class="lineNum">     311 </span>                :            :    generally used; stick to kCFAllocatorDefault whenever possible. This
+<span class="lineNum">     312 </span>                :            :    allocator is useful as the &quot;bytesDeallocator&quot; in CFData or
+<span class="lineNum">     313 </span>                :            :    &quot;contentsDeallocator&quot; in CFString where the memory was obtained as a
+<span class="lineNum">     314 </span>                :            :    result of malloc() type functions.
+<span class="lineNum">     315 </span>                :            : */
+<span class="lineNum">     316 </span>                :            : CF_EXPORT
+<span class="lineNum">     317 </span>                :            : const CFAllocatorRef kCFAllocatorMalloc;
+<span class="lineNum">     318 </span>                :            : 
+<span class="lineNum">     319 </span>                :            : /* This allocator explicitly uses the default malloc zone, returned by
+<span class="lineNum">     320 </span>                :            :    malloc_default_zone(). It should only be used when an object is
+<span class="lineNum">     321 </span>                :            :    safe to be allocated in non-scanned memory.
+<span class="lineNum">     322 </span>                :            :  */
+<span class="lineNum">     323 </span>                :            : CF_EXPORT
+<span class="lineNum">     324 </span>                :            : const CFAllocatorRef kCFAllocatorMallocZone AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;
+<span class="lineNum">     325 </span>                :            : 
+<span class="lineNum">     326 </span>                :            : /* Null allocator which does nothing and allocates no memory. This allocator
+<span class="lineNum">     327 </span>                :            :    is useful as the &quot;bytesDeallocator&quot; in CFData or &quot;contentsDeallocator&quot;
+<span class="lineNum">     328 </span>                :            :    in CFString where the memory should not be freed. 
+<span class="lineNum">     329 </span>                :            : */
+<span class="lineNum">     330 </span>                :            : CF_EXPORT
+<span class="lineNum">     331 </span>                :            : const CFAllocatorRef kCFAllocatorNull;
+<span class="lineNum">     332 </span>                :            : 
+<span class="lineNum">     333 </span>                :            : /* Special allocator argument to CFAllocatorCreate() which means
+<span class="lineNum">     334 </span>                :            :    &quot;use the functions given in the context to allocate the allocator
+<span class="lineNum">     335 </span>                :            :    itself as well&quot;. 
+<span class="lineNum">     336 </span>                :            : */
+<span class="lineNum">     337 </span>                :            : CF_EXPORT
+<span class="lineNum">     338 </span>                :            : const CFAllocatorRef kCFAllocatorUseContext;
+<span class="lineNum">     339 </span>                :            : 
+<span class="lineNum">     340 </span>                :            : typedef const void *    (*CFAllocatorRetainCallBack)(const void *info);
+<span class="lineNum">     341 </span>                :            : typedef void            (*CFAllocatorReleaseCallBack)(const void *info);
+<span class="lineNum">     342 </span>                :            : typedef CFStringRef     (*CFAllocatorCopyDescriptionCallBack)(const void *info);
+<span class="lineNum">     343 </span>                :            : typedef void *          (*CFAllocatorAllocateCallBack)(CFIndex allocSize, CFOptionFlags hint, void *info);
+<span class="lineNum">     344 </span>                :            : typedef void *          (*CFAllocatorReallocateCallBack)(void *ptr, CFIndex newsize, CFOptionFlags hint, void *info);
+<span class="lineNum">     345 </span>                :            : typedef void            (*CFAllocatorDeallocateCallBack)(void *ptr, void *info);
+<span class="lineNum">     346 </span>                :            : typedef CFIndex         (*CFAllocatorPreferredSizeCallBack)(CFIndex size, CFOptionFlags hint, void *info);
+<span class="lineNum">     347 </span>                :            : typedef struct {
+<span class="lineNum">     348 </span>                :            :     CFIndex                             version;
+<span class="lineNum">     349 </span>                :            :     void *                              info;
+<span class="lineNum">     350 </span>                :            :     CFAllocatorRetainCallBack           retain;
+<span class="lineNum">     351 </span>                :            :     CFAllocatorReleaseCallBack          release;        
+<span class="lineNum">     352 </span>                :            :     CFAllocatorCopyDescriptionCallBack  copyDescription;
+<span class="lineNum">     353 </span>                :            :     CFAllocatorAllocateCallBack         allocate;
+<span class="lineNum">     354 </span>                :            :     CFAllocatorReallocateCallBack       reallocate;
+<span class="lineNum">     355 </span>                :            :     CFAllocatorDeallocateCallBack       deallocate;
+<span class="lineNum">     356 </span>                :            :     CFAllocatorPreferredSizeCallBack    preferredSize;
+<span class="lineNum">     357 </span>                :            : } CFAllocatorContext;
+<span class="lineNum">     358 </span>                :            : 
+<span class="lineNum">     359 </span>                :            : CF_EXPORT
+<span class="lineNum">     360 </span>                :            : CFTypeID        CFAllocatorGetTypeID(void);
+<span class="lineNum">     361 </span>                :            : 
+<span class="lineNum">     362 </span>                :            : /*
+<span class="lineNum">     363 </span>                :            :         CFAllocatorSetDefault() sets the allocator that is used in the current
+<span class="lineNum">     364 </span>                :            :         thread whenever NULL is specified as an allocator argument. This means
+<span class="lineNum">     365 </span>                :            :         that most, if not all allocations will go through this allocator. It
+<span class="lineNum">     366 </span>                :            :         also means that any allocator set as the default needs to be ready to
+<span class="lineNum">     367 </span>                :            :         deal with arbitrary memory allocation requests; in addition, the size
+<span class="lineNum">     368 </span>                :            :         and number of requests will change between releases.
+<span class="lineNum">     369 </span>                :            : 
+<span class="lineNum">     370 </span>                :            :         An allocator set as the default will never be released, even if later
+<span class="lineNum">     371 </span>                :            :         another allocator replaces it as the default. Not only is it impractical
+<span class="lineNum">     372 </span>                :            :         for it to be released (as there might be caches created under the covers
+<span class="lineNum">     373 </span>                :            :         that refer to the allocator), in general it's also safer and more
+<span class="lineNum">     374 </span>                :            :         efficient to keep it around.
+<span class="lineNum">     375 </span>                :            : 
+<span class="lineNum">     376 </span>                :            :         If you wish to use a custom allocator in a context, it's best to provide
+<span class="lineNum">     377 </span>                :            :         it as the argument to the various creation functions rather than setting
+<span class="lineNum">     378 </span>                :            :         it as the default. Setting the default allocator is not encouraged.
+<span class="lineNum">     379 </span>                :            : 
+<span class="lineNum">     380 </span>                :            :         If you do set an allocator as the default, either do it for all time in
+<span class="lineNum">     381 </span>                :            :         your app, or do it in a nested fashion (by restoring the previous allocator
+<span class="lineNum">     382 </span>                :            :         when you exit your context). The latter might be appropriate for plug-ins
+<span class="lineNum">     383 </span>                :            :         or libraries that wish to set the default allocator.
+<span class="lineNum">     384 </span>                :            : */
+<span class="lineNum">     385 </span>                :            : CF_EXPORT
+<span class="lineNum">     386 </span>                :            : void CFAllocatorSetDefault(CFAllocatorRef allocator);
+<span class="lineNum">     387 </span>                :            : 
+<span class="lineNum">     388 </span>                :            : CF_EXPORT
+<span class="lineNum">     389 </span>                :            : CFAllocatorRef CFAllocatorGetDefault(void);
+<span class="lineNum">     390 </span>                :            : 
+<span class="lineNum">     391 </span>                :            : CF_EXPORT
+<span class="lineNum">     392 </span>                :            : CFAllocatorRef CFAllocatorCreate(CFAllocatorRef allocator, CFAllocatorContext *context);
+<span class="lineNum">     393 </span>                :            : 
+<span class="lineNum">     394 </span>                :            : CF_EXPORT
+<span class="lineNum">     395 </span>                :            : void *CFAllocatorAllocate(CFAllocatorRef allocator, CFIndex size, CFOptionFlags hint);
+<span class="lineNum">     396 </span>                :            : 
+<span class="lineNum">     397 </span>                :            : CF_EXPORT
+<span class="lineNum">     398 </span>                :            : void *CFAllocatorReallocate(CFAllocatorRef allocator, void *ptr, CFIndex newsize, CFOptionFlags hint);
+<span class="lineNum">     399 </span>                :            : 
+<span class="lineNum">     400 </span>                :            : CF_EXPORT
+<span class="lineNum">     401 </span>                :            : void CFAllocatorDeallocate(CFAllocatorRef allocator, void *ptr);
+<span class="lineNum">     402 </span>                :            : 
+<span class="lineNum">     403 </span>                :            : CF_EXPORT
+<span class="lineNum">     404 </span>                :            : CFIndex CFAllocatorGetPreferredSizeForSize(CFAllocatorRef allocator, CFIndex size, CFOptionFlags hint);
+<span class="lineNum">     405 </span>                :            : 
+<span class="lineNum">     406 </span>                :            : CF_EXPORT
+<span class="lineNum">     407 </span>                :            : void CFAllocatorGetContext(CFAllocatorRef allocator, CFAllocatorContext *context);
+<span class="lineNum">     408 </span>                :            : 
+<span class="lineNum">     409 </span>                :            : 
+<span class="lineNum">     410 </span>                :            : /* Polymorphic CF functions */
+<span class="lineNum">     411 </span>                :            : 
+<span class="lineNum">     412 </span>                :            : CF_EXPORT
+<span class="lineNum">     413 </span>                :            : CFTypeID CFGetTypeID(CFTypeRef cf);
+<span class="lineNum">     414 </span>                :            : 
+<span class="lineNum">     415 </span>                :            : CF_EXPORT
+<span class="lineNum">     416 </span>                :            : CFStringRef CFCopyTypeIDDescription(CFTypeID type_id);
+<span class="lineNum">     417 </span>                :            : 
+<span class="lineNum">     418 </span>                :            : CF_EXPORT
+<span class="lineNum">     419 </span>                :            : CFTypeRef CFRetain(CFTypeRef cf);
+<span class="lineNum">     420 </span>                :            : 
+<span class="lineNum">     421 </span>                :            : CF_EXPORT
+<span class="lineNum">     422 </span>                :            : void CFRelease(CFTypeRef cf);
+<span class="lineNum">     423 </span>                :            : 
+<span class="lineNum">     424 </span>                :            : CF_EXPORT
+<span class="lineNum">     425 </span>                :            : CFIndex CFGetRetainCount(CFTypeRef cf);
+<span class="lineNum">     426 </span>                :            : 
+<span class="lineNum">     427 </span>                :            : CF_EXPORT
+<span class="lineNum">     428 </span>                :            : CFTypeRef CFMakeCollectable(CFTypeRef cf) AVAILABLE_MAC_OS_X_VERSION_10_4_AND_LATER;
+<span class="lineNum">     429 </span>                :            : 
+<span class="lineNum">     430 </span>                :            : CF_EXPORT
+<span class="lineNum">     431 </span>                :            : Boolean CFEqual(CFTypeRef cf1, CFTypeRef cf2);
+<span class="lineNum">     432 </span>                :            : 
+<span class="lineNum">     433 </span>                :            : CF_EXPORT
+<span class="lineNum">     434 </span>                :            : CFHashCode CFHash(CFTypeRef cf);
+<span class="lineNum">     435 </span>                :            : 
+<span class="lineNum">     436 </span>                :            : CF_EXPORT
+<span class="lineNum">     437 </span>                :            : CFStringRef CFCopyDescription(CFTypeRef cf);
+<span class="lineNum">     438 </span>                :            : 
+<span class="lineNum">     439 </span>                :            : CF_EXPORT
+<span class="lineNum">     440 </span>                :            : CFAllocatorRef CFGetAllocator(CFTypeRef cf);
+<span class="lineNum">     441 </span>                :            : 
+<span class="lineNum">     442 </span>                :            : CF_EXTERN_C_END
+<span class="lineNum">     443 </span>                :            : 
+<span class="lineNum">     444 </span>                :            : #endif /* ! __COREFOUNDATION_CFBASE__ */
+<span class="lineNum">     445 </span>                :            : 
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.8</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

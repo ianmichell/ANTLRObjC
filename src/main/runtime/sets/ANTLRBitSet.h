@@ -1,12 +1,6 @@
-//
-//  ANTLRBitSet.h
-//  ANTLR
-//
-//  Created by Ian Michell on 21/03/2010.
-//  Copyright 2010 Ian Michell. All rights reserved.
-//
-
 // [The "BSD licence"]
+// Copyright (c) 2006-2007 Kay Roepke
+// All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions
@@ -33,32 +27,44 @@
 #import <Cocoa/Cocoa.h>
 #import <CoreFoundation/CoreFoundation.h>
 
-@interface ANTLRBitSet : NSObject <NSCopying>
-{
+#define ANTLR_BITSET_SIZE 64
+// A simple wrapper around CoreFoundation bit vectors to shield the rest of the implementation
+// from the specifics of the BitVector initialization and query functions.
+// This is fast, so there is no need to reinvent the wheel just yet.
+
+@interface ANTLRBitSet : NSObject < NSCopying > {
 	CFMutableBitVectorRef bitVector;
 }
 
-#pragma mark Constructors
--(ANTLRBitSet *) initWithBitVector:(CFMutableBitVectorRef) theVector;
--(ANTLRBitSet *) initWithBits:(const unsigned long long const *) bits size:(NSUInteger) numberOfBits;
--(ANTLRBitSet *) initWithArrayOfBits:(NSArray *) array;
+#pragma mark Initializer
+
+- (ANTLRBitSet *) init;
+- (ANTLRBitSet *) initWithBitVector:(CFMutableBitVectorRef)theBitVector;
+- (ANTLRBitSet *) initWithBits:(const unsigned long long const*)theBits count:(NSUInteger)theCount;
+- (ANTLRBitSet *) initWithArrayOfBits:(NSArray *)theArray;
 
 #pragma mark Operations
--(ANTLRBitSet *) or:(ANTLRBitSet *) aBitSet;
--(void) orInPlace:(ANTLRBitSet *) aBitSet;
--(void) add:(NSUInteger) bit;
--(void) remove:(NSUInteger) bit;
--(NSUInteger) size;
+- (ANTLRBitSet *) or:(ANTLRBitSet *) aBitSet;
+- (void) orInPlace:(ANTLRBitSet *) aBitSet;
+- (void) add:(NSUInteger) bit;
+- (void) remove:(NSUInteger) bit;
 
-#pragma mark Information
--(unsigned long long) bitMask:(NSUInteger) bitNumber;
--(BOOL) isMember:(NSUInteger) bitNumber;
--(BOOL) isNil;
--(NSString *) toString;
--(NSString *) description;
+- (NSUInteger) size;
+- (void) setSize:(NSUInteger) noOfWords;
+
+#pragma mark Informational
+- (NSInteger) numBits;
+- (unsigned long long) bitMask:(NSUInteger) bitNumber;
+- (BOOL) isMember:(NSUInteger) bitNumber;
+- (BOOL) isNil;
+- (NSString *) toString;
+- (NSString *) description;
 
 #pragma mark NSCopying support
 
--(id) copyWithZone:(NSZone *) theZone;
+- (id) copyWithZone:(NSZone *) theZone;
 
+
+//private
+- (CFMutableBitVectorRef) _bitVector;
 @end

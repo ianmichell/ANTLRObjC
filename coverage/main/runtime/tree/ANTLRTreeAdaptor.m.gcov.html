@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>LCOV - ANTLR.info - main/runtime/tree/ANTLRTreeAdaptor.m</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">main/runtime/tree</a> - ANTLRTreeAdaptor.m<span style="font-size: 80%;"> (source / <a href="ANTLRTreeAdaptor.m.func.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">ANTLR.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2010-05-24</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">58</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>                :            : //</a>
+<span class="lineNum">       2 </span>                :            : //  ANTLRTreeAdaptor.m
+<span class="lineNum">       3 </span>                :            : //  ANTLR
+<span class="lineNum">       4 </span>                :            : //
+<span class="lineNum">       5 </span>                :            : //  Created by Ian Michell on 23/04/2010.
+<span class="lineNum">       6 </span>                :            : //  Copyright 2010 Ian Michell. All rights reserved.
+<span class="lineNum">       7 </span>                :            : //
+<span class="lineNum">       8 </span>                :            : 
+<span class="lineNum">       9 </span>                :            : #import &quot;ANTLRError.h&quot;
+<span class="lineNum">      10 </span>                :            : #import &quot;ANTLRTreeAdaptor.h&quot;
+<span class="lineNum">      11 </span>                :            : #import &quot;ANTLRCommonErrorNode.h&quot;
+<span class="lineNum">      12 </span>                :            : 
+<span class="lineNum">      13 </span>                :            : 
+<span class="lineNum">      14 </span>                :            : @implementation ANTLRTreeAdaptor
+<span class="lineNum">      15 </span>                :            : 
+<span class="lineNum">      16 </span>                :            : -(id) init
+<span class="lineNum">      17 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      18 </span>                :<span class="lineNoCov">          0 :         self = [super init];</span>
+<span class="lineNum">      19 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (self)</span>
+<span class="lineNum">      20 </span>                :            :         {
+<span class="lineNum">      21 </span>                :<span class="lineNoCov">          0 :                 uniqueNodeID = 1;</span>
+<span class="lineNum">      22 </span>                :            :         }
+<span class="lineNum">      23 </span>                :<span class="lineNoCov">          0 :         return self;</span>
+<span class="lineNum">      24 </span>                :            : }
+<span class="lineNum">      25 </span>                :            : 
+<span class="lineNum">      26 </span>                :            : -(id&lt;ANTLRTree&gt;) createTreeWithToken:(id&lt;ANTLRToken&gt;) payload
+<span class="lineNum">      27 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      28 </span>                :<span class="lineNoCov">          0 :         [self doesNotRecognizeSelector:_cmd];</span>
+<span class="lineNum">      29 </span>                :<span class="lineNoCov">          0 :         return nil;</span>
+<span class="lineNum">      30 </span>                :            : }
+<span class="lineNum">      31 </span>                :            : 
+<span class="lineNum">      32 </span>                :            : -(id&lt;ANTLRTree&gt;) createEmptyTree
+<span class="lineNum">      33 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      34 </span>                :<span class="lineNoCov">          0 :         return [self createTreeWithToken:nil];</span>
+<span class="lineNum">      35 </span>                :            : }
+<span class="lineNum">      36 </span>                :            : 
+<span class="lineNum">      37 </span>                :            : -(id&lt;ANTLRTree&gt;) createErrorNodeWithStream:(id&lt;ANTLRTokenStream&gt;) inStream fromToken:(id&lt;ANTLRToken&gt;) start toToken:(id&lt;ANTLRToken&gt;) stop caughtException:(ANTLRRecognitionException *) exception
+<span class="lineNum">      38 </span>                :            : {
+<span class="lineNum">      39 </span>                :<span class="lineNoCov">          0 :         ANTLRCommonErrorNode *errNode = [[ANTLRCommonErrorNode alloc] initWithStream:inStream fromToken:start toToken:stop caughtException:exception];</span>
+<span class="lineNum">      40 </span>                :<span class="lineNoCov">          0 :         return errNode;</span>
+<span class="lineNum">      41 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      42 </span>                :            : 
+<span class="lineNum">      43 </span>                :            : -(id&lt;ANTLRTree&gt;) copyNode:(id&lt;ANTLRTree&gt;) t;
+<span class="lineNum">      44 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">      45 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">      46 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      47 </span>                :            :                 return nil;
+<span class="lineNum">      48 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      49 </span>                :            :         return [t copyWithZone:nil];
+<span class="lineNum">      50 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      51 </span>                :            : 
+<span class="lineNum">      52 </span>                :            : -(id&lt;ANTLRTree&gt;) copyTree:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">      53 </span>                :            : {
+<span class="lineNum">      54 </span>                :<span class="lineNoCov">          0 :         return [self copyTree:t withParent:nil];</span>
+<span class="lineNum">      55 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      56 </span>                :            : 
+<span class="lineNum">      57 </span>                :            : -(id&lt;ANTLRTree&gt;) copyTree:(id&lt;ANTLRTree&gt;) t withParent:(id&lt;ANTLRTree&gt;) parent
+<span class="lineNum">      58 </span>                :            : {
+<span class="lineNum">      59 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">      60 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      61 </span>                :<span class="lineNoCov">          0 :                 return nil;</span>
+<span class="lineNum">      62 </span>                :            :         }
+<span class="lineNum">      63 </span>                :<span class="lineNoCov">          0 :         id&lt;ANTLRTree&gt; newTree = [self copyNode:t];</span>
+<span class="lineNum">      64 </span>                :            :         [self setIndexForNode:newTree toIndex:[self indexForNode:t]];
+<span class="lineNum">      65 </span>                :<span class="lineNoCov">          0 :         [self setParentForNode:newTree toParent:parent];</span>
+<span class="lineNum">      66 </span>                :<span class="lineNoCov">          0 :         NSInteger n = [self childCountForTree:t];</span>
+<span class="lineNum">      67 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         for (NSInteger i = 0; i &lt; n; i++)</span>
+<span class="lineNum">      68 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      69 </span>                :<span class="lineNoCov">          0 :                 id&lt;ANTLRTree&gt; child = [self childForNode:t atIndex:i];</span>
+<span class="lineNum">      70 </span>                :            :                 id&lt;ANTLRTree&gt; newSubTree = [self copyTree:child withParent:t];
+<span class="lineNum">      71 </span>                :<span class="lineNoCov">          0 :                 [self addChild:newSubTree toTree:newTree];</span>
+<span class="lineNum">      72 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      73 </span>                :<span class="lineNoCov">          0 :         return newTree;</span>
+<span class="lineNum">      74 </span>                :            : }
+<span class="lineNum">      75 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">      76 </span>                :            : -(void) addChild:(id&lt;ANTLRTree&gt;) child toTree:(id&lt;ANTLRTree&gt;)parent
+<span class="lineNum">      77 </span>                :            : {
+<span class="lineNum">      78 </span>[<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>][<span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span>]:            :         if (parent != nil &amp;&amp; child != nil)
+<span class="lineNum">      79 </span>                :            :         {
+<span class="lineNum">      80 </span>                :<span class="lineNoCov">          0 :                 [parent addChild:child];</span>
+<span class="lineNum">      81 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">      82 </span>                :            : }
+<span class="lineNum">      83 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">      84 </span>                :            : -(id&lt;ANTLRTree&gt;) postProcessTree:(id&lt;ANTLRTree&gt;) rootTree
+<span class="lineNum">      85 </span>                :            : {
+<span class="lineNum">      86 </span>                :            :         id&lt;ANTLRTree&gt; r = rootTree;
+<span class="lineNum">      87 </span>[<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>][<span class="branchNoExec" title="Block containing branch 3 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 4 was never executed"> # </span>]:            :         if (r != nil &amp;&amp; r.isEmpty)
+<span class="lineNum">      88 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">      89 </span>        [<span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span>]:<span class="lineNoCov">          0 :                 if (r.childCount == 0)</span>
+<span class="lineNum">      90 </span>                :<span class="lineNoCov">          0 :                 {</span>
+<span class="lineNum">      91 </span>                :            :                         r = nil;
+<span class="lineNum">      92 </span>                :<span class="lineNoCov">          0 :                 }</span>
+<span class="lineNum">      93 </span>        [<span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span>]:            :                 else if (rootTree.childCount == 1)
+<span class="lineNum">      94 </span>                :<span class="lineNoCov">          0 :                 {</span>
+<span class="lineNum">      95 </span>                :            :                         r = [rootTree childAtIndex:0];
+<span class="lineNum">      96 </span>                :<span class="lineNoCov">          0 :                         r.parent = nil;</span>
+<span class="lineNum">      97 </span>                :            :                         r.childIndex = -1;
+<span class="lineNum">      98 </span>                :<span class="lineNoCov">          0 :                 }</span>
+<span class="lineNum">      99 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     100 </span>                :<span class="lineNoCov">          0 :         return r;</span>
+<span class="lineNum">     101 </span>                :            : }
+<span class="lineNum">     102 </span>                :            : 
+<span class="lineNum">     103 </span>                :<span class="lineNoCov">          0 : -(NSInteger) getUniqueIdForTree:(id&lt;ANTLRTree&gt;) node</span>
+<span class="lineNum">     104 </span>                :            : {
+<span class="lineNum">     105 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (treeToUniqueIDMap == nil)
+<span class="lineNum">     106 </span>                :            :         {
+<span class="lineNum">     107 </span>                :<span class="lineNoCov">          0 :                 treeToUniqueIDMap = [NSMutableDictionary new];</span>
+<span class="lineNum">     108 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     109 </span>                :            :         NSNumber *prevID = [treeToUniqueIDMap objectForKey:node];
+<span class="lineNum">     110 </span>        [<span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if ([prevID integerValue] &gt; 0)</span>
+<span class="lineNum">     111 </span>                :            :         {
+<span class="lineNum">     112 </span>                :<span class="lineNoCov">          0 :                 return [prevID integerValue];</span>
+<span class="lineNum">     113 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     114 </span>                :            :         NSNumber *ID = [NSNumber numberWithInteger:uniqueNodeID];
+<span class="lineNum">     115 </span>                :<span class="lineNoCov">          0 :         [treeToUniqueIDMap setObject:ID forKey:node];</span>
+<span class="lineNum">     116 </span>                :            :         uniqueNodeID++;
+<span class="lineNum">     117 </span>                :<span class="lineNoCov">          0 :         return [ID integerValue];</span>
+<span class="lineNum">     118 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     119 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     120 </span>                :<span class="lineNoCov">          0 : -(BOOL) isEmptyTree:(id&lt;ANTLRTree&gt;) tree</span>
+<span class="lineNum">     121 </span>                :            : {
+<span class="lineNum">     122 </span>                :            :         return tree.isEmpty;
+<span class="lineNum">     123 </span>                :            : }
+<span class="lineNum">     124 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     125 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) createTreeWithToken:(id&lt;ANTLRToken&gt;) token withType:(NSInteger) type</span>
+<span class="lineNum">     126 </span>                :            : {
+<span class="lineNum">     127 </span>                :            :         id&lt;ANTLRToken&gt; newToken = [self createTokenFromToken:token];
+<span class="lineNum">     128 </span>                :            :         newToken.type = type;
+<span class="lineNum">     129 </span>                :            :         return [self createTreeWithToken:newToken];
+<span class="lineNum">     130 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     131 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     132 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) createTreeWithToken:(id&lt;ANTLRToken&gt;) token withType:(NSInteger) type andText:(NSString *) text</span>
+<span class="lineNum">     133 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     134 </span>                :            :         id&lt;ANTLRToken&gt; newToken = [self createTokenFromToken:token];
+<span class="lineNum">     135 </span>                :            :         newToken.type = type;
+<span class="lineNum">     136 </span>                :            :         newToken.text = text;
+<span class="lineNum">     137 </span>                :            :         return [self createTreeWithToken:newToken];
+<span class="lineNum">     138 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     139 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     140 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) createTreeWithTokenType:(NSInteger) tokenType withText:(NSString *) text</span>
+<span class="lineNum">     141 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     142 </span>                :<span class="lineNoCov">          0 :         id&lt;ANTLRToken&gt; newToken = [self createTokenFromType:tokenType withText:text];</span>
+<span class="lineNum">     143 </span>                :            :         return [self createTreeWithToken:newToken];
+<span class="lineNum">     144 </span>                :            : }
+<span class="lineNum">     145 </span>                :            : 
+<span class="lineNum">     146 </span>                :            : -(id&lt;ANTLRTree&gt;) becomeRootNode:(id&lt;ANTLRTree&gt;) newRoot ofNode:(id&lt;ANTLRTree&gt;) oldRoot
+<span class="lineNum">     147 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     148 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (oldRoot == nil)</span>
+<span class="lineNum">     149 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">     150 </span>                :            :                 return newRoot;
+<span class="lineNum">     151 </span>                :            :         }
+<span class="lineNum">     152 </span>        [<span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 2 was never executed"> # </span>]:            :         if (newRoot.isEmpty)
+<span class="lineNum">     153 </span>                :            :         {
+<span class="lineNum">     154 </span>                :<span class="lineNoCov">          0 :                 NSInteger nc = newRoot.childCount;</span>
+<span class="lineNum">     155 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :                 if (nc == 1)</span>
+<span class="lineNum">     156 </span>                :            :                 {
+<span class="lineNum">     157 </span>                :<span class="lineNoCov">          0 :                         newRoot = [newRoot childAtIndex:0];</span>
+<span class="lineNum">     158 </span>                :            :                 }
+<span class="lineNum">     159 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :                 else if (nc &gt; 1)</span>
+<span class="lineNum">     160 </span>                :            :                 {
+<span class="lineNum">     161 </span>                :<span class="lineNoCov">          0 :                         @throw [NSException exceptionWithName:ANTLRRuntimeException reason:@&quot;More than one node as root&quot; userInfo:nil];</span>
+<span class="lineNum">     162 </span>                :<span class="lineNoCov">          0 :                 }</span>
+<span class="lineNum">     163 </span>                :            :         }
+<span class="lineNum">     164 </span>                :<span class="lineNoCov">          0 :         [newRoot addChild:oldRoot];</span>
+<span class="lineNum">     165 </span>                :            :         return newRoot;
+<span class="lineNum">     166 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     167 </span>                :            : 
+<span class="lineNum">     168 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) becomeRootNodeFromToken:(id&lt;ANTLRToken&gt;) token ofNode:(id&lt;ANTLRTree&gt;) oldRoot</span>
+<span class="lineNum">     169 </span>                :            : {
+<span class="lineNum">     170 </span>                :            :         return [self becomeRootNode:[self createTreeWithToken:token] ofNode:oldRoot];
+<span class="lineNum">     171 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     172 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     173 </span>                :            : -(NSInteger) tokenTypeForNode:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     174 </span>                :            : {
+<span class="lineNum">     175 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">     176 </span>                :            :         {
+<span class="lineNum">     177 </span>                :<span class="lineNoCov">          0 :                 return ANTLRTokenTypeInvalid;</span>
+<span class="lineNum">     178 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     179 </span>                :            :         return t.type;
+<span class="lineNum">     180 </span>                :            : }
+<span class="lineNum">     181 </span>                :            : 
+<span class="lineNum">     182 </span>                :<span class="lineNoCov">          0 : -(void) setTokenType:(NSInteger) type forNode:(id&lt;ANTLRTree&gt;) t</span>
+<span class="lineNum">     183 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     184 </span>                :            :         @throw [NSException exceptionWithName:ANTLRNoSuchMethodException reason:@&quot;Don't know enough about tree&quot; userInfo:nil];
+<span class="lineNum">     185 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     186 </span>                :            : 
+<span class="lineNum">     187 </span>                :<span class="lineNoCov">          0 : -(NSString *) textForNode:(id&lt;ANTLRTree&gt;) t</span>
+<span class="lineNum">     188 </span>                :            : {
+<span class="lineNum">     189 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">     190 </span>                :            :         {
+<span class="lineNum">     191 </span>                :            :                 return nil;
+<span class="lineNum">     192 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     193 </span>                :<span class="lineNoCov">          0 :         return t.text;</span>
+<span class="lineNum">     194 </span>                :            : }
+<span class="lineNum">     195 </span>                :            : 
+<span class="lineNum">     196 </span>                :            : -(void) setText:(NSString *) text forNode:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     197 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     198 </span>                :<span class="lineNoCov">          0 :         @throw [NSException exceptionWithName:ANTLRNoSuchMethodException reason:@&quot;Don't know enough about tree&quot; userInfo:nil];</span>
+<span class="lineNum">     199 </span>                :            : }
+<span class="lineNum">     200 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     201 </span>                :            : -(id&lt;ANTLRToken&gt;) tokenForNode:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     202 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     203 </span>                :            :         [self doesNotRecognizeSelector:_cmd];
+<span class="lineNum">     204 </span>                :            :         return nil;
+<span class="lineNum">     205 </span>                :            : }
+<span class="lineNum">     206 </span>                :            : 
+<span class="lineNum">     207 </span>                :<span class="lineNoCov">          0 : -(void) setTokenBoundriesForTree:(id&lt;ANTLRTree&gt;) t fromToken:(id&lt;ANTLRToken&gt;) start toToken:(id&lt;ANTLRToken&gt;) stop</span>
+<span class="lineNum">     208 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     209 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">     210 </span>                :            :         {
+<span class="lineNum">     211 </span>                :            :                 return;
+<span class="lineNum">     212 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     213 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         t.tokenStartIndex = start != nil ? start.tokenIndex : 0;</span>
+<span class="lineNum">     214 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         t.tokenStopIndex = stop != nil ? stop.tokenIndex : 0;</span>
+<span class="lineNum">     215 </span>                :            : }
+<span class="lineNum">     216 </span>                :            : 
+<span class="lineNum">     217 </span>                :            : -(NSInteger) tokenStartIndexForTree:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     218 </span>                :            : {
+<span class="lineNum">     219 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (t == nil)</span>
+<span class="lineNum">     220 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">     221 </span>                :            :                 return -1;
+<span class="lineNum">     222 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     223 </span>                :            :         return t.tokenStartIndex;
+<span class="lineNum">     224 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     225 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     226 </span>                :            : -(NSInteger) tokenStopIndexForTree:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     227 </span>                :            : {
+<span class="lineNum">     228 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">     229 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">     230 </span>                :<span class="lineNoCov">          0 :                 return -1;</span>
+<span class="lineNum">     231 </span>                :            :         }
+<span class="lineNum">     232 </span>                :<span class="lineNoCov">          0 :         return t.tokenStopIndex;</span>
+<span class="lineNum">     233 </span>                :            : }
+<span class="lineNum">     234 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     235 </span>                :            : -(id&lt;ANTLRTree&gt;) childForNode:(id&lt;ANTLRTree&gt;) parent atIndex:(NSInteger) idx
+<span class="lineNum">     236 </span>                :            : {
+<span class="lineNum">     237 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (parent == nil)
+<span class="lineNum">     238 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">     239 </span>                :<span class="lineNoCov">          0 :                 return nil;</span>
+<span class="lineNum">     240 </span>                :            :         }
+<span class="lineNum">     241 </span>                :<span class="lineNoCov">          0 :         return [parent.children objectAtIndex:idx];</span>
+<span class="lineNum">     242 </span>                :            : }
+<span class="lineNum">     243 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     244 </span>                :            : -(void) setChildForNode:(id&lt;ANTLRTree&gt;) parent atIndex:(NSInteger) idx withChild:(id&lt;ANTLRTree&gt;) child
+<span class="lineNum">     245 </span>                :            : {
+<span class="lineNum">     246 </span>                :            :         [parent setChildAtIndex:idx child:child];
+<span class="lineNum">     247 </span>                :            : }
+<span class="lineNum">     248 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     249 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) removeChildFromNode:(id&lt;ANTLRTree&gt;) parent atIndex:(NSInteger) idx</span>
+<span class="lineNum">     250 </span>                :            : {
+<span class="lineNum">     251 </span>                :<span class="lineNoCov">          0 :         return [parent deleteChild:idx];</span>
+<span class="lineNum">     252 </span>                :            : }
+<span class="lineNum">     253 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     254 </span>                :            : -(NSInteger) childCountForTree:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     255 </span>                :            : {
+<span class="lineNum">     256 </span>                :            :         return t.childCount;
+<span class="lineNum">     257 </span>                :            : }
+<span class="lineNum">     258 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     259 </span>                :<span class="lineNoCov">          0 : -(id&lt;ANTLRTree&gt;) parentForNode:(id&lt;ANTLRTree&gt;) child</span>
+<span class="lineNum">     260 </span>                :            : {
+<span class="lineNum">     261 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (child == nil)
+<span class="lineNum">     262 </span>                :            :         {
+<span class="lineNum">     263 </span>                :            :                 return nil;
+<span class="lineNum">     264 </span>                :<span class="lineNoCov">          0 :         }</span>
+<span class="lineNum">     265 </span>                :<span class="lineNoCov">          0 :         return child.parent;</span>
+<span class="lineNum">     266 </span>                :            : }
+<span class="lineNum">     267 </span>                :            : 
+<span class="lineNum">     268 </span>                :            : -(void) setParentForNode:(id&lt;ANTLRTree&gt;) child toParent:(id&lt;ANTLRTree&gt;) parent
+<span class="lineNum">     269 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     270 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (child != nil)</span>
+<span class="lineNum">     271 </span>                :            :         {
+<span class="lineNum">     272 </span>                :            :                 child.parent = parent;
+<span class="lineNum">     273 </span>                :            :         }
+<span class="lineNum">     274 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     275 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     276 </span>                :            : -(NSInteger) indexForNode:(id&lt;ANTLRTree&gt;) t
+<span class="lineNum">     277 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     278 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:            :         if (t == nil)
+<span class="lineNum">     279 </span>                :<span class="lineNoCov">          0 :         {</span>
+<span class="lineNum">     280 </span>                :            :                 return 0;
+<span class="lineNum">     281 </span>                :            :         }
+<span class="lineNum">     282 </span>                :            :         return t.childIndex;
+<span class="lineNum">     283 </span>                :            : }
+<span class="lineNum">     284 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     285 </span>                :<span class="lineNoCov">          0 : -(void) setIndexForNode:(id&lt;ANTLRTree&gt;) t toIndex:(NSInteger) idx</span>
+<span class="lineNum">     286 </span>                :            : {
+<span class="lineNum">     287 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (t != nil)</span>
+<span class="lineNum">     288 </span>                :            :         {
+<span class="lineNum">     289 </span>                :            :                 t.childIndex = idx;
+<span class="lineNum">     290 </span>                :            :         }
+<span class="lineNum">     291 </span>                :            : }
+<span class="lineNum">     292 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     293 </span>                :<span class="lineNoCov">          0 : -(void) replaceChildrenForTree:(id&lt;ANTLRTree&gt;) parent from:(NSInteger) start to:(NSInteger) stop with:(id&lt;ANTLRTree&gt;) t</span>
+<span class="lineNum">     294 </span>                :            : {
+<span class="lineNum">     295 </span>        [<span class="branchNoExec" title="Block containing branch 0 was never executed"> # </span><span class="branchNoExec" title="Block containing branch 1 was never executed"> # </span>]:<span class="lineNoCov">          0 :         if (parent != nil)</span>
+<span class="lineNum">     296 </span>                :            :         {
+<span class="lineNum">     297 </span>                :<span class="lineNoCov">          0 :                 [parent replaceChildrenFromIndex:start toIndex:stop tree:t];</span>
+<span class="lineNum">     298 </span>                :            :         }
+<span class="lineNum">     299 </span>                :            : }
+<span class="lineNum">     300 </span>                :            : 
+<span class="lineNum">     301 </span>                :            : -(id&lt;ANTLRToken&gt;) createTokenFromType:(NSInteger) tokenType withText:(NSString *) txt
+<span class="lineNum">     302 </span>                :<span class="lineNoCov">          0 : {</span>
+<span class="lineNum">     303 </span>                :<span class="lineNoCov">          0 :         [self doesNotRecognizeSelector:_cmd];</span>
+<span class="lineNum">     304 </span>                :            :         return nil;
+<span class="lineNum">     305 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     306 </span>                :            : 
+<span class="lineNum">     307 </span>                :            : -(id&lt;ANTLRToken&gt;) createTokenFromToken:(id&lt;ANTLRToken&gt;) fromToken
+<span class="lineNum">     308 </span>                :            : {
+<span class="lineNum">     309 </span>                :            :         [self doesNotRecognizeSelector:_cmd];
+<span class="lineNum">     310 </span>                :            :         return nil;
+<span class="lineNum">     311 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     312 </span>                :<span class="lineNoCov">          0 : </span>
+<span class="lineNum">     313 </span>                :            : @end
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.8</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
