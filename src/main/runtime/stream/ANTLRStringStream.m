@@ -187,8 +187,7 @@
 
 -(NSString *) substring:(NSInteger) start stop:(NSInteger) stop
 {
-	return [data substringWithRange:NSMakeRange(start, stop)];
+	return [data substringWithRange:NSMakeRange(start, (stop - start))];
 }
-
 
 @end
