@@ -20,5 +20,6 @@
 -(void) testInitWithTokenTypeAndText;
 -(void) testInitWithCharStream;
 -(void) testInitWithToken;
+-(void) testTokenDescription;
 
 @end
