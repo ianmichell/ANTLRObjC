@@ -29,7 +29,7 @@
 	}
 	NSInteger popped = [intArray pop];
 	NSLog(@"Popped value: %d", popped);
-	STAssertTrue(popped == 10, [NSString stringWithFormat:@"Pop should pull the last element out, which should be 10 was: %d", popped]);
+	STAssertTrue(popped == 10, @"Pop should pull the last element out, which should be 10 was: %d", popped);
 	[intArray release];
 }
 

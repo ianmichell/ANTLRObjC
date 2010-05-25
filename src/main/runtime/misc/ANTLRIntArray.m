@@ -28,6 +28,7 @@
 
 -(void) dealloc
 {
+	data = nil;
 	[pool drain];
 	[super dealloc];
 }

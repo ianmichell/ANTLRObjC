@@ -84,7 +84,9 @@
 
 -(void) testTokenDescription
 {
-
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	STAssertTrue([[token description] isEqualToString:@"[@0,4,6,||,<555>,0,0]"], @"String description for token is not correct!");
 }
 
 @end
