@@ -18,7 +18,7 @@
 	id<ANTLRIntStream> inputStream;
 	id<ANTLRToken> startToken;
 	id<ANTLRToken> stopToken;
-	NSError *trappedError;
+	ANTLRRecognitionException *trappedException;
 }
 
 -(id) initWithStream:(id<ANTLRTokenStream>) input fromToken:(id<ANTLRToken>) start toToken:(id<ANTLRToken>) stop caughtException:(ANTLRRecognitionException *) exception;

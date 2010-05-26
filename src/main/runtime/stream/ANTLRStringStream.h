@@ -43,6 +43,7 @@
 	NSInteger line;
 	NSString *data;
 	NSMutableArray *markers;
+	NSString *sourceName;
 }
 
 -(id) initWithInput:(NSString *) input;

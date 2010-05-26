@@ -86,6 +86,7 @@
 	NSInteger tokenStopIndex;
 	NSInteger childIndex;
 	id<ANTLRTree> parent;
+	NSArray *ancestors;
 }
 
 -(id<ANTLRTree>) firstChildWithType:(NSInteger) t;

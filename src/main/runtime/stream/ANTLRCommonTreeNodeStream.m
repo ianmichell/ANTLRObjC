@@ -120,7 +120,7 @@
 	return @"n/a";
 }
 
-@synthesize uniqueNavigationNodes; // may be dynamic
+@synthesize uniqueNavigationNodes; // FIXME: This probably should not be a property...
 @synthesize treeAdaptor;
 @synthesize treeSource;
 @synthesize tokenStream;

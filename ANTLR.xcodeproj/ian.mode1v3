@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3CFF5DE011AC55D400311034</string>
+						<string>3CFF5DE911ACDB7700311034</string>
 						<key>history</key>
 						<array>
 							<string>3CF3E9EB11AB9A5F0086556E</string>
@@ -336,15 +336,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
-									<integer>14</integer>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>57</integer>
+									<integer>52</integer>
+									<integer>19</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 669}, {367, 1172}}</string>
+							<string>{{0, 461}, {367, 1172}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -381,7 +381,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRCommonTokenTest.m</string>
+								<string>ANTLRTree.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -389,11 +389,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ANTLRCommonTokenTest.m</string>
+										<string>ANTLRTree.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3CFF5DDF11AC55D400311034</string>
+										<string>3CFF5DE811ACDB7700311034</string>
 										<key>history</key>
 										<array>
 											<string>3C854B031183F81400618CAD</string>
@@ -445,7 +445,6 @@
 											<string>3C1F757D119BBB4B00BC0C1B</string>
 											<string>3C1F757E119BBB4B00BC0C1B</string>
 											<string>3C19E31E11A10D61006B5921</string>
-											<string>3CE1EF0611A2590E00F55B04</string>
 											<string>3CE1EFAB11A25FAE00F55B04</string>
 											<string>3CE1F02811A2665300F55B04</string>
 											<string>3CE1F08B11A26E9A00F55B04</string>
@@ -472,12 +471,13 @@
 											<string>3CF3E98211AB8F200086556E</string>
 											<string>3CF3E9C111AB93920086556E</string>
 											<string>3CF3E9C311AB93920086556E</string>
-											<string>3CF3E9D911AB95D40086556E</string>
 											<string>3CF3E9E611AB98D30086556E</string>
 											<string>3CFF5DDB11AC55D400311034</string>
 											<string>3CFF5DDC11AC55D400311034</string>
 											<string>3CFF5DDD11AC55D400311034</string>
-											<string>3CFF5DDE11AC55D400311034</string>
+											<string>3CFF5DE511ACDB7700311034</string>
+											<string>3CFF5DE611ACDB7700311034</string>
+											<string>3CFF5DE711ACDB7700311034</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -703,7 +703,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ANTLRTree.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -720,6 +720,8 @@
 							<string>422pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

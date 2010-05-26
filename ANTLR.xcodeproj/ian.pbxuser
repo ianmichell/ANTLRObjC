@@ -1,6 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Coverage;
 		activeExecutable = 3C0E5D8F119A6C46009F6E96 /* otest */;
 		activeTarget = 3C0E5D65119A68DA009F6E96 /* ANTLRTests */;
@@ -197,6 +198,13 @@
 			3CFF5DDE11AC55D400311034 /* PBXTextBookmark */ = 3CFF5DDE11AC55D400311034 /* PBXTextBookmark */;
 			3CFF5DDF11AC55D400311034 /* PBXTextBookmark */ = 3CFF5DDF11AC55D400311034 /* PBXTextBookmark */;
 			3CFF5DE011AC55D400311034 /* PBXTextBookmark */ = 3CFF5DE011AC55D400311034 /* PBXTextBookmark */;
+			3CFF5DE311ACDB7100311034 /* XCBuildMessageTextBookmark */ = 3CFF5DE311ACDB7100311034 /* XCBuildMessageTextBookmark */;
+			3CFF5DE411ACDB7100311034 /* PBXTextBookmark */ = 3CFF5DE411ACDB7100311034 /* PBXTextBookmark */;
+			3CFF5DE511ACDB7700311034 /* PBXTextBookmark */ = 3CFF5DE511ACDB7700311034 /* PBXTextBookmark */;
+			3CFF5DE611ACDB7700311034 /* PBXTextBookmark */ = 3CFF5DE611ACDB7700311034 /* PBXTextBookmark */;
+			3CFF5DE711ACDB7700311034 /* XCBuildMessageTextBookmark */ = 3CFF5DE711ACDB7700311034 /* XCBuildMessageTextBookmark */;
+			3CFF5DE811ACDB7700311034 /* PBXTextBookmark */ = 3CFF5DE811ACDB7700311034 /* PBXTextBookmark */;
+			3CFF5DE911ACDB7700311034 /* PBXTextBookmark */ = 3CFF5DE911ACDB7700311034 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3C40437F117EC130002C5A3F /* Source Control */;
 		userBuildSettings = {
@@ -489,9 +497,9 @@
 	};
 	3C440A79117EC2EE00161EBF /* ANTLRTree.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 5772}}";
-			sepNavSelRange = "{2136, 0}";
-			sepNavVisRange = "{1411, 1461}";
+			sepNavIntBoundsRect = "{{0, 0}, {1391, 5993}}";
+			sepNavSelRange = "{10458, 0}";
+			sepNavVisRange = "{5895, 2476}";
 			sepNavWindowFrame = "{{84, 79}, {1441, 1271}}";
 		};
 	};
@@ -549,9 +557,9 @@
 	};
 	3C440A95117EC45D00161EBF /* ANTLRStringStream.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {996, 2522}}";
-			sepNavSelRange = "{3946, 0}";
-			sepNavVisRange = "{2511, 1448}";
+			sepNavIntBoundsRect = "{{0, 0}, {996, 2509}}";
+			sepNavSelRange = "{3213, 0}";
+			sepNavVisRange = "{1054, 1534}";
 			sepNavWindowFrame = "{{289, 139}, {1441, 1271}}";
 		};
 	};
@@ -1665,8 +1673,8 @@
 	3CF3E96D11AB87C50086556E /* ANTLRCommonTokenTest.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {996, 1209}}";
-			sepNavSelRange = "{4108, 0}";
-			sepNavVisRange = "{43, 4125}";
+			sepNavSelRange = "{4159, 0}";
+			sepNavVisRange = "{0, 4160}";
 		};
 	};
 	3CF3E97A11AB8E7F0086556E /* PBXBookmark */ = {
@@ -1864,6 +1872,74 @@
 		vrLoc = 43;
 	};
 	3CFF5DE011AC55D400311034 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440AA6117EC64E00161EBF /* ANTLRCommonToken.m */;
+		name = "ANTLRCommonToken.m: 141";
+		rLen = 0;
+		rLoc = 3652;
+		rType = 0;
+		vrLen = 1458;
+		vrLoc = 3098;
+	};
+	3CFF5DE311ACDB7100311034 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Synthesized property 'ancestors' must either be named the same as a compatible ivar or must explicitly name an ivar";
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 459;
+		rType = 1;
+	};
+	3CFF5DE411ACDB7100311034 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		name = "ANTLRTree.m: 460";
+		rLen = 0;
+		rLoc = 10922;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 10599;
+	};
+	3CFF5DE511ACDB7700311034 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3CF3E96D11AB87C50086556E /* ANTLRCommonTokenTest.m */;
+		name = "ANTLRCommonTokenTest.m: 89";
+		rLen = 0;
+		rLoc = 4159;
+		rType = 0;
+		vrLen = 4160;
+		vrLoc = 0;
+	};
+	3CFF5DE611ACDB7700311034 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440A95117EC45D00161EBF /* ANTLRStringStream.m */;
+		name = "ANTLRStringStream.m: 148";
+		rLen = 0;
+		rLoc = 3213;
+		rType = 0;
+		vrLen = 1534;
+		vrLoc = 1054;
+	};
+	3CFF5DE711ACDB7700311034 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Synthesized property 'ancestors' must either be named the same as a compatible ivar or must explicitly name an ivar";
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 459;
+		rType = 1;
+	};
+	3CFF5DE811ACDB7700311034 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3C440A79117EC2EE00161EBF /* ANTLRTree.m */;
+		name = "ANTLRTree.m: 425";
+		rLen = 0;
+		rLoc = 10488;
+		rType = 0;
+		vrLen = 1533;
+		vrLoc = 9395;
+	};
+	3CFF5DE911ACDB7700311034 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3C440AA6117EC64E00161EBF /* ANTLRCommonToken.m */;
 		name = "ANTLRCommonToken.m: 141";

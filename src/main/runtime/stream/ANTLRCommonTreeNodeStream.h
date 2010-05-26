@@ -27,6 +27,7 @@
 	ANTLRIntArray *calls;
 	BOOL hasNilRoot;
 	NSInteger level;
+	BOOL uniqueNavigationNodes;
 }
 
 -(id) initWithTree:(id<ANTLRTree>) tree;

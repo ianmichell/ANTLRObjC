@@ -71,7 +71,7 @@
 	ANTLRBitSet *bitSet = [[ANTLRBitSet alloc] initWithBits:bitData count:2];
 	ANTLRBitSet *copy = [bitSet copy];
 	CFIndex actual = (CFIndex)[copy numBits];
-	STAssertEquals(actual, [bitSet numBits], @"There should be three bits set in bitvector. But I have %d", [copy numBits]);
+	STAssertEquals(actual, (CFIndex)[bitSet numBits], @"There should be three bits set in bitvector. But I have %d", [copy numBits]);
 	[bitSet release];
 }
 
