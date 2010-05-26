@@ -202,24 +202,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>3CF3E98611AB8F200086556E</string>
+				<string>3CFF5E3D11ACE91700311034</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>ANTLRCommonToken.m</string>
+				<string>ANTLRCommonTree.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>3CF3E98711AB8F200086556E</string>
+						<string>3CFF5E3E11ACE91700311034</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>ANTLRCommonToken.m</string>
+						<string>ANTLRCommonTree.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3CFF5DE911ACDB7700311034</string>
+						<string>3CFF5E7111ACEAD200311034</string>
 						<key>history</key>
 						<array>
-							<string>3CF3E9EB11AB9A5F0086556E</string>
+							<string>3CFF5E2C11ACE81D00311034</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -231,11 +231,51 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {1044, 793}}</string>
+				<string>{{0, 20}, {1272, 1184}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>302 358 1044 834 0 0 2560 1418 </string>
+				<string>325 182 1272 1225 0 0 2560 1418 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>3CFF5E4011ACE91700311034</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>ANTLRTree.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3CFF5E4111ACE91700311034</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>ANTLRTree.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3CFF5E7211ACEAD200311034</string>
+						<key>history</key>
+						<array>
+							<string>3CFF5E2611ACE78300311034</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1441, 1174}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>84 135 1441 1215 0 0 2560 1418 </string>
 			</dict>
 		</dict>
 	</array>
@@ -336,15 +376,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>57</integer>
-									<integer>52</integer>
 									<integer>19</integer>
-									<integer>18</integer>
+									<integer>17</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 461}, {367, 1172}}</string>
+							<string>{{0, 32}, {367, 1172}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -381,7 +421,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTree.m</string>
+								<string>ANTLRCommonTreeTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -389,11 +429,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ANTLRTree.m</string>
+										<string>ANTLRCommonTreeTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3CFF5DE811ACDB7700311034</string>
+										<string>3CFF5E7011ACEAD200311034</string>
 										<key>history</key>
 										<array>
 											<string>3C854B031183F81400618CAD</string>
@@ -404,14 +444,11 @@
 											<string>3C4F9F7F1189452A004A9D5C</string>
 											<string>3C4F9F801189452A004A9D5C</string>
 											<string>3C4F9F811189452A004A9D5C</string>
-											<string>3C4F9F921189452A004A9D5C</string>
-											<string>3C4F9F931189452A004A9D5C</string>
 											<string>3C4F9F941189452A004A9D5C</string>
 											<string>3C4F9F951189452A004A9D5C</string>
 											<string>3C4F9F961189452A004A9D5C</string>
 											<string>3C4F9F971189452A004A9D5C</string>
 											<string>3C4F9F981189452A004A9D5C</string>
-											<string>3C4F9F9A1189452A004A9D5C</string>
 											<string>3C4F9F9B1189452A004A9D5C</string>
 											<string>3C4F9F9D1189452A004A9D5C</string>
 											<string>3C4F9FAE1189F4AA004A9D5C</string>
@@ -421,13 +458,11 @@
 											<string>3CC02127118FE3CD00B8D7E0</string>
 											<string>3CC0214B118FE5B100B8D7E0</string>
 											<string>3CC02157118FE6A000B8D7E0</string>
-											<string>3CDA36F4119138E8002EE021</string>
 											<string>3CDA36FC119138E8002EE021</string>
 											<string>3C73AC571197C21300F0C3A6</string>
 											<string>3C73AC581197C21300F0C3A6</string>
 											<string>3C73AC5A1197C21300F0C3A6</string>
 											<string>3C73ACC7119920E900F0C3A6</string>
-											<string>3C73ACC8119920E900F0C3A6</string>
 											<string>3C73ACC9119920E900F0C3A6</string>
 											<string>3C73ACCA119920E900F0C3A6</string>
 											<string>3C73ACCC119920E900F0C3A6</string>
@@ -441,9 +476,7 @@
 											<string>3C73ACE6119922E300F0C3A6</string>
 											<string>3C73ACE91199238C00F0C3A6</string>
 											<string>3C1F757B119BBB4B00BC0C1B</string>
-											<string>3C1F757C119BBB4B00BC0C1B</string>
 											<string>3C1F757D119BBB4B00BC0C1B</string>
-											<string>3C1F757E119BBB4B00BC0C1B</string>
 											<string>3C19E31E11A10D61006B5921</string>
 											<string>3CE1EFAB11A25FAE00F55B04</string>
 											<string>3CE1F02811A2665300F55B04</string>
@@ -459,7 +492,6 @@
 											<string>3C7B3B3311A5001D00175202</string>
 											<string>3C7B3B3411A5001D00175202</string>
 											<string>3C7B3B3711A5001D00175202</string>
-											<string>3C7B3B3811A5001D00175202</string>
 											<string>3C7B3B3911A5001D00175202</string>
 											<string>3C7B3B6C11A501EA00175202</string>
 											<string>3C7B3C6711A511CF00175202</string>
@@ -467,17 +499,27 @@
 											<string>3C40967A11AA43C800E976B4</string>
 											<string>3C40969F11AA45A900E976B4</string>
 											<string>3C4096A011AA45A900E976B4</string>
-											<string>3CF3E98111AB8F200086556E</string>
 											<string>3CF3E98211AB8F200086556E</string>
 											<string>3CF3E9C111AB93920086556E</string>
 											<string>3CF3E9C311AB93920086556E</string>
-											<string>3CF3E9E611AB98D30086556E</string>
 											<string>3CFF5DDB11AC55D400311034</string>
 											<string>3CFF5DDC11AC55D400311034</string>
 											<string>3CFF5DDD11AC55D400311034</string>
-											<string>3CFF5DE511ACDB7700311034</string>
-											<string>3CFF5DE611ACDB7700311034</string>
-											<string>3CFF5DE711ACDB7700311034</string>
+											<string>3CFF5E0411ACDEF200311034</string>
+											<string>3CFF5E0511ACDEF200311034</string>
+											<string>3CFF5E0611ACDEF200311034</string>
+											<string>3CFF5E0811ACDEF200311034</string>
+											<string>3CFF5E0A11ACDEF200311034</string>
+											<string>3CFF5E0B11ACDEF200311034</string>
+											<string>3CFF5E0C11ACDEF200311034</string>
+											<string>3CFF5E3511ACE91700311034</string>
+											<string>3CFF5E3611ACE91700311034</string>
+											<string>3CFF5E3811ACE91700311034</string>
+											<string>3CFF5E3911ACE91700311034</string>
+											<string>3CFF5E6C11ACEAD200311034</string>
+											<string>3CFF5E6D11ACEAD200311034</string>
+											<string>3CFF5E6E11ACEAD200311034</string>
+											<string>3CFF5E6F11ACEAD200311034</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -678,7 +720,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>3C40437D117EC130002C5A3F</string>
-		<string>3CF3E98611AB8F200086556E</string>
+		<string>3CFF5E4011ACE91700311034</string>
+		<string>3CFF5E3D11ACE91700311034</string>
 		<string>/Users/ian/projects/XCode Projects/ANTLR/ANTLR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -703,7 +746,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTree.m</string>
+								<string>ANTLRBitSetTest.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
