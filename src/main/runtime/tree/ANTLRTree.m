@@ -93,14 +93,21 @@ static id<ANTLRTree> invalidNode = nil;
 #pragma mark Ancestors / Parents
 -(id<ANTLRTree>) getAncestor:(NSInteger) tokenType
 {
-	[self doesNotRecognizeSelector:_cmd];
+	id<ANTLRTree> t = self.parent;
+	while (t != nil)
+	{
+		if (t.type == tokenType)
+		{
+			return t;
+		}
+		t = t.parent;
+	}
 	return nil;
 }
 
 -(BOOL) hasAncestor:(NSInteger) tokenType
 {
-	[self doesNotRecognizeSelector:_cmd];
-	return NO;
+	return [self getAncestor:tokenType] != nil;
 }
 
 @synthesize parent;
@@ -233,6 +240,8 @@ static id<ANTLRTree> invalidNode = nil;
 	{
 		// if the tree is not empty, add it as a child.
 		[self.children addObject:child];
+		child.parent = self;
+		child.childIndex = [self.children count] - 1;
 	}
 }
 

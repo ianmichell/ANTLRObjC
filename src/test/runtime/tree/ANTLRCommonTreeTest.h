@@ -17,5 +17,12 @@
 -(void) testInitWithTree;
 -(void) testInvalidTreeNode;
 -(void) testInitWithCommonTreeNode;
+-(void) testCopyTree;
+-(void) testDescription;
+-(void) testText;
+-(void) testAddChild;
+-(void) testChildAtIndex;
+-(void) testSetChildAtIndex;
+-(void) testGetAncestor;
 
 @end

@@ -84,7 +84,11 @@
 
 -(id) copyWithZone:(NSZone *)aZone
 {
-	return [[ANTLRCommonTree allocWithZone:aZone] initWithCommonTreeNode:self];
+	if (aZone != nil)
+	{
+		return [[ANTLRCommonTree allocWithZone:aZone] initWithCommonTreeNode:self];
+	}
+	return [[ANTLRCommonTree alloc] initWithCommonTreeNode:self];
 }
 
 -(NSString *) description
@@ -96,10 +100,6 @@
 	if (self.type == ANTLRTokenTypeInvalid)
 	{
 		return @"<errornode>";
-	}
-	if (self.token == nil)
-	{
-		return nil;
 	}
 	return self.token.text;
 }
