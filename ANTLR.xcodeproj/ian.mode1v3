@@ -295,15 +295,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>86</integer>
-									<integer>84</integer>
-									<integer>21</integer>
-									<integer>20</integer>
+									<integer>19</integer>
+									<integer>17</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 371}, {367, 1172}}</string>
+							<string>{{0, 0}, {367, 1172}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -322,7 +322,7 @@
 							<real>367</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>937 163 1446 1231 0 0 2560 1418 </string>
+						<string>954 168 1446 1231 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -340,7 +340,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRTree.m</string>
+								<string>ANTLRCommonTreeTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,11 +348,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ANTLRTree.m</string>
+										<string>ANTLRCommonTreeTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3CEA9C4A11B3C2060029E0DE</string>
+										<string>3CEA9CAE11B3CA140029E0DE</string>
 										<key>history</key>
 										<array>
 											<string>3C854B031183F81400618CAD</string>
@@ -435,10 +435,10 @@
 											<string>3CEA9C1111B2EAFE0029E0DE</string>
 											<string>3CEA9C3011B3B3CA0029E0DE</string>
 											<string>3CEA9C3111B3B3CA0029E0DE</string>
-											<string>3CEA9C3311B3B3CA0029E0DE</string>
 											<string>3CEA9C4711B3C2060029E0DE</string>
-											<string>3CEA9C4811B3C2060029E0DE</string>
-											<string>3CEA9C4911B3C2060029E0DE</string>
+											<string>3CEA9C5F11B3C3850029E0DE</string>
+											<string>3CEA9C7D11B3C70B0029E0DE</string>
+											<string>3CEA9C7E11B3C70B0029E0DE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -452,7 +452,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1057, 1185}}</string>
 								<key>RubberWindowFrame</key>
-								<string>937 163 1446 1231 0 0 2560 1418 </string>
+								<string>954 168 1446 1231 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -472,7 +472,7 @@
 								<key>Frame</key>
 								<string>{{0, 1190}, {1057, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>937 163 1446 1231 0 0 2560 1418 </string>
+								<string>954 168 1446 1231 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -644,7 +644,7 @@
 		<string>/Users/ian/projects/XCode Projects/ANTLR/ANTLR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>937 163 1446 1231 0 0 2560 1418 </string>
+	<string>954 168 1446 1231 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

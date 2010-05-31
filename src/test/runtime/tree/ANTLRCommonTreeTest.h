@@ -15,6 +15,7 @@
 
 -(void) testInitAndRelease;
 -(void) testInitWithTree;
+-(void) testWithToken;
 -(void) testInvalidTreeNode;
 -(void) testInitWithCommonTreeNode;
 -(void) testCopyTree;
@@ -24,5 +25,6 @@
 -(void) testChildAtIndex;
 -(void) testSetChildAtIndex;
 -(void) testGetAncestor;
+-(void) testFirstChildWithType;
 
 @end

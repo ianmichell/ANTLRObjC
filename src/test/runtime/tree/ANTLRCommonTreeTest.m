@@ -18,6 +18,8 @@
 	ANTLRCommonTree *tree = [ANTLRCommonTree new];
 	STAssertNotNil(tree, @"Tree was nil");
 	STAssertEquals(tree.type, (NSInteger)ANTLRTokenTypeInvalid, @"Tree should have an invalid token type, because it has not token");
+	STAssertEquals(tree.line, (NSInteger)0, @"Tree should be at line 0");
+	STAssertEquals(tree.charPositionInLine, (NSInteger)0, @"Char position should be 0");
 	[tree release];
 }
 
@@ -26,6 +28,20 @@
 	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithTree:[ANTLRTree invalidNode]];
 	STAssertNotNil(tree, @"Tree was nil");
 	// FIXME: It doesn't do anything else, perhaps initWithTree should set something somewhere, java says no though...
+	[tree release];
+}
+
+-(void) testWithToken
+{
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	token.line = 1;
+	token.charPositionInLine = 4;
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	STAssertNotNil(tree, @"Tree was nil");
+	STAssertEquals(tree.line, (NSInteger)1, @"Tree should be at line 1");
+	STAssertEquals(tree.charPositionInLine, (NSInteger)1, @"Char position should be 1");
+	STAssertTrue([tree.text isEqualToString:@"||"], @"Text was not ||");
 	[tree release];
 }
 
@@ -121,12 +137,19 @@
 	// Child tree
 	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
 	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	token.line = 1;
+	token.charPositionInLine = 4;
 	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
 	
 	// Add a child to the parent tree
 	[parent addChild: tree];
+
+	STAssertEquals(parent.line, (NSInteger)1, @"Tree should be at line 1");
+	STAssertEquals(parent.charPositionInLine, (NSInteger)1, @"Char position should be 1");
 	
 	STAssertEquals(parent.childCount, (NSInteger)1, @"There were either no children or more than 1: %d", parent.childCount);
+	STAssertEquals([parent childAtIndex:0].childIndex, (NSInteger)0, @"Child index should be 0 was : %d", [parent childAtIndex:0].childIndex);
+	STAssertEquals([parent childAtIndex:0].parent, parent, @"Parent not set for child");
 	
 	[parent release];
 }
@@ -144,7 +167,7 @@
 	// Add a child to the parent tree
 	[parent addChild: tree];
 	
-	STAssertEquals(parent.childCount, (NSInteger)1, @"There were either no children or more than 1: %d", parent.childCount);
+	STAssertEquals((NSInteger)parent.childCount, (NSInteger)1, @"There were either no children or more than 1: %d", parent.childCount);
 	
 	ANTLRTree *child = [parent childAtIndex:0];
 	STAssertNotNil(child, @"Child at index 0 should not be nil");
@@ -187,12 +210,31 @@
 	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
 	
 	[parent addChild:tree];
+	STAssertTrue([tree hasAncestor:ANTLRTokenTypeUP], @"Should have an ancestor of type ANTLRTokenTypeUP");
 	
 	ANTLRCommonTree *ancestor = [tree getAncestor:ANTLRTokenTypeUP];
 	STAssertNotNil(ancestor, @"Ancestor should not be nil");
 	STAssertEquals(ancestor, parent, @"Acenstors do not match");
-	
 	[parent release];
 }
+
+-(void) testFirstChildWithType
+{
+	// Create a new tree
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	
+	ANTLRCommonTree *up = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
+	ANTLRCommonTree *down = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	
+	[parent addChild:up];
+	[parent addChild:down];
+	
+	ANTLRCommonTree *found = [parent firstChildWithType:ANTLRTokenTypeDOWN];
+	STAssertEquals((NSInteger)found.type, (NSInteger)ANTLRTokenTypeDOWN, @"Token type was not correct, should be down!");
+	found = [parent firstChildWithType:ANTLRTokenTypeUP];
+	STAssertEquals((NSInteger)found.type, (NSInteger)ANTLRTokenTypeUP, @"Token type was not correct, should be up!");
+	[parent release];
+}
+
 
 @end
