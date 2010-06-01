@@ -7,14 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 #define ANTLR_INT_ARRAY_INITIAL_SIZE 10
 
 @interface ANTLRIntArray : NSObject 
 {
 	NSAutoreleasePool *pool;
-	NSMutableData *buffer;
-	NSInteger *data;
+	NSMutableArray *data;
 	NSInteger p;
 }
 
@@ -24,8 +24,7 @@
 -(NSInteger) get:(NSInteger) i;
 -(NSInteger) size;
 -(void) clear;
--(void) ensureCapacity:(NSInteger) index;
 
-@property(readwrite) NSInteger *data;
+@property(readwrite, retain) NSMutableArray *data;
 
 @end

@@ -22,6 +22,7 @@
 -(void) testDescription;
 -(void) testText;
 -(void) testAddChild;
+-(void) testAddSelfAsChild;
 -(void) testChildAtIndex;
 -(void) testSetChildAtIndex;
 -(void) testGetAncestor;

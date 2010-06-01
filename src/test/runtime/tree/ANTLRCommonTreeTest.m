@@ -10,6 +10,7 @@
 #import "ANTLRStringStream.h"
 #import "ANTLRCommonTree.h"
 #import "ANTLRCommonToken.h"
+#import "ANTLRError.h"
 
 @implementation ANTLRCommonTreeTest
 
@@ -154,6 +155,23 @@
 	[parent release];
 }
 
+-(void) testAddSelfAsChild
+{
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	ANTLRCommonTree *emptyChild = [ANTLRCommonTree new];
+	STAssertTrue(emptyChild.isEmpty, @"Child not empty");
+	@try 
+	{
+		[parent addChild:emptyChild];
+	}
+	@catch (NSException * e) 
+	{
+		STAssertTrue([[e name] isEqualToString:ANTLRIllegalArgumentException], @"Got wrong king of exception!");
+		return;
+	}
+	STFail(@"Did not get an exception when adding an empty child!");
+}
+
 -(void) testChildAtIndex
 {
 	// Create a new tree
@@ -204,12 +222,17 @@
 	ANTLRCommonTree *parent = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
 	parent.token.text = @"<UP>";
 	
+	ANTLRCommonTree *down = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	down.token.text = @"<DOWN>";
+	
+	[parent addChild:down];
+	
 	// Child tree
 	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
 	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
 	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
 	
-	[parent addChild:tree];
+	[down addChild:tree];
 	STAssertTrue([tree hasAncestor:ANTLRTokenTypeUP], @"Should have an ancestor of type ANTLRTokenTypeUP");
 	
 	ANTLRCommonTree *ancestor = [tree getAncestor:ANTLRTokenTypeUP];

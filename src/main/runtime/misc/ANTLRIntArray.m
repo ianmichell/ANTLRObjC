@@ -20,23 +20,20 @@
 	{
 		pool = [NSAutoreleasePool new];
 		p = -1;
-		buffer = [[[NSMutableData alloc] initWithCapacity:ANTLR_INT_ARRAY_INITIAL_SIZE] autorelease];
-		data = [buffer mutableBytes];
+		data = [[NSMutableArray arrayWithCapacity:ANTLR_INT_ARRAY_INITIAL_SIZE] autorelease];
 	}
 	return self;
 }
 
 -(void) dealloc
 {
-	data = nil;
 	[pool drain];
 	[super dealloc];
 }
 
 -(void) add:(NSInteger) v
 {
-	[self ensureCapacity:p + 1];
-	data[++p] = v;
+	[data insertObject:[[NSNumber numberWithInt:v] autorelease] atIndex:++p];
 }
 
 -(void) push:(NSInteger) v
@@ -46,14 +43,14 @@
 
 -(NSInteger) pop
 {
-	NSInteger v = data[p];
+	NSInteger v = [self get:p];
 	p--;
 	return v;
 }
 
 -(NSInteger) get:(NSInteger) i
 {
-	return data[i];
+	return [[data objectAtIndex:i] intValue];
 }
 
 // FIXME: Java runtime returns p, I'm not so sure it's right so have added p + 1 to show true size!
@@ -67,18 +64,6 @@
 	p = -1;
 }
 
--(void) ensureCapacity:(NSInteger) index
-{
-	if ((index + 1) >= [buffer length])
-	{
-		NSInteger newSize = [buffer length] * 2;
-		if (index > newSize)
-		{
-			newSize = index + 1;
-		}
-		[buffer setLength:newSize];
-	}
-}
 
 @end
 

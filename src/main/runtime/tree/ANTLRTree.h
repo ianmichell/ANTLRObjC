@@ -81,6 +81,7 @@
 
 @interface ANTLRTree : NSObject <ANTLRTree>
 {
+	NSAutoreleasePool *pool;
 	NSMutableArray *children;
 	NSInteger tokenStartIndex;
 	NSInteger tokenStopIndex;

@@ -51,7 +51,7 @@ static id<ANTLRTree> invalidNode = nil;
 		return;
 	}
 	// Create a new array
-	children = [NSMutableArray new];
+	children = [[NSMutableArray new] autorelease];
 }
 
 @end
@@ -64,6 +64,7 @@ static id<ANTLRTree> invalidNode = nil;
 	self = [super init];
 	if (self)
 	{
+		pool = [NSAutoreleasePool new];
 		children = nil;
 	}
 	return self;
@@ -76,7 +77,7 @@ static id<ANTLRTree> invalidNode = nil;
 
 -(void) dealloc
 {
-	[children release];
+	[pool drain];
 	[super dealloc];
 }
 
