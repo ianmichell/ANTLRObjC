@@ -158,18 +158,52 @@
 -(void) testAddSelfAsChild
 {
 	ANTLRCommonTree *parent = [ANTLRCommonTree new];
-	ANTLRCommonTree *emptyChild = [ANTLRCommonTree new];
-	STAssertTrue(emptyChild.isEmpty, @"Child not empty");
 	@try 
 	{
-		[parent addChild:emptyChild];
+		[parent addChild:parent];
 	}
 	@catch (NSException * e) 
 	{
 		STAssertTrue([[e name] isEqualToString:ANTLRIllegalArgumentException], @"Got wrong king of exception!");
+		[parent release];
 		return;
 	}
 	STFail(@"Did not get an exception when adding an empty child!");
+}
+
+-(void) testAddEmptyChildWithNoChildren
+{
+	ANTLRCommonTree *emptyChild = [ANTLRCommonTree new];
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	[parent addChild:emptyChild];
+	STAssertEquals(parent.childCount, (NSInteger)0, @"There were supposed to be no children!");
+	[parent release];
+	[emptyChild release];
+}
+
+-(void) testAddEmptyChildWithChildren
+{
+	// Create a new tree
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	
+	// Child tree
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	token.line = 1;
+	token.charPositionInLine = 4;
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	
+	// Add a child to the parent tree
+	[parent addChild: tree];
+	
+	ANTLRCommonTree *newParent = [ANTLRCommonTree new];
+	[newParent addChild:parent];
+	
+	STAssertEquals(newParent.childCount, (NSInteger)1, @"Parent should only have 1 child: %d", newParent.childCount);
+	STAssertEquals([newParent childAtIndex:0], tree, @"Child was not the correct object.");
+	[parent release];
+	[newParent release];
+	[tree release];
 }
 
 -(void) testChildAtIndex
@@ -259,5 +293,38 @@
 	[parent release];
 }
 
+-(void) testSanityCheckParentAndChildIndexesForParentTree
+{
+	// Child tree
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	
+	@try 
+	{
+		[tree sanityCheckParentAndChildIndexes];
+	}
+	@catch (NSException * e) 
+	{
+		STFail(@"Exception was thrown and this is not what's right...");
+	}
+	
+	BOOL passed = NO;
+	@try 
+	{
+		[tree sanityCheckParentAndChildIndexesForParentTree:parent forIndex:0];
+	}
+	@catch (NSException * e) 
+	{
+		STAssertTrue([[e name] isEqualToString:ANTLRIllegalArgumentException], @"Exception was not an ANTLRIllegalArgumentException");
+		passed = YES;
+	}
+	if (!passed)
+	{
+		STFail(@"An exception should have been thrown");
+	}
+}
 
 @end
