@@ -191,7 +191,7 @@ static id<ANTLRTree> invalidNode = nil;
 	// Check that our parent is the same as parent tree
 	if (parentTree != self.parent)
 	{
-		@throw [NSException exceptionWithName:ANTLRIllegalArgumentException reason:[NSString stringWithFormat:@"Parents don't match; expected %@ found %@", [self.parent description]] userInfo:nil];
+		@throw [NSException exceptionWithName:ANTLRIllegalArgumentException reason:[NSString stringWithFormat:@"Parents don't match; expected %@ found %@", [parent description], [self.parent description]] userInfo:nil];
 	}
 	
 	// Check that the child indexes match
@@ -248,7 +248,7 @@ static id<ANTLRTree> invalidNode = nil;
 
 -(id<ANTLRTree>) deleteChild:(NSInteger) index
 {
-	if (self.children != nil)
+	if (self.children == nil)
 	{
 		return nil;
 	}

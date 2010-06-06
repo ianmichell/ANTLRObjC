@@ -22,6 +22,7 @@
 -(void) testDescription;
 -(void) testText;
 -(void) testAddChild;
+-(void) testAddChildren;
 -(void) testAddSelfAsChild;
 -(void) testAddEmptyChildWithNoChildren;
 -(void) testAddEmptyChildWithChildren;
@@ -30,5 +31,7 @@
 -(void) testGetAncestor;
 -(void) testFirstChildWithType;
 -(void) testSanityCheckParentAndChildIndexesForParentTree;
+-(void) testDeleteChild;
+-(void) testTreeDescriptions;
 
 @end

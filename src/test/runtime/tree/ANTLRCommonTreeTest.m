@@ -155,6 +155,27 @@
 	[parent release];
 }
 
+-(void) testAddChildren
+{
+	// Create a new tree
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	
+	// Child tree
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	token.line = 1;
+	token.charPositionInLine = 4;
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	
+	// Add a child to the parent tree
+	[parent addChild: tree];
+	
+	ANTLRCommonTree *newParent = [ANTLRCommonTree new];
+	[newParent addChildren:parent.children];
+	
+	STAssertEquals([newParent childAtIndex:0], [parent childAtIndex:0], @"Children did not match");
+}
+
 -(void) testAddSelfAsChild
 {
 	ANTLRCommonTree *parent = [ANTLRCommonTree new];
@@ -325,6 +346,56 @@
 	{
 		STFail(@"An exception should have been thrown");
 	}
+	
+	[parent addChild:tree];
+	@try 
+	{
+		[tree sanityCheckParentAndChildIndexesForParentTree:parent forIndex:0];
+	}
+	@catch (NSException * e) 
+	{
+		STFail(@"No exception should have been thrown!");
+	}
 }
 
+-(void) testDeleteChild
+{
+	// Child tree
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	[parent addChild:tree];
+	
+	ANTLRCommonTree *deletedChild = [parent deleteChild:0];
+	STAssertEquals(deletedChild, tree, @"Children do not match!");
+	STAssertEquals(parent.childCount, (NSInteger)0, @"Child count should be zero!");
+}
+
+-(void) testTreeDescriptions
+{
+	// Child tree
+	ANTLRStringStream *stream = [[ANTLRStringStream alloc] initWithInput:@"this||is||a||double||piped||separated||csv"];
+	ANTLRCommonToken *token = [[ANTLRCommonToken alloc] initWithCharStream:stream type:555 channel:ANTLRTokenChannelDefault start:4 stop:6];
+	ANTLRCommonTree *tree = [[ANTLRCommonTree alloc] initWithToken:token];
+	
+	// Description for tree
+	NSString *treeDesc = [tree treeDescription];
+	STAssertTrue([treeDesc isEqualToString:@"||"], @"Tree description was not ||");
+	
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	STAssertTrue([[parent treeDescription] isEqualToString:@"nil"], @"Tree description was not nil was %@", [parent treeDescription]);
+	[parent addChild:tree];
+	treeDesc = [parent treeDescription];
+	STAssertTrue([treeDesc isEqualToString:@"||"], @"Tree description was not correct was: %@", treeDesc);
+	
+	// Test non empty parent
+	ANTLRCommonTree *down = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	down.token.text = @"<DOWN>";
+	
+	[tree addChild:down];
+	treeDesc = [parent treeDescription];
+	STAssertTrue([treeDesc isEqualToString:@"(|| <DOWN>)"], @"Tree description was wrong expected (|| <DOWN>) but got: %@", treeDesc);
+}
 @end
