@@ -69,10 +69,6 @@
 @property(readonly) NSInteger charPositionInLine;
 @property(readonly) NSString *text;
 
-#pragma mark copying
--(id) deepCopy;
--(id) deepCopyWithZone:(NSZone *) aZone;
-
 #pragma mark Information
 -(NSString *) description;
 -(NSString *) treeDescription;

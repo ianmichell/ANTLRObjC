@@ -398,4 +398,93 @@
 	treeDesc = [parent treeDescription];
 	STAssertTrue([treeDesc isEqualToString:@"(|| <DOWN>)"], @"Tree description was wrong expected (|| <DOWN>) but got: %@", treeDesc);
 }
+
+-(void) testReplaceChildrenAtIndexWithNoChildren
+{
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	ANTLRCommonTree *parent2 = [ANTLRCommonTree new];
+	ANTLRCommonTree *child = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	child.token.text = @"<DOWN>";
+	[parent2 addChild:child];
+	@try 
+	{
+		[parent replaceChildrenFromIndex:1 toIndex:2 tree:parent2];
+	}
+	@catch (NSException *ex)
+	{
+		STAssertTrue([[ex name] isEqualToString:ANTLRIllegalArgumentException], @"Expected an illegal argument exception... Got instead: %@", [ex name]);
+		return;
+	}
+	STFail(@"Exception was not thrown when I tried to replace a child on a parent with no children");
+}
+
+-(void) testReplaceChildrenAtIndex
+{
+	ANTLRCommonTree *parent1 = [ANTLRCommonTree new];
+	ANTLRCommonTree *child1 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
+	[parent1 addChild:child1];
+	ANTLRCommonTree *parent2 = [ANTLRCommonTree new];
+	ANTLRCommonTree *child2 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	child2.token.text = @"<DOWN>";
+	[parent2 addChild:child2];
+	
+	[parent2 replaceChildrenFromIndex:0 toIndex:0 tree:parent1];
+	
+	STAssertEquals([parent2 childAtIndex:0], child1, @"Child for parent 2 should have been from parent 1");
+}
+
+-(void) testReplaceChildrenAtIndexWithChild
+{
+	ANTLRCommonTree *replacement = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
+	replacement.token.text = @"<UP>";
+	ANTLRCommonTree *parent = [ANTLRCommonTree new];
+	ANTLRCommonTree *child = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	child.token.text = @"<DOWN>";
+	[parent addChild:child];
+	
+	[parent replaceChildrenFromIndex:0 toIndex:0 tree:replacement];
+	
+	STAssertEquals([parent childAtIndex:0], replacement, @"Children do not match");
+}
+
+-(void) testReplacechildrenAtIndexWithLessChildren
+{
+	ANTLRCommonTree *parent1 = [ANTLRCommonTree new];
+	ANTLRCommonTree *child1 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
+	[parent1 addChild:child1];
+	
+	ANTLRCommonTree *parent2 = [ANTLRCommonTree new];
+	
+	ANTLRCommonTree *child2 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeEOF];
+	[parent2 addChild:child2];
+	
+	ANTLRCommonTree *child3 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	child2.token.text = @"<DOWN>";
+	[parent2 addChild:child3];
+	
+	[parent2 replaceChildrenFromIndex:0 toIndex:1 tree:parent1];
+	STAssertEquals(parent2.childCount, (NSInteger)1, @"Should have one child");
+	STAssertEquals([parent2 childAtIndex:0], child1, @"Child for parent 2 should have been from parent 1");
+}
+
+-(void) testReplacechildrenAtIndexWithMoreChildren
+{
+	ANTLRCommonTree *parent1 = [ANTLRCommonTree new];
+	ANTLRCommonTree *child1 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeUP];
+	[parent1 addChild:child1];
+	ANTLRCommonTree *child2 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeEOF];
+	[parent1 addChild:child2];
+	
+	ANTLRCommonTree *parent2 = [ANTLRCommonTree new];
+	
+	ANTLRCommonTree *child3 = [[ANTLRCommonTree alloc] initWithTokenType:ANTLRTokenTypeDOWN];
+	child2.token.text = @"<DOWN>";
+	[parent2 addChild:child3];
+	
+	[parent2 replaceChildrenFromIndex:0 toIndex:0 tree:parent1];
+	STAssertEquals(parent2.childCount, (NSInteger)2, @"Should have one child");
+	STAssertEquals([parent2 childAtIndex:0], child1, @"Child for parent 2 should have been from parent 1");
+	STAssertEquals([parent2 childAtIndex:1], child2, @"An extra child (child2) should be in the children collection");
+}
+
 @end

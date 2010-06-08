@@ -33,5 +33,10 @@
 -(void) testSanityCheckParentAndChildIndexesForParentTree;
 -(void) testDeleteChild;
 -(void) testTreeDescriptions;
+-(void) testReplaceChildrenAtIndexWithNoChildren;
+-(void) testReplaceChildrenAtIndex;
+-(void) testReplaceChildrenAtIndexWithChild;
+-(void) testReplacechildrenAtIndexWithMoreChildren;
+-(void) testReplacechildrenAtIndexWithLessChildren;
 
 @end

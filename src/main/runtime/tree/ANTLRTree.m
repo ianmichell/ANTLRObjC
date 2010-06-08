@@ -291,7 +291,7 @@ static id<ANTLRTree> invalidNode = nil;
 	if (delta == 0)
 	{
 		int j = 0; // index into new children
-		for (int i = start; i < stop; i++)
+		for (int i = start; i <= stop; i++)
 		{
 			ANTLRTree *child = [newChildren objectAtIndex:j];
 			[self.children replaceObjectAtIndex:i withObject:child];
@@ -308,7 +308,7 @@ static id<ANTLRTree> invalidNode = nil;
 			[self.children replaceObjectAtIndex:start + i withObject:[newChildren objectAtIndex:i]];
 		}
 		int indexToDelete = start + numNewChildren;
-		for (int i = indexToDelete; i < stop; i++)
+		for (int i = indexToDelete; i <= stop; i++)
 		{
 			[self.children removeObjectAtIndex:i];
 		}
@@ -322,7 +322,7 @@ static id<ANTLRTree> invalidNode = nil;
 			[self.children replaceObjectAtIndex:start + i withObject:[newChildren objectAtIndex:i]];
 		}
 		//int numToInsert = replacingWithHowMany - replacingHowMany; // why isn't this used in the java code?
-		for (int i = 0; i < replacingWithHowMany; i++)
+		for (int i = replacingHowMany; i < replacingWithHowMany; i++)
 		{
 			[self.children insertObject:[newChildren objectAtIndex:i] atIndex:start + i];
 		}
@@ -353,29 +353,6 @@ static id<ANTLRTree> invalidNode = nil;
 	return theCopy;
 }
 
--(id) deepCopy
-{
-	return [self deepCopyWithZone:nil];
-}
-
--(id) deepCopyWithZone:(NSZone *) aZone
-{
-	id<ANTLRTree> theCopy = [self copyWithZone:aZone];
-	NSArray *childrenCopy = [NSMutableArray new];
-	if (theCopy.children != nil)
-	{
-		[theCopy.children removeAllObjects];
-	}
-	for (int i = 0; i < [childrenCopy count]; i++)
-	{
-		id<ANTLRTree> child = [[childrenCopy objectAtIndex:i] deepCopyWithZone:aZone];
-		[theCopy addChild:child];
-	}
-	[childrenCopy release];
-	// Return the copied object
-	return theCopy;
-	
-}
 
 -(NSString *) description
 {
