@@ -32,7 +32,7 @@
 -(BOOL) mismatchIsMissingToken:(id<ANTLRIntStream>) input bitSet:(ANTLRBitSet *) follow;
 -(void) reportError:(ANTLRRecognitionException *) e;
 -(void) displayRecognitionError:(NSMutableArray *) tokenNames withException:(ANTLRRecognitionException *) e;
--(NSString *) errorMessageForException:(ANTLRRecognitionException *) e withTokens:(NSMutableArray *) tokenNames;
+-(NSString *) errorMessageForException:(ANTLRRecognitionException *) e withTokens:(NSMutableArray *) tNames;
 -(NSInteger) numberOfSyntaxErrors;
 -(NSString *) errorHeaderFromException:(ANTLRRecognitionException *) e;
 -(NSString *) errorDisplayFromToken:(id<ANTLRToken>) t;
