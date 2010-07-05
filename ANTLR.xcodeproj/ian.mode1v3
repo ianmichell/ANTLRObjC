@@ -271,10 +271,10 @@
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>3C404382117EC1D1002C5A3F</string>
+								<string>3C854A441182B3BB00618CAD</string>
+								<string>3C440A82117EC36600161EBF</string>
 								<string>3C404384117EC1D1002C5A3F</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>3CED811F11E0592F00FD6A54</string>
-								<string>3CED812011E0592F00FD6A54</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 								<string>3CF3EA34114277AC0001944B</string>
@@ -282,6 +282,10 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>41</integer>
+									<integer>37</integer>
+									<integer>3</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -305,7 +309,7 @@
 							<real>367</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1220 138 1446 1253 0 0 2560 1418 </string>
+						<string>1068 138 1446 1253 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -335,7 +339,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3CED817511E075B100FD6A54</string>
+										<string>3C5A7C1711E19F6700BA263A</string>
 										<key>history</key>
 										<array>
 											<string>3C3B7A5411BB6BDE002DDAA2</string>
@@ -350,16 +354,11 @@
 											<string>3C61619211C0A5BA00C1BE00</string>
 											<string>3C9FD5AF11DDAB8A008EDFC1</string>
 											<string>3C9FD5DC11DDB2ED008EDFC1</string>
-											<string>3C9FD5DD11DDB2ED008EDFC1</string>
-											<string>3C9FD5DE11DDB2ED008EDFC1</string>
 											<string>3C9FD5DF11DDB2ED008EDFC1</string>
 											<string>3CED80A911DF640100FD6A54</string>
 											<string>3CED80AA11DF640100FD6A54</string>
 											<string>3CED80AB11DF640100FD6A54</string>
-											<string>3CED80AE11DF640100FD6A54</string>
-											<string>3CED80C311DFB78900FD6A54</string>
 											<string>3CED80C511DFB78900FD6A54</string>
-											<string>3CED80C611DFB78900FD6A54</string>
 											<string>3CED812111E0592F00FD6A54</string>
 											<string>3CED812211E0592F00FD6A54</string>
 											<string>3CED812311E0592F00FD6A54</string>
@@ -368,15 +367,23 @@
 											<string>3CED812611E0592F00FD6A54</string>
 											<string>3CED812711E0592F00FD6A54</string>
 											<string>3CED812811E0592F00FD6A54</string>
-											<string>3CED812911E0592F00FD6A54</string>
 											<string>3CED812A11E0592F00FD6A54</string>
 											<string>3CED812B11E0592F00FD6A54</string>
 											<string>3CED812C11E0592F00FD6A54</string>
 											<string>3CED812D11E0592F00FD6A54</string>
 											<string>3CED813811E0612B00FD6A54</string>
 											<string>3CED813911E0612B00FD6A54</string>
-											<string>3CED813A11E0612B00FD6A54</string>
-											<string>3CED813B11E0612B00FD6A54</string>
+											<string>3C5A7C0411E19A2A00BA263A</string>
+											<string>3C5A7C0511E19A2A00BA263A</string>
+											<string>3C5A7C0611E19A2A00BA263A</string>
+											<string>3C5A7C0711E19A2A00BA263A</string>
+											<string>3C5A7C0811E19A2A00BA263A</string>
+											<string>3C5A7C0911E19A2A00BA263A</string>
+											<string>3C5A7C0B11E19A2A00BA263A</string>
+											<string>3C5A7C0C11E19A2A00BA263A</string>
+											<string>3C5A7C0D11E19A2A00BA263A</string>
+											<string>3C5A7C1411E19F6700BA263A</string>
+											<string>3C5A7C1511E19F6700BA263A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1057, 1207}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1220 138 1446 1253 0 0 2560 1418 </string>
+								<string>1068 138 1446 1253 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -410,7 +417,7 @@
 								<key>Frame</key>
 								<string>{{0, 1212}, {1057, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1220 138 1446 1253 0 0 2560 1418 </string>
+								<string>1068 138 1446 1253 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -434,9 +441,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>3CED80B211DF640100FD6A54</string>
+				<string>3C5A7BCF11E18F5C00BA263A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>3CED80B311DF640100FD6A54</string>
+				<string>3C5A7BD011E18F5C00BA263A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -574,12 +581,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3C40437D117EC130002C5A3F</string>
 		<string>/Users/ian/projects/XCode Projects/ANTLR/ANTLR.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>1220 138 1446 1253 0 0 2560 1418 </string>
+	<string>1068 138 1446 1253 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -600,7 +606,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ANTLRMismatchedNotSetException.h</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -617,8 +623,6 @@
 							<string>422pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -658,7 +662,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>3C40437D117EC130002C5A3F</string>
-				<string>3CED808C11DF25A500FD6A54</string>
+				<string>3C5A7BD111E18F5C00BA263A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

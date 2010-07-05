@@ -69,8 +69,8 @@
 
 #pragma mark protected methods
 -(id) _currentInputSymbol:(id<ANTLRIntStream>) input;
--(id) _missingSymbol:(id<ANTLRIntStream>) input;
--(id) _pushFollow:(ANTLRBitSet *) follow;
+-(id) _missingSymbolWithInput:(id<ANTLRIntStream>) input withException:(ANTLRRecognitionException *) e withExpectedTokenType:(NSInteger) ttype withBitSet:(ANTLRBitSet *)follow;
+-(void) _pushFollow:(ANTLRBitSet *) follow;
 
 @end
 
